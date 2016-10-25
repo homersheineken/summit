@@ -1,0 +1,19 @@
+/* line 82, lib.sass */
+.shadow {
+  -moz-box-shadow: 1px 1px 5px #bbbbbb;
+  -webkit-box-shadow: 1px 1px 5px #bbbbbb;
+  -ms-box-shadow: 1px 1px 5px #bbbbbb;
+  -o-box-shadow: 1px 1px 5px #bbbbbb;
+  box-shadow: 1px 1px 5px #bbbbbb;
+  border: 1px solid #cccccc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+
+/* line 87, lib.sass */
+.dotted-bottom-border {
+  background-image: url(../img/border-dotted-horizontal.png);
+  background-position: center bottom;
+  background-repeat: no-repeat; }

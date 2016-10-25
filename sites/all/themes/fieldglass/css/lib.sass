@@ -1,0 +1,90 @@
+// Define width and number of columns and gutters
+// Change to suit.
+// Pixels work just as well (ie 960 px).  I'm just on a fluid grid kick right now.
+
+
+$width: 960px
+$grid_cols: 16
+$gutters: 10px
+$blue: #3399ff
+$red: darken(red, 15%)
+$yellow: #f7f0d6
+// Lib
+
+@mixin container()
+  width: $width
+  margin: 0 auto
+
+@mixin grid($cols, $margin-left: $gutters, $margin-right: $gutters)
+  width: (($width / $grid_cols) * $cols) - ($margin-left + $margin-right)
+  display: inline
+  float: left
+  margin-left: $margin-left
+  margin-right: $margin-right
+
+// Usage: @include grid(4)
+// If a nested grid - @include grid(4, $margin-left: 0)
+
+@mixin push($cols)
+  position: relative
+  left: (($width / $grid_cols) * $cols)
+  
+@mixin pull($cols)
+  position: relative
+  left: -(($width / $grid_cols) * $cols)
+
+// I never use the push/pull feature in 960, so it's possible that this doesn't work correctly.
+
+@mixin radius($args)
+  -moz-border-radius: $args
+  -webkit-border-radius: $args
+  -ms-border-radius: $args
+  -o-border-radius: $args
+  border-radius: $args
+  
+@mixin shadow($args, $args2: false)
+  $params: $args
+  @if $args2 != false
+    $params: $args, $args2
+  -moz-box-shadow: $params
+  -webkit-box-shadow: $params
+  -ms-box-shadow: $params
+  -o-box-shadow: $params
+  box-shadow: $params
+  
+@mixin gradient($color1, $color2, $start: 0%, $stop: 100%, $url: false, $position: false)
+  @if $url != false
+    background: url('#{$url}') #{$position},-webkit-gradient(linear, left $start, left $stop, from($color1), to($color2))
+    @each $browser in webkit, moz, o, ms
+      background: url('#{$url}') #{$position}, -#{$browser}-linear-gradient(top, $color1 $start, $color2 $stop)
+    background: url('#{$url}') #{$position}, linear-gradient(top, $color1 $start, $color2 $stop)
+  @else
+    background: -webkit-gradient(linear, left $start, left $stop, from($color1), to($color2))
+    @each $browser in webkit, moz, o, ms
+      background: -#{$browser}-linear-gradient(top, $color1 $start, $color2 $stop)
+    background: linear-gradient(top, $color1 $start, $color2 $stop)
+
+@mixin shoutbox()
+  background: $yellow
+  border: 1px solid #999
+  padding: 1em
+  @include radius(10px)
+  position: relative
+  &:before
+    content: ""
+    width: 11px
+    height: 9px
+    background: url(../img/shoutbox.png) center no-repeat
+    position: absolute
+    top: -9px
+    left: 30px
+    
+.shadow
+  @include shadow(1px 1px 5px #bbb)
+  border: 1px solid #ccc
+  @include radius(4px)
+  
+.dotted-bottom-border
+  background-image: url(../img/border-dotted-horizontal.png)
+  background-position: center bottom
+  background-repeat: no-repeat

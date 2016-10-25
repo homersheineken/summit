@@ -1,0 +1,187 @@
+/* Custom styles for IE 7 and below */
+
+/* --- Mega-menu ---- */
+
+#zone-menu {
+  z-index: 200;
+  position: relative;
+}
+
+/* Why Fieldlgass */
+
+#zone-menu li.menu-217 .view-megamenu .view-megamenu {
+  width: 200px;
+}
+
+#zone-menu li.menu-217 .attachment .view-megamenu .view-content {
+  width: 96%;
+  padding: 4%;
+}
+
+/* Resources & Solutions link columns */
+
+#zone-menu li.menu-221 .view-megamenu .block-menu-block-8 ul.menu li,
+#zone-menu li.menu-221 .view-megamenu .views-row-last .block-menu-block .menu-mlid-391,
+#zone-menu li.menu-221 .view-megamenu .views-row-last .block-menu-block .menu-mlid-233,
+#zone-menu li.menu-509 .view-megamenu ul.menu li {
+  width: 48% !important;
+  float: left;
+  display: block;
+}
+
+/* ---- Common classes ---- */
+
+.pullquote .views-field-body,
+.pullquote .views-field-description,
+.pullquote .aggregator_feed_description,
+.pullquote .views-field-text,
+.pullquote-grey,
+.item-list ul li.pullquote-grey {
+  padding-top: 10px;
+}
+
+.pullquote.top .views-field-body,
+.pullquote.top .views-field-description,
+.pullquote.top .aggregator_feed_description,
+.pullquote.top .views-field-text,
+.pullquote-grey,
+.item-list ul li.pullquote-grey {
+  margin-top: 0;
+}
+
+.pullquote-grey {
+  margin: 10px 0;
+}
+
+/* ---- Sitewide ---- */
+
+.region-sidebar-first .block-inner {
+  width: 260px;
+}
+
+/* ---- Front page ---- */
+
+.front #zone-preface-wrapper .region-inner .preface-right {
+  padding-bottom: 0;
+}
+
+.front #zone-preface-wrapper .preface-right .views-row .views-field {
+  display: block;
+}
+
+.front #zone-preface-wrapper .preface-right .view-front-page-by-the-numbers .views-row .field-content  {
+  background: transparent;
+  display: block;
+  width: 190px;
+  height:  80px;
+}
+
+/* ---- Why Fieldglass ---- */
+
+.region-sidebar-first .block-43 .block-inner,
+.region-sidebar-first .solutions-block .block-inner {
+  width: 240px;
+}
+
+/* ---- Solutions ---- */
+
+#block-views-fieldglass-blog-block .content {
+  clear: both;
+  margin-top: .5em;
+}
+
+#block-views-fieldglass-blog-block .views-field-timestamp {
+  float: right;
+  letter-spacing: -.04em;
+  margin-top: -2.5em;
+}
+
+/* ---- Resources ---- */
+
+#block-menu-block-9 ul li a.active, 
+#block-menu-block-10 ul li a.active, 
+#block-menu-block-15 ul li a.active {
+  border-top-width: 1px;
+  position: relative;
+}
+
+/* ---- Company section ---- */
+
+/* Careers page */
+
+.page-node-33 #block-block-27,
+.page-node-33 #block-block-28,
+.page-node-33 #block-block-29,
+.page-node-33 #block-views-company-careers-quotes-block {
+  width: 47%;
+}
+
+/* Press Releases */
+
+.view-company-press-release-archive-page .views-row,
+.view-company-media-coverage-archive-page .views-row {
+  border-bottom: 1px solid #ccc;
+  overflow: auto;
+}
+
+.view-company-press-release-archive-page .views-row .views-field, 
+.view-company-media-coverage-archive-page .views-row .views-field {
+  display: block;
+  float: left;
+  border-bottom: none;
+}
+
+.view-company-press-release-archive-page .views-field-field-press-date, 
+.view-company-media-coverage-archive-page .views-field-field-press-date {
+   width: 8%;
+}
+
+.view-company-press-release-archive-page .views-field-title, 
+.view-company-media-coverage-archive-page .views-field-title {
+  width: 82%;
+}
+
+.view-company-press-release-archive-page .views-field-field-press-pdf, 
+.view-company-media-coverage-archive-page .views-field-field-press-pdf {
+  text-align: center;
+  width: 4%;
+}
+
+/* Media Coverage */
+
+
+.view-company-media-coverage-newest-block {
+  display: block;
+}
+
+.view-company-media-coverage-newest-block .view-content {
+  display: block;
+}
+
+.view-company-media-coverage-newest-block .views-row {
+  display: block;
+  float: left;
+  width: 42% !important;
+  margin-right: 2.4%;
+}
+
+/* Meet our Team */
+
+.context-company .node-team-member .field-name-field-team-first-name, 
+.context-company .node-team-member .field-name-field-team-last-name {
+  float: left;
+}
+
+.context-company .node-team-member .field-name-field-team-title-dept {
+  clear: left;
+}
+
+/* Community */
+
+.page-node-42 #region-content #block-system-main {
+  display: none;
+}
+
+.page-node-42 .region-sidebar-first .block-inner {
+  width: 370px;
+}

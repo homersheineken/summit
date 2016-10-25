@@ -1,0 +1,37 @@
+/* Custom styles for IE 8 and below */
+
+.front #block-views-front-page-meet-our-team-block .views-row,
+.front #region-content .front-resources .views-row  {
+  background: #fff !important;
+}
+
+
+/* ---- Resources section page ---- */
+
+.page-node-196 #region-content .region-inner {
+  overflow: visible;
+}
+
+.page-node-196 #region-content .region-inner section {
+  margin: 0 15x 15px 0px;
+  width: 266px;
+  padding: 12px 8px;
+}
+
+
+/* Industry Recognition */
+
+.page-company-awards-and-recognition .view-company-awards- .views-row {
+  margin-right: 20px;
+  width: 430px;
+}
+
+.page-company-awards-and-recognition .view-company-awards- .views-row-1  {
+  width: 918px;
+}
+
+/* Media Coverage */
+
+.view-company-media-coverage-newest-block .views-field-body {
+  width: 90% !important;
+}

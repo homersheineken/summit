@@ -1,0 +1,1411 @@
+/* ---- 
+  * CSS added by Megan McDermott - April 19, 20122
+  * To be merged with other files 
+ ---- */
+
+.img-border { /* currently only used on /solutions/business_intelligence but c/b found elsewhere */
+  border: 3px solid #a1a1a1;
+  border-radius: 3px;
+  margin-bottom: .5em;
+}
+
+/* Block headers */
+
+#block-views-front-page-featured-award-block h2,
+.front #block-views-fieldglass-tweets-block h2,
+.front #block-views-fieldglass-tweets-block h3,
+.front #block-views-fieldglass-blog-block-1 h3,
+#block-views-fieldglass-blog-block-2 h2,
+#block-views-fieldglass-tweets-block-1 h2,
+#block-block-23 h2,
+.block.did-you-know h2,
+#block-block-43 h2,
+#block-block-44 h2,
+#block-views-flickr-feed-block h2 {
+  color: #222222;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+/* With icon */
+#block-views-front-page-featured-award-block h2 {
+  padding-left: 28px;
+}
+
+/* Fake Vertical Tabs - used on Contingent Workers page, others */
+
+.content-vtabs {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px #bbbbbb;
+  margin: 10px 0 25px; 
+}
+
+.content-vtabs .view-content {
+  position: relative;
+}
+
+.content-vtabs .vtab_parent {
+  width: 170px;
+  padding: 0 0 0 15px;
+  line-height: 41px;
+  background: #F6F6F4;
+  border-right: 1px solid #ccc;
+}
+
+.content-vtabs .vtab_parent:hover,
+.content-vtabs .active_vtab .vtab_parent {
+	background: rgb(246,246,244); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(246,246,244,1) 0%, rgba(219,219,219,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,246,244,1)), color-stop(100%,rgba(219,219,219,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(246,246,244,1) 0%,rgba(219,219,219,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(246,246,244,1) 0%,rgba(219,219,219,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(246,246,244,1) 0%,rgba(219,219,219,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(246,246,244,1) 0%,rgba(219,219,219,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f4', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
+}
+
+.content-vtabs .vtab_parent a,
+.content-vtabs .vtab_parent a:link,
+.content-vtabs .vtab_parent a:visited,
+.content-vtabs .vtab_parent a:hover,
+.content-vtabs .vtab_parent a:active,
+.content-vtabs .vtab_parent a:focus {
+  color: #606060;
+  background: transparent url(../img/vtabs_sm_arrow.png) 0 center no-repeat;
+  padding-left: 9px;
+  display: block;
+  padding-right: 9px;
+  margin-right: -1px;
+}
+
+.content-vtabs .vtab_parent span {
+  display: block;
+  margin-right: -1px;
+}
+
+.content-vtabs .vtab_parent span:hover,
+.content-vtabs .active_vtab .vtab_parent span {
+  background-image: url(../img/vtabs-pane-arrow2.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.content-vtabs .active_vtab .vtab_child {
+  display: block;
+}
+
+.content-vtabs .vtab_child {
+  display: none;
+  position: absolute;
+  top: 1px;
+  left: 200px;
+  width: 414px;
+}
+
+.content-vtabs .vtab_child .field-content {
+  padding: 16px 16px 16px 30px;
+}
+
+/* Carousels */
+
+.view-front-page-carousel {
+	position: relative;
+}
+
+.view-front-page-carousel .views-row {
+	display: none;
+}
+
+.view-front-page-carousel .views-row.views-row-first {
+	display: block;
+}
+
+.view-front-page-carousel #pager a {
+	background: url(../img/pager.png) top left no-repeat;
+	display: block;
+	float: left;
+	height: 18px;
+	margin-right: 7px;
+	overflow: hidden;
+	text-indent: -300%;
+	width: 18px;
+}
+
+.view-front-page-carousel #pager a.activeSlide {
+	background-image: url(../img/pager-active.png);
+}
+
+/* ---- Common to Press Releases and Media Coverage ---- */
+
+.page-company-press-releases #region-content,
+.page-company-media-coverage #region-content {
+  margin: 0;
+}
+
+/* More Releases/More coverage */
+
+.view-company-press-release-archive-page .view-header,
+.view-company-media-coverage-archive-page .view-header {
+  background: #cecece;
+  font-size: 1.1em;
+  padding: 4px 8px;
+}
+
+.view-company-press-release-archive-page .view-content,
+.view-company-media-coverage-archive-page .view-content {
+  display: table;
+  font-size: .94em;
+  width: 100%;
+}
+
+.view-company-press-release-archive-page .views-row,
+.view-company-media-coverage-archive-page .views-row {  
+  display: table-row;
+}
+
+.view-company-press-release-archive-page .views-row a,
+.view-company-media-coverage-archive-page .views-row a {
+  color: #000;
+}
+
+.view-company-press-release-archive-page .views-row .views-field,
+.view-company-media-coverage-archive-page .views-row .views-field {
+  border-bottom: 1px solid #cecece;
+  display: table-cell;
+  line-height: 1.3em;
+  padding: 6px
+}
+
+.view-company-media-coverage-archive-page .views-field-field-media-coverage-date {
+  width: 4em;
+}
+
+.view-company-press-release-archive-page .views-field-field-press-pdf .file a {
+  display: none;
+}
+
+/* Top two block */
+
+.view-press-release-blocks-newest-,
+.view-company-media-coverage-newest-block {
+  font-size: .94em;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  overflow: auto;
+}
+
+.view-press-release-blocks-newest- .views-row,
+.view-company-media-coverage-newest-block .views-row {
+  float: left;
+  padding: 2.3%;
+  width: 43%;
+}  
+
+.view-press-release-blocks-newest- .views-row + .views-row {
+  margin-left: 4%;
+}
+
+.view-company-media-coverage-newest-block {
+  border-spacing: 20px;
+  display: table;
+  width: 660px;
+  margin: 0 -20px;
+}
+
+.view-company-media-coverage-newest-block .view-content {
+  display: table-row;
+}
+
+.view-company-media-coverage-newest-block .views-row {
+  display: table-cell;
+  float: none;
+  vertical-align: top;
+  width: 50%;
+}
+
+.view-company-media-coverage-newest-block .views-field-field-media-coverage-image {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.view-company-media-coverage-newest-block .views-field-field-media-coverage-image img,
+.view-company-media-coverage-newest-block .views-field-body,
+.view-company-media-coverage-newest-block .views-field-field-media-coverage-date {
+  margin: 0 auto;
+  width: 160px;
+}
+
+/* Press release top two block */
+
+.view-press-release-blocks-newest- .views-field-title {
+  font-size: 1.25em;
+  line-height: 1.2em;
+}
+
+.view-press-release-blocks-newest- .views-field-field-press-date {
+  margin-bottom: 1em;
+}
+
+.view-press-release-blocks-newest- .views-field-field-press-sub-header {
+  line-height: 1.3em;
+}
+
+.view-press-release-blocks-newest- .views-field-field-press-pdf {
+  margin-top: 1em;
+}
+
+/* Press Releases RSS feed link */
+
+.view-press-release-blocks-newest- .view-header a  {
+  background: url(../img/logo-rss-24px.png) right center no-repeat; 
+  font-size: 1.17em;
+  height: 24px;
+  padding: 3px 30px 0 0;
+  position: absolute;
+  right: 0;
+  text-decoration: underline;
+  top: -60px;
+} 
+
+/* Press Release nodes */
+
+.node-type-press-release #region-content h1#page-title {
+  border-bottom: none;
+  color: #000;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+}
+
+.node-type-press-release .field-name-field-press-sub-header {
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.node-type-press-release .field-name-field-press-description p {
+  margin-bottom: 1em;
+}
+
+/* ----- Careers Page ---- */
+
+.page-node-33 .field-name-body {
+  margin-bottom: 30px;
+}
+
+.page-node-33 .field-name-body h2 {
+  font-size: 2em;
+  font-weight: normal;
+  margin-bottom: .5em;
+}
+
+/* Jobs block with iframe */
+
+.page-node-33 #block-block-25 {
+  box-shadow: 1px 1px 5px #bbbbbb;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+/* "Life at Fieldglass" section */
+
+.page-node-33 #block-block-26 h2.block-title {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.page-node-33 #block-block-27,
+.page-node-33 #block-block-28,
+.page-node-33 #block-block-29,
+.page-node-33 #block-views-company-careers-quotes-block {
+  float: left;
+  margin: 0 4% 20px 0; 
+  width: 48%;
+}
+
+.page-node-33 #block-block-28,
+.page-node-33 #block-views-company-careers-quotes-block {
+  margin-right: 0;
+}
+
+.page-node-33 #block-block-27 h2,
+.page-node-33 #block-block-28 h2,
+.page-node-33 #block-block-29 h2,
+.page-node-33 #block-views-company-careers-quotes-block h2 {
+  border-bottom: none;
+  margin-bottom: .3em;
+}
+
+/* Pullquotes  */
+
+.pullquote .content {
+  font-family: Georgia, serif;
+  font-size: 1.1em;
+  font-style: italic;
+  line-height: 1.1em;
+}
+
+.pullquote .views-field-body,
+.pullquote .views-field-description,
+.pullquote .aggregator_feed_description,
+.pullquote .views-field-text,
+.pullquote-grey,
+.item-list ul li.pullquote-grey {
+    background: #f7f0d6;
+    border: 1px solid #999;
+    border-radius: 10px;
+    position: relative;
+    padding: 15px;
+}
+
+.pullquote-grey,
+.item-list ul li.pullquote-grey {
+  background: #eee;
+  color: #222;
+  margin-left: 0;
+}
+
+.pullquote.bottom .views-field-body,
+.pullquote.bottom .views-field-description,
+.pullquote.bottom .views-field-text   {
+  margin-bottom: 20px;
+}
+
+.pullquote.top .views-field-body,
+.pullquote.top .views-field-description,
+.pullquote.top .aggregator_feed_description,
+.pullquote.top .views-field-text,
+.pullquote-grey,
+.item-list ul li.pullquote-grey {
+  margin-top: 20px;
+}
+
+.pullquote.bottom .views-field-body:before,
+.pullquote.bottom .views-field-description:before {
+  border-color: #999 transparent;
+  border-style: solid;
+  border-width: 11px 9px 0;
+  bottom: -11px;
+  content: "";
+  display: block;
+  left: 234px;
+  position: absolute;
+  width: 0;
+}
+
+.pullquote.bottom .views-field-body:after,
+.pullquote.bottom .views-field-description:after {
+  border-color: #f7f0d6 transparent;
+  border-style: solid;
+  border-width: 10px 8px 0;
+  bottom: -10px;
+  content: "";
+  display: block;
+  left: 235px;
+  position: absolute;
+  width: 0;
+}
+
+.pullquote.top .views-field-body:before,
+.pullquote.top .views-field-description:before,
+.pullquote.top .aggregator_feed_description:before,
+.pullquote.top .views-field-text:before,
+.pullquote-grey.top:before {
+  border-color: #999 transparent;
+  border-style: solid;
+  border-width: 0 9px 11px;
+  content: "";
+  display: block;
+  left: 24px;
+  position: absolute;
+  width: 0;
+  top: -11px;
+}
+
+.pullquote.top .views-field-body:after,
+.pullquote.top .views-field-description:after,
+.pullquote.top .aggregator_feed_description:after,
+.pullquote.top .views-field-text:after,
+.pullquote-grey.top:after {
+  border-color: #f7f0d6 transparent;
+  border-style: solid;
+  border-width: 0 8px 10px ;
+  display: block;
+  left: 25px;
+  position: absolute;
+  width: 0;
+  top: -10px;
+  content: "";
+}
+
+.pullquote-grey.top:after {
+  border-color: #eee transparent;
+}
+/* Quote author information */
+
+.pullquote .views-field-field-quote-team-member,
+.pullquote .views-field-field-team-title-dept {
+  float: left;
+  margin-bottom: .3em;
+  width: 254px;
+  text-align: right;
+}
+
+.pullquote .views-field-field-team-profile-pic {
+  float: right;
+  margin-top: -2em;
+}
+
+/* From the Field block (Solutions page) */
+
+#block-views-fieldglass-blog-block {
+  border-bottom: 0;
+  background: url("../img/shadow-front-preface-right.png") no-repeat center bottom;
+  padding-bottom: 40px;
+} 
+
+#block-views-fieldglass-blog-block h2 {
+  float: left;
+  margin-right: .5em;
+}
+
+#block-views-fieldglass-blog-block .views-field-timestamp {
+  line-height: 1.5em;
+  margin-bottom: -.5em;
+  white-space: nowrap;
+}
+
+/* Front page Community corner block */
+
+.front #block-views-fieldglass-tweets-block,
+.front #block-views-fieldglass-blog-block-1 {
+  width: 65%;
+  float: left; 
+}
+
+.front #block-views-fieldglass-tweets-block {
+  margin-bottom: 1.5em;
+}
+
+.front #block-views-fieldglass-tweets-block h2,
+.front #block-views-fieldglass-tweets-block h3,
+.front #block-views-fieldglass-blog-block-1 h3 {
+  font-family: arial,helvetica,sans-serif;
+  font-style: normal;
+}
+
+.front #block-views-fieldglass-tweets-block h2 {
+  margin-bottom: 1em;
+}
+
+.front #block-views-fieldglass-tweets-block h3,
+.front #block-views-fieldglass-blog-block-1 h3 {
+  margin-right: .3em;
+}
+
+.front #block-views-fieldglass-tweets-block h3,
+.front #block-views-fieldglass-blog-block-1 h3,
+.front #block-views-fieldglass-tweets-block h3 + p,
+.front #block-views-fieldglass-blog-block-1 h3 + p {
+  display: inline;
+}
+
+.front #block-views-fieldglass-tweets-block h3 + p {
+  text-transform: lowercase;
+}
+
+.front #block-views-fieldglass-tweets-block ul,
+.front #block-views-fieldglass-tweets-block li {
+  margin: 0;
+}
+
+.front #block-views-fieldglass-tweets-block .views-field-nothing,
+.front #block-views-fieldglass-blog-block-1 .view-header {
+  float: left;
+  margin-bottom: 15px;
+}
+
+.front #block-views-fieldglass-tweets-block .views-field-created-time,
+.front #block-views-fieldglass-blog-block-1 .views-field-timestamp {
+  float: right;
+  line-height: 2.5em
+}
+
+
+.front #block-views-fieldglass-tweets-block .views-field-created-time {
+  background: url(../img/twitter-icon.png) left center no-repeat;
+  padding: 3px 0 1px 25px;
+}
+
+.front #block-views-fieldglass-tweets-block .views-field-text,
+.front #block-views-fieldglass-blog-block-1 .views-field-description {
+  clear: left;
+}
+
+/* ---- Common to Resources and Industry Recognition ---- */
+
+/* Section (tabbed) navigation */
+.page-resources #zone-preface,
+.page-company-awards-and-recognition #zone-preface,
+.page-company-analysts #zone-preface {
+  width: 100%;
+}
+
+.page-resources #zone-preface .region,
+.page-company-awards-and-recognition  #zone-preface .region,
+.page-company-analysts #zone-preface .region,
+
+.page-resources #zone-preface #region-preface-first .region-inner,
+.page-company-awards-and-recognition #zone-preface #region-preface-first .region-inner,
+.page-company-analysts #zone-preface #region-preface-first .region-inner {
+  display: block;
+  float: none;
+  margin: 0 auto;
+  width: 960px;
+}
+
+.page-resources #zone-preface #region-preface-first,
+.page-company-awards-and-recognition #zone-preface #region-preface-first,
+.page-company-analysts #zone-preface #region-preface-first {
+  background: #a9a9a9;
+  margin: 30px 0 40px;
+  padding: 0;
+  width: 100%;
+}
+
+#block-menu-block-9 ul li.leaf,
+#block-menu-block-10 ul li.leaf,
+#block-menu-block-15 ul li.leaf {
+  list-style: none;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#block-menu-block-9 ul.menu a,
+#block-menu-block-10 ul.menu a,
+#block-menu-block-15 ul.menu a {
+  border-right: 1px solid #fff;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  margin: 6px 0;
+  padding: 10px 28px;
+  text-decoration: none;
+}
+
+#block-menu-block-10 ul.menu a,
+#block-menu-block-15 ul.menu a {
+  padding: 10px 11px;
+}
+
+#block-menu-block-9 ul.menu li:last-child a,
+#block-menu-block-10 ul.menu li:last-child a,
+#block-menu-block-15 ul.menu li:last-child a {
+  border-right: none;
+}
+
+#block-menu-block-9 ul li a.active,
+#block-menu-block-10 ul li a.active,
+#block-menu-block-15 ul li a.active {
+  background: #fff;
+  border: 1px solid #a9a9a9;
+  border-bottom: 1px solid #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #a9a9a9;
+  margin: -8px 0 -1px -1px;
+  padding: 22px 28px 16px;
+}
+
+#block-menu-block-10 ul li a.active,
+#block-menu-block-15 ul li a.active {
+  padding: 22px 12px 16px;
+}
+
+/* --- Industry Recognition page ---- */
+
+.page-company-awards-and-recognition .view-company-awards- .views-row {
+  background: #f2f2f2;
+  border: 1px solid #555;
+  float: left;
+  font-size: 1.1em;
+  height: 350px;
+  margin-bottom: 30px;
+  width: 453px;
+}
+
+.page-company-awards-and-recognition .view-company-awards- .views-row:nth-child(2n) {
+  margin-right: 30px;
+}
+
+.page-company-awards-and-recognition .view-company-awards- .views-field-title,
+.page-company-awards-and-recognition .view-company-awards- .views-field-body,
+.page-company-awards-and-recognition .view-company-awards- .views-field-field-award-pdf {
+  padding: 20px;
+}
+
+.page-company-awards-and-recognition .view-company-awards- .views-field-title {
+  border-bottom: 1px solid #555;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.page-company-awards-and-recognition .view-company-awards-  .views-field-field-award-image {
+  float: none;
+  margin: 0px;
+  text-align: center;
+}
+
+.page-company-awards-and-recognition  #region-content .view-company-awards- .views-field-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* First box */
+
+.page-company-awards-and-recognition .view-company-awards- .views-row-1 {
+  height: auto;
+  margin-left: 0;
+  width: 938px;
+}
+
+.page-company-awards-and-recognition .view-company-awards- .views-row-1 .views-field-body {
+  margin-right: 250px;
+}
+
+.page-company-awards-and-recognition .view-company-awards- .views-row-1 .views-field-field-award-image {
+  float: right;
+  margin: -95px 20px 20px;
+}
+
+
+/* ---- Expert Analysis ---- */
+
+.page-company-analysts #region-content {
+  width: 100%;
+}
+
+.page-company-analysts #region-content .views-row {
+  border-bottom: 1px dashed #ccc;
+  line-height: 1.7em;
+  padding: 20px 0;
+}
+
+.page-company-analysts #region-content .views-row:last-child {
+  border: none;
+}
+
+.page-company-analysts #region-content .views-field-field-expert-analysis-image {
+  float: left;
+}
+
+.page-company-analysts #region-content .views-field-title,
+.page-company-analysts #region-content .views-field-body,
+.page-company-analysts #region-content .views-field-field-expert-analysis-source {
+  margin-left: 200px;
+}
+
+.page-company-analysts #region-content .views-field-title {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.page-company-analysts .views-field-field-expert-analysis-source {
+  font-style: italic;
+  margin-top: 1em;
+}
+
+.page-company-analysts .views-field-field-expert-analysis-source span,
+.page-company-analysts .views-field-field-expert-analysis-source .field-content {
+  display: inline;
+}
+
+/* ---- Company landing page 
+  Much of this is overriding CSS on the block-views-front-page-meet-our-team-block for the front page ---- */
+
+.page-node-41 #block-views-team-member-blocks-block,
+.page-node-41 #block-views-front-page-meet-our-team-block {
+  background: none;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 46%;
+}
+
+.page-node-41 #block-views-front-page-meet-our-team-block {
+  margin-left: 8%;
+}
+
+.page-node-41 .field-name-body h2:last-child,
+.page-node-41 #block-views-team-member-blocks-block h2.block-title,
+.page-node-41 #block-views-front-page-meet-our-team-block h2.block-title {
+  background: none;
+  color: #222;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1em;
+  padding: 0;
+}
+
+/* Why Fieldglass blocks - common */
+
+#block-block-33,
+.block.did-you-know,
+#block-block-43,
+#block-block-44  {
+  background: url(../img/shadow-front-preface-right.png) center bottom no-repeat;
+  border: 1px solid #ccc;
+  padding: 10px 4% 40px;
+}
+
+#zone-content .block.did-you-know h2.block-title,
+#block-block-43 h2,
+#block-block-44 h2 {
+  border: none;
+  font-size: 1.5em;
+}
+/* Corporate Brochure block */
+
+#block-block-33 {
+  background: url(../img/shadow-front-preface-right.png) center bottom no-repeat;
+  border-bottom: none;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin-top: 15px;
+}
+
+#block-block-33 img {
+  float: left;
+  margin-right: 6px;
+}
+
+#block-block-33 h2 {
+  color: #3399FF;
+  font-size: 1.3em;
+  font-weight: normal;
+  margin-bottom: 1em;
+  text-decoration: underline;
+}
+
+#block-block-33 p {
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+
+/* Did you know? block */
+
+.block.did-you-know {
+  border-top: none;
+  border-bottom: none;
+}
+
+.block.did-you-know p {
+  line-height: 1.2em;
+}
+
+.page-node-38 .block.did-you-know,
+.context-company .block.did-you-know { /* where it's the last block */
+  background: none;
+  border-bottom: 1px solid #ccc;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding-bottom: 4%;
+}
+
+/* New to VMS/Language Expertise blocks */
+
+#block-block-43,
+#block-block-44 {
+  border-top: none;
+  border-bottom: none;
+}
+
+#block-block-43 .content,
+#block-block-44 .content {
+  font-size: 1.1em;
+  line-height: 1.2em;
+}
+
+#block-block-44 p {
+ margin-bottom: 1em;
+}
+
+#block-block-44 ul {
+  margin-left: 1em;
+}
+/* Relevant Resources */
+
+.context-why-fieldglass .solutions-block {
+  border-top: 0;
+  margin-top: 0;
+}
+
+/* ---- Contact page ---- */
+
+.context-contact h1#page-title {
+  color: #cd273d;
+}
+
+.context-contact #region-content {
+  width: 100%;
+}
+
+.context-contact .contact-block {
+  float: left;
+  line-height: 1.3em;
+  margin-top: 25px;
+  padding: 0 6% 6%;
+  width: 37%;
+}
+
+.context-contact .contact-block + .contact-block {
+  border-left: 1px solid #555;
+}
+
+.context-contact .node .contact-block h2 {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+.context-contact .node .contact-block h3 {
+  font-size: 1.4em;
+  font-weight: normal;
+  margin-bottom: .16em;
+}
+
+.context-contact .contact-block .helpdesk {
+  background: #eaeaea;
+  padding: 8px 10px;
+}
+
+.context-contact .contact-block + .contact-block .helpdesk {
+  margin-top: 128px;
+}
+
+.context-contact .node .contact-block .helpdesk h3 {
+  margin-bottom: 0;
+  font-size: 1.7em;
+  font-weight: normal;
+}
+
+.context-contact .contact-block .helpdesk p:last-child {
+  margin-bottom: 0;
+}
+
+/* iFrame'ed form */
+
+.context-contact #block-block-32 {
+  border-radius: 8px;
+  border: 1px solid #909090;
+  padding: 10px;
+} 
+
+.context-contact #block-block-32 h2 {
+  background: #f2f2f2;
+  font-size: 2em;
+  font-weight: normal;
+  padding: 15px 20px;
+}
+
+/* Most requested resources block */
+
+#block-views-927c0a39f10a96aa53cd7a43b13cdd72 {
+    background: url("../img/border-dotted-horizontal.png") no-repeat scroll center bottom transparent;
+    line-height: 1.3;
+    margin-bottom: 1.5em;
+    padding: 1em 0;
+}
+
+#block-views-927c0a39f10a96aa53cd7a43b13cdd72 h2 {
+  border-bottom: 1px solid #222;
+  color: #222;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin-bottom: .5em;
+}
+
+.view-resource-block-most-requested .views-row {
+  line-height: 1.3em;
+  margin-bottom:20px; 
+}
+
+.view-resource-block-most-requested .views-field-field-taxonomy-resource-image {
+  float: left;
+  margin-right: 4px;
+}
+
+.view-resource-block-most-requested .views-field-title,
+.view-resource-block-most-requested .views-field-view-node {
+  margin-left: 40px;
+}
+
+.view-resource-block-most-requested .views-field-view-node a {
+  text-decoration: underline;
+}
+
+/* ---- Home page Featured Award block ---- */
+
+#block-views-front-page-featured-award-block h2 {
+  background: url(../img/icon-trophy.png) left top no-repeat;
+  font-family: arial, helvetica, sans-serif !important;
+  font-size: 24px !important;
+  line-height: 1.2em !important;
+  color: #222222 !important;
+}
+
+.view-front-page-featured-award .views-field-body {
+  float: left;
+  margin-right: 4%;
+  width: 50%;
+}
+
+.view-front-page-featured-award .views-field-field-award-image {
+  float: right;
+  margin-top: 20px;
+  text-align: center;
+  width: 46%;
+}
+
+.view-front-page-featured-award .views-field-field-award-image img {
+  /*border: 3px solid #a1a1a1;
+  border-radius: 3px;*/
+  
+  border: 3px solid #A1A1A1;
+  border-radius: 3px;
+  padding: 20px;
+  margin-top: -20px;
+}
+
+/* ---- Archived webinar nodes ---- */
+
+.node-type-archived-webinar .field-name-field-archived-webinar-pdf {
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+}
+
+/* ---- Meet our Team blocks ---- */
+
+section.meet-team h2 a {
+  color: #000;
+}
+
+section.meet-team h2 a:hover {
+  color: #3399FF;
+}
+
+/* Quotes (Customer Experience, Solutions/Support) */
+
+.view-quote .views-field-nothing {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.view-quote .views-field-body,
+.view-quote .views-field-field-quote-author,
+.view-quote .views-field-field-quote-source,
+.view-quote .views-field-field-quote-company{
+  font-family: Georgia, serif;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+.view-quote .views-field-body {
+  background: url(../img/quote.png) top left no-repeat #f9fafb;
+  border: 1px solid #cacaca;
+  border-radius: 8px;
+  color: #606060;
+  line-height: 1.3em;
+  margin-bottom: 20px;
+  padding: 18px 36px;
+  position: relative;
+}
+
+#region-content .view-quote .views-field-body p {
+  margin-bottom: 0;
+}
+
+.view-quote .views-field-body:after {
+  bottom: -27px;
+  content: url(../img/quote-pointer.png);
+  height: 27px;
+  left: 60px;
+  position: absolute;
+  width: 30px;
+}
+
+.view-quote .views-field-field-quote-author,
+.view-quote .views-field-nothing-1 {
+  margin: 0 0 .2em 100px;
+}
+
+.view-quote .views-field-field-quote-author {
+  font-size: 1.3em;
+  float: left;
+  margin-right: .3em;
+}
+
+.view-quote .views-field-field-quote-source,
+.view-quote .views-field-field-quote-company {
+  line-height: 1.5em;
+  margin-left: .2em;
+}
+
+.view-quote .views-field-nothing-1 {
+  clear: left;
+}
+
+.view-quote .views-field-nothing-1 a {
+  text-decoration: underline;
+}
+
+/* ---- Community section + Flickr block ---- */
+
+.page-node-42 #region-sidebar-first .block,
+.page-node-42 #region-content .block,
+#block-views-flickr-feed-block {
+  padding: 4%;
+  margin-bottom: 4%;
+}
+
+.page-node-42 #region-content #block-system-main {
+  margin: 0;
+  padding: 0;
+}
+
+.page-node-42 #region-sidebar-first .block h2,
+.page-node-42 #region-content .block h2,
+#block-views-flickr-feed-block .block h2 {
+  border-bottom: 1px solid #222;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+  color: #222;
+}
+
+.page-node-42 #region-sidebar-first .block h2 + p,
+.page-node-42 #region-content .block h2 + p,
+.page-node-42 #block-views-fieldglass-blog-block-2 .view-header p:first-child,
+#block-views-flickr-feed-block .view-header p {
+  color: #222;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: .5em;
+  text-transform: lowercase;
+}
+
+.page-node-42 #region-sidebar-first,
+.page-node-42 #region-content {
+  line-height: 1.3em;
+}
+
+.page-node-42 #region-content .views-field-timestamp,
+.page-node-42 #region-sidebar-first .views-field-created-time {
+  color: #555;
+}
+
+.page-node-42 #region-content .views-field-timestamp em,
+.page-node-42 #region-sidebar-first .views-field-created-time em {
+  font-style: normal;
+}
+
+/* FUSE community block */
+
+.page-node-42 #block-block-42 {
+  background: url("../img/cubes.jpg") no-repeat right center; 
+}
+
+.page-node-42 #block-block-42 .content {
+  padding-right: 100px;
+}
+
+.page-node-42 #block-block-42 p {
+  margin-left: 20px;
+}
+
+.page-node-42 #block-block-42 img {
+  float: right;
+}
+
+/* blog block */
+
+.page-node-42 #block-views-fieldglass-blog-block-2 p {
+  margin-bottom: 1em;
+}
+
+.page-node-42 #block-views-fieldglass-blog-block-2 h3 {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.page-node-42 #block-views-fieldglass-blog-block-2 .pullquote-grey {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 1em;
+}
+
+.page-node-42 #block-views-fieldglass-blog-block-2 .pullquote-grey p {
+  margin-bottom: 0;
+}
+
+.page-node-42 #block-views-fieldglass-blog-block-2 a:last-child {
+  font-weight: bold;
+  text-decoration: underline;  
+}
+
+/* Flickr block */
+.page-node-42 #views_slideshow_cycle_main_flickr_feed-block p,
+#block-views-flickr-feed-block p {
+  margin-bottom: .5em;
+}
+
+.page-node-42 #views_slideshow_cycle_main_flickr_feed-block .views-field-description p,
+#block-views-flickr-feed-block .views-field-description p {
+  font-family: arial, helvetica, sans-serif;
+}
+
+.page-node-42 #views_slideshow_cycle_main_flickr_feed-block p:last-child,
+#block-views-flickr-feed-block p:last-child {
+  margin-bottom: 0;
+}
+
+.region-sidebar-first #block-views-flickr-feed-block h2 {
+  line-height: 1em;
+}
+
+.region-sidebar-first #block-views-flickr-feed-block {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+
+/* Results Focussed page adjustments */
+
+.page-node-2 .field-name-body div.shadow {
+  padding: 2% 2% 0 2%;
+  margin-bottom: 4%;
+}
+
+.page-node-2 #region-content .field-name-body div.shadow ul {
+  list-style: none;
+}
+
+.page-node-2 #region-content .field-name-body div.shadow ul li {
+  list-style: none;
+  background: url("../img/list-bullet-arrow.png") no-repeat scroll left .4em transparent;
+  padding-left: 15px;
+  font-size: 1.3em;
+  line-height: 1.5em;
+
+}
+
+/* ----- Mobile (to be copied to mobile.
+/* Hiding sidebar blocks */
+
+.responsive-layout-mobile .region-sidebar-first #block-views-flickr-feed-block {
+  display: none;
+}
+
+/* Resources section */
+
+.responsive-layout-mobile #block-views-front-page-carousel-block-1,
+.responsive-layout-mobile #block-views-front-page-carousel-block-2 {
+  display: none;
+}
+
+.responsive-layout-mobile.page-node-196 #region-content .region-inner {
+  overflow: visible;
+}
+
+.responsive-layout-mobile.page-node-196 #region-content .region-inner section {
+  width: 90%;
+  height: auto;
+}
+
+.responsive-layout-mobile.page-node-196 #region-sidebar-first {
+  clear: left;
+}
+
+.responsive-layout-mobile.page-node-196 #region-content .region-inner section h2 {
+  margin-top: 0;
+}
+
+/* Tabbed navigation */
+
+.responsive-layout-mobile.page-resources #zone-preface .region,
+.responsive-layout-mobile.page-company-awards-and-recognition  #zone-preface .region,
+.responsive-layout-mobile.page-company-analysts #zone-preface .region,
+
+.responsive-layout-mobile.page-resources #zone-preface #region-preface-first .region-inner,
+.responsive-layout-mobile.page-company-awards-and-recognition #zone-preface #region-preface-first .region-inner,
+.responsive-layout-mobile.page-company-analysts #zone-preface #region-preface-first .region-inner {
+  width: 100%;
+}
+
+.responsive-layout-mobile #block-menu-block-9 ul,
+.responsive-layout-mobile #block-menu-block-10 ul,
+.responsive-layout-mobile #block-menu-block-15 ul {
+  text-align: center;
+  border-top: 1px solid #a9a9a9;
+}
+
+.responsive-layout-mobile #block-menu-block-9 ul li.leaf,
+.responsive-layout-mobile #block-menu-block-10 ul li.leaf,
+.responsive-layout-mobile #block-menu-block-15 ul li.leaf {
+  display: inline-block;
+  float: none;
+}
+
+.responsive-layout-mobile #block-menu-block-9 ul.menu a,
+.responsive-layout-mobile #block-menu-block-10 ul.menu a,
+.responsive-layout-mobile #block-menu-block-15 ul.menu a {
+  border: none;
+  font-size: 1.2em;
+  margin: 0;
+  padding: .75em 1em;
+}
+
+.responsive-layout-mobile #block-menu-block-9 ul.menu a.active,
+.responsive-layout-mobile #block-menu-block-10 ul.menu a.active,
+.responsive-layout-mobile #block-menu-block-15 ul.menu a.active {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.responsive-layout-mobile .view.resources .views-row {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.responsive-layout-mobile .view.resources .views-field {
+  margin-left: 0;
+}
+
+.responsive-layout-mobile .view.resources .views-field-nothing {
+  display: none;
+}
+
+.responsive-layout-mobile .view.resources .views-field-field-resource-request-link-1,
+.responsive-layout-mobile .view.resources .views-field-field-resource-request-link {
+  float: left;
+  margin-bottom: 10px;
+}
+
+.responsive-layout-mobile .view.resources .views-field-field-resource-type-1 {
+  clear: left;
+}
+
+/* Events */
+
+.responsive-layout-mobile #region-content .view-id-resource_page_topic_events .views-row .views-field-title, 
+.responsive-layout-mobile #region-content .view-id-resource_page_topic_events .views-row .views-field-title span {
+  font-size: 18px;
+}
+
+.responsive-layout-mobile #region-content .view-id-resource_page_topic_events .views-row .views-field-field-resource-event-dsplydate {
+  font-size: 1em;
+}
+
+.responsive-layout-mobile #region-content .view-id-resource_page_topic_events .views-row .views-field-field-resource-event-link {
+  padding-top: 0;
+}
+
+/* Media Coverage */
+
+.responsive-layout-mobile.page-company-press-releases #region-content, 
+.responsive-layout-mobile.page-company-media-coverage #region-content {
+  margin: 20px 10px;
+}
+
+.responsive-layout-mobile .view-company-media-coverage-newest-block  {
+  display: block;
+  margin: 0;
+  width: auto;
+}
+
+.responsive-layout-mobile .view-company-media-coverage-newest-block .view-content,
+.responsive-layout-mobile .view-company-media-coverage-newest-block .views-row {
+  display: block;
+}
+
+.responsive-layout-mobile .view-company-media-coverage-newest-block .views-row {
+  margin-bottom: 10px;
+  width: auto;
+}
+
+/* Press Releases */
+
+.responsive-layout-mobile .view-press-release-blocks-newest- .view-header a {
+  position: static;
+}
+
+.responsive-layout-mobile .view-press-release-blocks-newest- .views-row,
+.responsive-layout-mobile .view-company-media-coverage-newest-block .views-row {
+  float: none;
+  margin: 0 0 10px;
+  width: 94%;
+}
+
+/* Industry Recognition */
+
+.responsive-layout-mobile.page-company-awards-and-recognition .view-company-awards- .views-row {
+  height: auto;
+  width: 94%;
+}
+
+.responsive-layout-mobile.page-company-awards-and-recognition .view-company-awards- .views-row-1 .views-field-body {
+  margin: 0;
+}
+
+.responsive-layout-mobile.page-company-awards-and-recognition .view-company-awards- .views-row-1 .views-field-field-award-image {
+  float: none;
+  margin: 20px auto;
+}
+
+/* Analysts */
+.responsive-layout-mobile.page-company-analysts #region-content .views-field-field-expert-analysis-image {
+  float: none;
+}
+
+.responsive-layout-mobile.page-company-analysts #region-content .views-field-field-expert-analysis-image img {
+  display: block;  
+  margin: 10px auto; 
+}
+
+.responsive-layout-mobile.page-company-analysts #region-content .views-field-title, 
+.responsive-layout-mobile.page-company-analysts #region-content .views-field-body, 
+.responsive-layout-mobile.page-company-analysts #region-content .views-field-field-expert-analysis-source {
+  margin-left: 0;
+}
+
+/* Careers */
+
+.responsive-layout-mobile.page-node-33 #block-block-27, 
+.responsive-layout-mobile.page-node-33 #block-block-28, 
+.responsive-layout-mobile.page-node-33 #block-block-29, 
+.responsive-layout-mobile.page-node-33 #block-views-company-careers-quotes-block {
+  float: none;
+  width: 94%;
+  margin: 10px 0;
+}
+
+/* Meet our team pages */
+.responsive-layout-mobile.context-company #block-system-main {
+  margin-top: 20px;
+}
+
+.responsive-layout-mobile.context-company .view-team-member-pages .views-row {
+  float: none;
+  overflow: auto;
+  width: 94%;
+}

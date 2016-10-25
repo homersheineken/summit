@@ -1,0 +1,334 @@
+/* Custom CSS file for Resources section only */
+
+/* ---- Common blocks ---- */
+
+/* Block headers; should be added with others in fieldglass-alpha-default.css, line 312 */
+
+#region-sidebar-first #block-menu-block-16 h2,
+#region-sidebar-first #block-views-3976dc323172828f48d39f401b806034 h2 {
+  color: #222222;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+
+/* Featured resource topics and Resource Types menu blocks */
+
+#region-sidebar-first #block-menu-block-7,
+#region-sidebar-first #block-menu-block-16 {
+  background: url("../img/border-dotted-horizontal.png") no-repeat scroll center bottom transparent;
+  margin-bottom: 1.5em;
+  padding: 1em 0 2em;
+}
+
+#region-sidebar-first #block-menu-block-16 {
+  padding-bottom: 3em;
+}
+
+#region-sidebar-first #block-views-3976dc323172828f48d39f401b806034 h2, /* Past Events block */
+#region-sidebar-first #block-menu-block-7 h2,
+#region-sidebar-first #block-menu-block-16 h2 {
+  padding-left: 0;
+  border-bottom: 1px solid #222;
+}
+
+#region-sidebar-first #block-menu-block-7 ul.menu,
+#region-sidebar-first #block-menu-block-16 ul.menu {
+  border: none;
+  display: inline-block;
+  padding:  0;
+}
+
+#region-sidebar-first #block-menu-block-7 ul.menu li,
+#region-sidebar-first #block-menu-block-16 ul.menu li {
+  border-bottom: 1px solid #ddd;
+}
+
+
+#region-sidebar-first #block-menu-block-16 ul.menu li {
+  min-width: 168px;
+}
+
+#region-sidebar-first #block-menu-block-7 ul.menu li:last-child {
+  border-bottom: none;
+}
+
+#region-sidebar-first #block-menu-block-7 li a,
+#region-sidebar-first #block-menu-block-16 li a {
+  background: none;
+  border: none;
+  font-style: italic;
+  font-size: 13px;
+  padding: 8px 8px 8px 0;
+  text-decoration: none;
+}
+
+/* Code for section (tabbed) navigation is currently in megan.css, around line 243 */
+
+/* Relevant Upcoming Events (webinars & events by topic) */
+
+.page-resources .region-content .block-views {
+  border: 1px solid #cccccc;
+  box-shadow: 1px 1px 5px #bbb;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  padding: 2%;
+}
+
+.page-resources .region-content .block-views .block-title {
+  color: #a9a9a9;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.relevant-events .views-row + .views-row {
+  margin-top: 18px;
+}
+
+.relevant-events .views-field-title {
+  color: #771F37;
+  font-family: "din-condensed-web",sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.relevant-events .views-field-field-resource-event-dsplydate {
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
+.relevant-events .views-field-field-resource-event-link {
+  float: right;
+  margin-top: -1em;
+}
+
+/* ---- Resources index page ---- */
+
+.page-node-196 #region-content .region-inner {
+  overflow: auto;
+  margin-left: 1.4%;
+}
+
+.page-node-196 #region-content .region-inner section {
+  float: left;
+  height: 170px;
+  width: 42%;
+  margin: 0 2% 3.4% 1.4%;
+  padding: 4% 2.6%;
+}
+
+.page-node-196 #region-content .region-inner section:nth-child(2n) {
+  margin-right: 0;
+}
+
+.page-node-196 #zone-content-wrapper #region-content .region-inner h2 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: .2em;
+}
+
+.page-node-196 #region-content .region-inner section.block p + p {
+  margin-top: 1em;
+}
+
+.page-node-196 #region-content .region-inner section.block p > a {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Resources Views; applies to Resources by Type, Webinars, Resources by Topic */
+
+.view.resources .views-row {
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.view.resources .views-row:last-child {
+  border-bottom: 0;
+}
+
+.view.resources a {
+  text-decoration: none;
+}
+
+.view.resources .views-field {
+  margin-left: 116px;
+}
+
+.view.resources .views-field-field-resource-image {
+  float: left;
+  margin-left: 0;
+}
+
+.view.resources .views-field-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.view.resources .views-field-field-resource-type-1,
+.view.resources .views-field-field-resource-type-2,
+.view.resources .views-field-field-resource-author,
+.view.resources .views-field-field-resource-web-presenters,
+.view.resources .views-field-field-resource-web-featuring,
+.view.resources .views-field-field-resource-web-host {
+  border-bottom: 1px solid #e9e9e9;
+  font-size: 12px;
+  padding: 2px;
+  margin-bottom: 6px;
+  width: 200px;
+}
+
+.view.resources .views-field-field-resource-type-1 span,
+.view.resources .views-field-field-resource-type-2 span,
+.view.resources .views-field-field-resource-author span,
+.view.resources .views-field-field-resource-web-presenters span,
+.view.resources .views-field-field-resource-web-featuring span,
+.view.resources .views-field-field-resource-web-host span {
+  font-weight: bold;
+  float: left;
+  padding-right: 4px;
+}
+
+/* Request resource button */
+
+.view.resources .views-field-field-resource-request-link-1,
+.node-type-resource .field-name-field-resource-request-link-1,
+.node-type-webinar .field-name-field-resource-request-link-1,
+.view.resources .views-field-field-resource-request-link,
+.node-type-resource .field-name-field-resource-request-link,
+.node-type-webinar .field-name-field-resource-request-link {
+  background: #eee;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 4px 24px;
+  margin-right: 0;
+  float: left;
+
+	background: rgb(254,254,254); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(254,254,254,1) 0%, rgba(235,235,235,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,254,254,1)), color-stop(100%,rgba(235,235,235,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(235,235,235,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(235,235,235,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(235,235,235,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(235,235,235,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#ebebeb',GradientType=0 ); /* IE6-9 */
+}
+
+.view.resources .views-field-field-resource-request-link-1,
+.view.resources .views-field-field-resource-request-link {
+  float: right;
+}
+
+.node-type-webinar .no-colorbox .field-name-field-resource-request-link,
+.node-type-resource .no-colorbox .field-name-field-resource-request-link,
+.view.resources .views-field-field-resource-request-link-1 {
+  display: none;
+}
+
+.view.resources .views-field-field-resource-request-link-1 a,
+.node-type-resource .field-name-field-resource-request-link-1 a,
+.node-type-webinar .field-name-field-resource-request-link-1 a,
+.view.resources .views-field-field-resource-request-link a,
+.node-type-resource .field-name-field-resource-request-link a,
+.node-type-webinar .field-name-field-resource-request-link a {
+  color: #555;
+}
+
+.view.resources .views-field-field-resource-request-link-1 a:hover,
+.node-type-resource .field-name-field-resource-request-link-1 a:hover,
+.node-type-webinar .field-name-field-resource-request-link-1 a:hover,
+.view.resources .views-field-field-resource-request-link a:hover,
+.node-type-resource .field-name-field-resource-request-link a:hover,
+.node-type-webinar .field-name-field-resource-request-link a:hover {
+  color: #222;
+}
+
+.view.resources .views-field-body p,
+.view.resources .views-field-body .more {
+  display: inline;
+}
+
+.view.resources .views-field-body .more {
+  margin-left: .5em;
+}
+
+/* Events page */
+
+#region-content .view-id-resource_page_topic_events .views-row {
+  border: 1px solid #cccccc;
+  box-shadow: 1px 1px 5px #bbb;
+  border-radius: 4px;
+  padding: 24px 18px 32px 18px;
+  margin: 0 0 23px 0;
+}
+
+#region-content .view-id-resource_page_topic_events .views-row .views-field-title,
+#region-content .view-id-resource_page_topic_events .views-row .views-field-title span {
+  font-size: 22px;
+  color: #771f37;
+  line-height: 1.3em;
+  font-family: "din-condensed-web", sans-serif;
+}
+
+#region-content .view-id-resource_page_topic_events .views-row .views-field-field-resource-event-dsplydate {
+  font-size: 16px;
+  color: #262626;
+  padding-bottom: 22px;
+}
+
+#region-content .view-id-resource_page_topic_events .views-row .views-field-field-resource-event-link {
+  font-size: 14px;
+  padding-top: 28px;
+}
+
+
+/* Events summary block */
+#region-content .block-block-18 .block-inner {
+  padding-bottom: 35px;
+} 
+
+#region-content .block-block-18 .block-inner .content {
+  font-size: 14px;
+}
+
+/* Past Events block */
+#region-sidebar-first #block-views-3976dc323172828f48d39f401b806034 {
+  padding: 1em 0;
+  background: url(../img/border-dotted-horizontal.png) center bottom no-repeat;
+  padding-bottom: 2em;
+  margin-bottom: 1em;
+}
+
+#region-sidebar-first #block-views-3976dc323172828f48d39f401b806034 .block-inner {
+}
+
+#region-sidebar-first #block-views-3976dc323172828f48d39f401b806034 h2 { 
+  padding-left: 0;
+}
+
+#region-sidebar-first #block-views-3976dc323172828f48d39f401b806034 .views-row {
+  padding-bottom: 20px;
+}
+
+#region-sidebar-first #block-views-3976dc323172828f48d39f401b806034 .views-row-last {
+  padding-bottom: 0;
+}
+
+#region-sidebar-first #block-views-3976dc323172828f48d39f401b806034 .views-row .field-content {
+  color: #ababab;
+  font-size: 14px;
+  line-height: 1.3em;
+}
+
+#region-sidebar-first #block-views-3976dc323172828f48d39f401b806034 .views-row .views-field-title {
+  font-weight: bold;
+}
+
+
+/* Webinar fix */
+body.node-type-webinar .links .node-readmore {
+  display: none;
+}

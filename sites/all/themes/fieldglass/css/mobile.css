@@ -1,0 +1,464 @@
+/* css for iphone/android phones (small screens) */
+
+
+.responsive-layout-mobile #block-menu-block-14  {
+  margin-top: 0;
+}
+
+.responsive-layout-mobile #block-menu-block-14 ul.menu {
+  float: none;
+}
+
+
+/* turn off megamenu sections */
+
+.responsive-layout-mobile #zone-menu-wrapper .view-megamenu {
+  display: none !important;
+}
+
+.responsive-layout-mobile #zone-menu li {
+  float: left;
+  display: block;
+  width: 50%;
+}
+
+.responsive-layout-mobile #zone-menu li.menu-217 {
+  width: 100%;
+}
+
+.responsive-layout-mobile #zone-menu li a{
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.responsive-layout-mobile #zone-menu li.menu-217 a:focus {
+  background-image: url(../img/main-menu/why.png); }
+.responsive-layout-mobile #zone-menu li.menu-221 a:focus {
+  background-image: url(../img/main-menu/solutions.png); }
+.responsive-layout-mobile #zone-menu li.menu-509 a:focus {
+  background-image: url(../img/main-menu/resources.png); }
+.responsive-layout-mobile #zone-menu li.menu-299 a:focus {
+  background-image: url(../img/main-menu/company.png); }
+.responsive-layout-mobile #zone-menu li.menu-310 a:focus {
+  background-image: url(../img/main-menu/community.png); }
+
+/* turn off blocks on home page */
+.responsive-layout-mobile.front .block-front-page-featured-award-block,
+.responsive-layout-mobile.front .region-postscript-first,
+.responsive-layout-mobile .block-block-19, /* Fuse block */
+.responsive-layout-mobile .block-fieldglass-tweets-block,
+.responsive-layout-mobile .block-views-fieldglass-blog-block-1,
+/* .responsive-layout-mobile .block-front-page-meet-our-team-block, */
+.responsive-layout-mobile .block-block-17, /* By the Numbers */
+.responsive-layout-mobile .block-front-page-carousel-block,
+.responsive-layout-mobile .block-views-front-page-by-the-numbers-block {
+  display: none !important;
+}
+
+/* Front page */
+.responsive-layout-mobile.front #zone-content-wrapper {
+  padding-top: 0;
+}
+
+.responsive-layout-mobile.front #zone-content-wrapper #region-content .block {
+  padding-bottom: 0.5em;
+}
+
+.responsive-layout-mobile .block-15 .left,
+.responsive-layout-mobile .block-15 .right {
+  width: 90% !important;
+}
+
+.responsive-layout-mobile .block-15 .right {
+  border-top: 1px solid #DDD;
+  padding-top: 1em;
+  background: none !important;
+  padding-left: 0 !important;
+}
+
+.responsive-layout-mobile .block-15 li {
+  margin-left: 0 !important;
+}
+
+.responsive-layout-mobile .block-15 .left li {
+  margin-right: 5px !important;
+}
+
+.responsive-layout-mobile .view-front-page-featured-award .views-field-body {
+  width: 80%;
+}
+.responsive-layout-mobile .view-front-page-featured-award .views-field-body p {
+  margin-bottom: 10px !important;
+}
+
+.responsive-layout-mobile .view-front-page-featured-award .views-field-field-award-image {
+  float: left !important;
+  clear: left;
+  margin-top: 0 !important;
+}
+
+.responsive-layout-mobile #zone-footer-wrapper #block-block-1 #copyright {
+  margin-top: 1em;
+  margin-bottom: 2.5em;
+  line-height: 1.4em;
+}
+
+.responsive-layout-mobile .block-2 {
+  border-top: 1px solid #DDD;
+  padding-top: 1em;
+}
+
+.responsive-layout-mobile #zone-footer-wrapper #block-block-2 img#skyscrapers {
+  margin-bottom: 1em;
+}
+
+.responsive-layout-mobile #zone-footer-wrapper #block-block-3 {
+  border-top: 1px solid #DDD;
+  margin-top: 1em;
+}
+
+.responsive-layout-mobile #zone-footer-wrapper #block-block-3 p#social {
+  margin-bottom: 1.5em;
+}
+
+.responsive-layout-mobile #zone-footer-wrapper #block-block-3 p.links {
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 1.5em;
+  margin-bottom: 1em;
+}
+
+
+/* Non-home page, general */
+.responsive-layout-mobile #region-content h2 {
+  margin-top: 1.2em;
+}
+
+.responsive-layout-mobile .block-43,
+.responsive-layout-mobile .solutions-block,
+.responsive-layout-mobile #block-views-fieldglass-blog-block,
+.responsive-layout-mobile #block-bean-solutions-landing-page,
+.responsive-layout-mobile .block-33,
+.responsive-layout-mobile .did-you-know {
+  display: none !important;
+}
+
+/* Why Fieldglass */
+.responsive-layout-mobile .view-why-fieldglass-questions .views-row {
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+/* Company pages */
+.responsive-layout-mobile.page-node-41 #block-views-team-member-blocks-block,
+.responsive-layout-mobile.page-node-41 #block-views-front-page-meet-our-team-block {
+  width: 95%;
+}
+
+/* Community page */
+
+.responsive-layout-mobile.page-node-42 .container-12 .grid-6 {
+}
+
+.responsive-layout-mobile.page-node-42 #region-sidebar-first .region-sidebar-first-inner {
+  padding: 0 0 0 0 !important;
+}
+
+.responsive-layout-mobile .block-block-24 .fb_iframe_widget iframe {
+  width: 250px !important;
+}
+
+/* Search pages */
+.responsive-layout-mobile .block-39 {
+  display: none !important;
+}
+
+.responsive-layout-mobile .page-search .block-main .views-field-url a {
+  width: 80%;
+}
+
+
+/* Contact page */
+
+.responsive-layout-mobile.context-contact #region-content {
+  width: 94%;
+}
+
+.responsive-layout-mobile.context-contact .contact-block {
+  width: 80%;
+  background: url(../img/border-dotted-horizontal.png) center bottom no-repeat;
+}
+
+.responsive-layout-mobile.context-contact .contact-block + .contact-block {
+  border-left: 0 !important;
+  clear: left;
+  background: 0;
+}
+
+.responsive-layout-mobile.context-contact .contact-block + .contact-block .helpdesk {
+  margin-top: 0 !important;
+}
+
+.responsive-layout-mobile.context-contact .block-32 {
+  width: 90%;
+}
+
+.responsive-layout-mobile.context-contact #region-content h2 {
+  margin-top: 0;
+}
+
+.responsive-layout-mobile.context-contact iframe {
+  width: 100%;
+}
+
+/* Hiding sidebar blocks */
+
+.responsive-layout-mobile .region-sidebar-first #block-views-flickr-feed-block {
+  display: none;
+}
+
+/* Resources section */
+
+.responsive-layout-mobile #block-views-front-page-carousel-block-1,
+.responsive-layout-mobile #block-views-front-page-carousel-block-2 {
+  display: none;
+}
+
+.responsive-layout-mobile.page-node-196 #region-content .region-inner {
+  overflow: visible;
+}
+
+.responsive-layout-mobile.page-node-196 #region-content .region-inner section {
+  width: 90%;
+  height: auto;
+}
+
+.responsive-layout-mobile.page-node-196 #region-sidebar-first {
+  clear: left;
+}
+
+.responsive-layout-mobile.page-node-196 #region-content .region-inner section h2 {
+  margin-top: 0;
+}
+
+/* Tabbed navigation */
+
+.responsive-layout-mobile.page-resources #zone-preface .region,
+.responsive-layout-mobile.page-company-awards-and-recognition  #zone-preface .region,
+.responsive-layout-mobile.page-company-analysts #zone-preface .region,
+
+.responsive-layout-mobile.page-resources #zone-preface #region-preface-first .region-inner,
+.responsive-layout-mobile.page-company-awards-and-recognition #zone-preface #region-preface-first .region-inner,
+.responsive-layout-mobile.page-company-analysts #zone-preface #region-preface-first .region-inner {
+  width: 100%;
+}
+
+.responsive-layout-mobile #block-menu-block-9 ul,
+.responsive-layout-mobile #block-menu-block-10 ul,
+.responsive-layout-mobile #block-menu-block-15 ul {
+  text-align: center;
+  border-top: 1px solid #a9a9a9;
+}
+
+.responsive-layout-mobile #block-menu-block-9 ul li.leaf,
+.responsive-layout-mobile #block-menu-block-10 ul li.leaf,
+.responsive-layout-mobile #block-menu-block-15 ul li.leaf {
+  display: inline-block;
+  float: none;
+}
+
+.responsive-layout-mobile #block-menu-block-9 ul.menu a,
+.responsive-layout-mobile #block-menu-block-10 ul.menu a,
+.responsive-layout-mobile #block-menu-block-15 ul.menu a {
+  border: none;
+  font-size: 1.2em;
+  margin: 0;
+  padding: .75em 1em;
+}
+
+.responsive-layout-mobile #block-menu-block-9 ul.menu a.active,
+.responsive-layout-mobile #block-menu-block-10 ul.menu a.active,
+.responsive-layout-mobile #block-menu-block-15 ul.menu a.active {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.responsive-layout-mobile .view.resources .views-row {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.responsive-layout-mobile .view.resources .views-field {
+  margin-left: 0;
+}
+
+.responsive-layout-mobile .view.resources .views-field-field-resource-image {
+  display: none;
+}
+
+.responsive-layout-mobile .view.resources .views-field-field-resource-request-link-1,
+.responsive-layout-mobile .view.resources .views-field-field-resource-request-link {
+  float: left;
+  margin-bottom: 10px;
+}
+
+.responsive-layout-mobile .view.resources .views-field-field-resource-type-1 {
+  clear: left;
+}
+
+/* Events */
+
+.responsive-layout-mobile #region-content .view-id-resource_page_topic_events .views-row .views-field-title, 
+.responsive-layout-mobile #region-content .view-id-resource_page_topic_events .views-row .views-field-title span {
+  font-size: 18px;
+}
+
+.responsive-layout-mobile #region-content .view-id-resource_page_topic_events .views-row .views-field-field-resource-event-dsplydate {
+  font-size: 1em;
+}
+
+.responsive-layout-mobile #region-content .view-id-resource_page_topic_events .views-row .views-field-field-resource-event-link {
+  padding-top: 0;
+}
+
+/* Media Coverage */
+
+.responsive-layout-mobile.page-company-press-releases #region-content, 
+.responsive-layout-mobile.page-company-media-coverage #region-content {
+  margin: 20px 10px;
+}
+
+.responsive-layout-mobile .view-company-media-coverage-newest-block  {
+  display: block;
+  margin: 0;
+  width: auto;
+}
+
+.responsive-layout-mobile .view-company-media-coverage-newest-block .view-content,
+.responsive-layout-mobile .view-company-media-coverage-newest-block .views-row {
+  display: block;
+}
+
+.responsive-layout-mobile .view-company-media-coverage-newest-block .views-row {
+  margin-bottom: 10px;
+  width: auto;
+}
+
+/* Press Releases */
+
+.responsive-layout-mobile .view-press-release-blocks-newest- .view-header a {
+  position: static;
+}
+
+.responsive-layout-mobile.page-node-46 .node-basic-page .field-name-body .container-12 div,
+.responsive-layout-mobile .view-press-release-blocks-newest- .views-row,
+.responsive-layout-mobile .view-company-media-coverage-newest-block .views-row {
+  float: none !important;
+  margin: 0 0 10px !important;
+  width: 94% !important;
+}
+
+/* Industry Recognition */
+
+.responsive-layout-mobile.page-company-awards-and-recognition .view-company-awards- .views-row {
+  height: auto;
+  width: 94%;
+}
+
+.responsive-layout-mobile.page-company-awards-and-recognition .view-company-awards- .views-row-1 .views-field-body {
+  margin: 0;
+}
+
+.responsive-layout-mobile.page-company-awards-and-recognition .view-company-awards- .views-row-1 .views-field-field-award-image {
+  float: none;
+  margin: 20px auto;
+}
+
+/* Analysts */
+.responsive-layout-mobile.page-company-analysts #region-content .views-field-field-expert-analysis-image {
+  float: none;
+}
+
+.responsive-layout-mobile.page-company-analysts #region-content .views-field-field-expert-analysis-image img {
+  display: block;  
+  margin: 10px auto; 
+}
+
+.responsive-layout-mobile.page-company-analysts #region-content .views-field-title, 
+.responsive-layout-mobile.page-company-analysts #region-content .views-field-body, 
+.responsive-layout-mobile.page-company-analysts #region-content .views-field-field-expert-analysis-source {
+  margin-left: 0;
+}
+
+/* Careers */
+
+.responsive-layout-mobile.page-node-33 #block-block-27, 
+.responsive-layout-mobile.page-node-33 #block-block-28, 
+.responsive-layout-mobile.page-node-33 #block-block-29, 
+.responsive-layout-mobile.page-node-33 #block-views-company-careers-quotes-block {
+  float: none;
+  width: 94%;
+  margin: 10px 0;
+}
+
+/* Meet our team pages */
+.responsive-layout-mobile.context-company #block-system-main {
+  margin-top: 20px;
+}
+
+.responsive-layout-mobile.context-company .view-team-member-pages .views-row {
+  float: none;
+  overflow: auto;
+  width: 94%;
+}
+
+.responsive-layout-mobile.context-company .node-team-member .field-name-field-team-profile-pic {
+  width: 110px;
+}
+
+.responsive-layout-mobile.context-company .node-team-member .field-name-body {
+  width: 95%;
+  float: none;
+}
+
+.responsive-layout-mobile.context-company .view-executive-team-members .pager-prev {
+  left: 80%;
+}
+
+.responsive-layout-mobile.context-company .view-executive-team-members .pager-next {
+  left: 85%;
+}
+
+.responsive-layout-mobile.context-company .view-executive-team-members .view-content {
+  width: 98% !important;
+}
+
+.responsive-layout-mobile.context-company .view-executive-team-members .view-content {
+  height: 1100px !important;
+}
+
+.responsive-layout-mobile.context-company .view-executive-team-members .views-field-body {
+  float: none !important;
+}
+
+.responsive-layout-mobile.context-company .view-executive-team-members .views-field-field-team-profile-pic {
+  width: 100px;
+  margin-right: 20px;
+}
+
+
+
+/* disable Resources colorboxes / enable basic links */
+.responsive-layout-mobile.node-type-webinar .field-name-field-resource-request-link,
+.responsive-layout-mobile.node-type-resource .field-name-field-resource-request-link,
+.responsive-layout-mobile .view-resource-page-webinars .views-field-field-resource-request-link,
+.responsive-layout-mobile .view-resource-pages-by-topic .views-field-field-resource-request-link,
+.responsive-layout-mobile .view-resource-pages-by-type .views-field-field-resource-request-link {
+  display: none !important;
+}
+
+.responsive-layout-mobile.node-type-webinar .no-colorbox .field-name-field-resource-request-link,
+.responsive-layout-mobile.node-type-resource .no-colorbox .field-name-field-resource-request-link,
+.responsive-layout-mobile .view.resources .views-field-field-resource-request-link-1 {
+  display: block !important;
+}
