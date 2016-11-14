@@ -1,0 +1,808 @@
+@charset "UTF-8";
+/* ! DO NOT EDIT THE GLOBAL.CSS FILE! Only edit global.scss, or your styles will be overwritten. */
+/* Variables, extends, and mixins */
+/* line 12, summit_wide-global.scss */
+
+@font-face {
+  font-family: BentonSans;
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansBold/Benton-Sans-Bold_WesternEurope/90a77a6d-79fe-4845-96a8-b6dadd7d52a4-2.eot");
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansBold/Benton-Sans-Bold_WesternEurope/90a77a6d-79fe-4845-96a8-b6dadd7d52a4-2.eot?") format("embedded-opentype"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansBold/Benton-Sans-Bold_WesternEurope/90a77a6d-79fe-4845-96a8-b6dadd7d52a4-3.woff") format("woff"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansBold/Benton-Sans-Bold_WesternEurope/90a77a6d-79fe-4845-96a8-b6dadd7d52a4-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: BentonSans;
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansBoldItalic/Benton-Sans-Bold_WesternEurope/88038764-da74-4542-9b5a-18eed1edc9a6-2.eot");
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansBoldItalic/Benton-Sans-Bold_WesternEurope/88038764-da74-4542-9b5a-18eed1edc9a6-2.eot?") format("embedded-opentype"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansBoldItalic/Benton-Sans-Bold_WesternEurope/88038764-da74-4542-9b5a-18eed1edc9a6-3.woff") format("woff"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansBoldItalic/Benton-Sans-Bold_WesternEurope/88038764-da74-4542-9b5a-18eed1edc9a6-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: BentonSansLight;
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansLight/Benton-Sans-Bold_WesternEurope/56fead03-cbb4-48e8-bc4c-512c795fc3c9-2.eot");
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansLight/Benton-Sans-Bold_WesternEurope/56fead03-cbb4-48e8-bc4c-512c795fc3c9-2.eot?") format("embedded-opentype"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansLight/Benton-Sans-Bold_WesternEurope/56fead03-cbb4-48e8-bc4c-512c795fc3c9-3.woff") format("woff"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansLight/Benton-Sans-Bold_WesternEurope/56fead03-cbb4-48e8-bc4c-512c795fc3c9-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: BentonSansLight;
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansLightItalic/Benton-Sans-Bold_WesternEurope/fabb90e9-f640-40ac-9ed0-c89506af7e10-2.eot");
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansLightItalic/Benton-Sans-Bold_WesternEurope/fabb90e9-f640-40ac-9ed0-c89506af7e10-2.eot?") format("embedded-opentype"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansLightItalic/Benton-Sans-Bold_WesternEurope/fabb90e9-f640-40ac-9ed0-c89506af7e10-3.woff") format("woff"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansLightItalic/Benton-Sans-Bold_WesternEurope/fabb90e9-f640-40ac-9ed0-c89506af7e10-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: BentonSansMedium;
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansMedium/Benton-Sans-Medium_WesternEurope/71592d14-e584-4c00-bbb9-8f1da5b98bf9-2.eot");
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansMedium/Benton-Sans-Medium_WesternEurope/71592d14-e584-4c00-bbb9-8f1da5b98bf9-2.eot?") format("embedded-opentype"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansMedium/Benton-Sans-Medium_WesternEurope/71592d14-e584-4c00-bbb9-8f1da5b98bf9-3.woff") format("woff"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansMedium/Benton-Sans-Medium_WesternEurope/71592d14-e584-4c00-bbb9-8f1da5b98bf9-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: BentonSansMedium;
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansMediumItalic/Benton-Sans-Bold_WesternEurope/f19f1a7b-0faf-413d-af6c-1766a29eb75c-2.eot");
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansMediumItalic/Benton-Sans-Bold_WesternEurope/f19f1a7b-0faf-413d-af6c-1766a29eb75c-2.eot?") format("embedded-opentype"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansMediumItalic/Benton-Sans-Bold_WesternEurope/f19f1a7b-0faf-413d-af6c-1766a29eb75c-3.woff") format("woff"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansMediumItalic/Benton-Sans-Bold_WesternEurope/f19f1a7b-0faf-413d-af6c-1766a29eb75c-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: BentonSansRE;
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansRE/Benton-Sans-Bold_WesternEurope/42a312e3-224b-4b82-8ee3-d9d077262289-2.eot");
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansRE/Benton-Sans-Bold_WesternEurope/42a312e3-224b-4b82-8ee3-d9d077262289-2.eot?") format("embedded-opentype"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansRE/Benton-Sans-Bold_WesternEurope/42a312e3-224b-4b82-8ee3-d9d077262289-3.woff") format("woff"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansRE/Benton-Sans-Bold_WesternEurope/42a312e3-224b-4b82-8ee3-d9d077262289-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}       
+@font-face {
+  font-family: BentonSans;
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansRegular/Benton-Sans-Regular_WesternEurope/b36a47f4-8876-40cb-b31a-d02f16a88d78-2.eot");
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansRegular/Benton-Sans-Regular_WesternEurope/b36a47f4-8876-40cb-b31a-d02f16a88d78-2.eot?") format("embedded-opentype"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansRegular/Benton-Sans-Regular_WesternEurope/b36a47f4-8876-40cb-b31a-d02f16a88d78-3.woff") format("woff"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansRegular/Benton-Sans-Regular_WesternEurope/b36a47f4-8876-40cb-b31a-d02f16a88d78-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: BentonSans;
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansRegularItalic/Benton-Sans-Regular-Italic_WesternEurope/cee0931f-0f2a-40c1-bbcc-89e2816df749-2.eot");
+  src: url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansRegularItalic/Benton-Sans-Regular-Italic_WesternEurope/cee0931f-0f2a-40c1-bbcc-89e2816df749-2.eot?") format("embedded-opentype"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansRegularItalic/Benton-Sans-Regular-Italic_WesternEurope/cee0931f-0f2a-40c1-bbcc-89e2816df749-3.woff") format("woff"),
+       url("/sites/all/themes/fieldglass_summit/css/BentonSans_Web/BentonSansRegularItalic/Benton-Sans-Regular-Italic_WesternEuropee/cee0931f-0f2a-40c1-bbcc-89e2816df749-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+.block-system-main-menu .block-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* line 16, summit_wide-global.scss */
+.block-agenda-block-2 .field-name-field-agenda-session-description, .block-agenda-block-2 .field-collection-view-links, .view-id-faq .views-slideshow-controls-top {
+  *zoom: 1; }
+  /* line 19, summit_wide-global.scss */
+  .block-agenda-block-2 .field-name-field-agenda-session-description:before, .block-agenda-block-2 .field-collection-view-links:before, .view-id-faq .views-slideshow-controls-top:before, .block-agenda-block-2 .field-name-field-agenda-session-description:after, .block-agenda-block-2 .field-collection-view-links:after, .view-id-faq .views-slideshow-controls-top:after {
+    content: " ";
+    display: table;
+    clear: both; }
+
+/* line 28, summit_wide-global.scss */
+#vscc_controls_previous_frontpage_slideshow-block a, #vscc_controls_next_frontpage_slideshow-block a, #vscc_controls_previous_photos_of_past_summits-block_1 a, #vscc_controls_next_photos_of_past_summits-block_1 a, .block-frontpage-slideshow-block .views-slideshow-pager-field-item, .block-learn-more-block .views-slideshow-pager-field-item {
+  display: block;
+  overflow: hidden;
+  background: top left no-repeat;
+  text-indent: 100%;
+  white-space: nowrap; }
+
+/* line 36, summit_wide-global.scss */
+.block-summit-features-block .views-row, .block-photos-of-past-summits-block-1 .views-row {
+  box-sizing: border-box;
+  width: 23%;
+  float: left;
+  margin: 0 1%; }
+
+/* line 43, summit_wide-global.scss */
+.block-agenda-block-2 .field-collection-view-links li a, .block-travel-tips-block .block-title, .view-id-faq .views_slideshow_pager_field_item,  .page-node-6 .block-system a[href*=".docx"] {
+  color: #606060;
+  font-size: 18px;
+  line-height: 40px;
+  padding: 0 15px;
+
+  border: 1px solid #bebebe;
+  text-align: center;
+  margin-right: 5px;
+  margin-left: 1px;
+  display: block;
+  float: left;
+   }
+  /* line 76, summit_wide-global.scss */
+  .block-agenda-block-2 .field-collection-view-links li a:hover, .block-travel-tips-block .block-title:hover, .view-id-faq .views_slideshow_pager_field_item:hover,  .page-node-6 .block-system a[href*=".docx"]:hover, .block-agenda-block-2 .field-collection-view-links li a:focus, .block-travel-tips-block .block-title:focus, .view-id-faq .views_slideshow_pager_field_item:focus, .register-button:focus, .page-node-6 .block-system a[href*=".docx"]:focus, .block-agenda-block-2 .field-collection-view-links li a.active, .block-travel-tips-block .active.block-title, .view-id-faq .active.views_slideshow_pager_field_item, .active.register-button, .page-node-6 .block-system a.active[href*=".docx"] {
+    background: #2f96d0;
+    border-color: #2f96d0;
+    color: #ffffff; }
+
+/* line 83, summit_wide-global.scss */
+.block-agenda-block-2 .field-collection-view-links li a, .block-travel-tips-block .block-title, .view-id-faq .views_slideshow_pager_field_item {
+  padding: 0 9px;
+  line-height: 2;
+  font-size: 1em;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px; }
+
+/* line 93, summit_wide-global.scss */
+.wordbubble {
+  position: relative;
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -webkit-box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+/* line 106, summit_wide-global.scss */
+.block-summit-features-block .views-row {
+  background: #ffffff;
+  padding-bottom: 20px;
+  -webkit-box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+/* line 114, summit_wide-global.scss */
+.block-quotes-block-1 .views-row, .view-quotes .views-row {
+  padding: 10px 0 0 68px;
+  margin: 0;
+  position: relative;
+  vertical-align: baseline;
+  font-style: italic;
+  font-family: Georgia, serif;
+  font-size: 1.3em; }
+  /* line 123, summit_wide-global.scss */
+  .block-quotes-block-1 .views-row p, .view-quotes .views-row p {
+    margin: 0 0 0.5em; 
+    font-family:BentonSans;}
+  /* line 127, summit_wide-global.scss */
+  .block-quotes-block-1 .views-row:before, .view-quotes .views-row:before {
+    content: '\201C';
+    font-size: 6em;
+    line-height: 1em;
+    display: block;
+    padding: 0;
+    position: absolute;
+    top: -10px;
+    left: 0; }
+
+/* line 139, summit_wide-global.scss */
+.block-quotes-block-1 .views-field-field-quote-speaker .field-content, .view-quotes .views-field-field-quote-speaker .field-content {
+  font-size: 0.8em;
+  color: #9e9e9e;
+  text-align: right; }
+  /* line 144, summit_wide-global.scss */
+  .block-quotes-block-1 .views-field-field-quote-speaker .field-content:before, .view-quotes .views-field-field-quote-speaker .field-content:before {
+    content: "— "; }
+
+/* line 149, summit_wide-global.scss */
+.region-sidebar-first .content ul, .block-block-3 ul {
+  list-style: none; }
+  /* line 152, summit_wide-global.scss */
+  .region-sidebar-first .content ul li, .block-block-3 ul li {
+    padding-left: 20px;
+    background: url(../img/bullet.png) left center no-repeat;
+    margin-bottom: 0.25em; }
+
+/* line 161, summit_wide-global.scss */
+.block-summit-features-block .block-title, .region-content #page-title,
+.region-content h3, #zone-header-wrapper .block-title, .block-photos-of-past-summits-block-1 .block-title, .zone-footer .block-title, .region-sidebar-first .block-title, .block-video-block .views-field-title,
+.block-video-block-1 .views-field-title,
+.block-video-block-2 .views-field-title, .block-agenda-block-2 .views-table caption, .view-id-faq .field-name-field-faq-category-question {
+  color: #353535;
+  margin-bottom: 0.5em;
+  font-family: "din-condensed-web", sans-serif;
+  font-weight: normal;
+  line-height: 1.2; }
+
+/* line 169, summit_wide-global.scss */
+.block-summit-features-block .block-title {
+  font-size: 3.7em; }
+
+/* line 174, summit_wide-global.scss */
+.region-content #page-title,
+.region-content h3, #zone-header-wrapper .block-title, .block-photos-of-past-summits-block-1 .block-title, .zone-footer .block-title {
+  font-size: 1.75em; }
+
+/* line 179, summit_wide-global.scss */
+.region-sidebar-first .block-title, .block-video-block .views-field-title,
+.block-video-block-1 .views-field-title,
+.block-video-block-2 .views-field-title, .block-agenda-block-2 .views-table caption, .view-id-faq .field-name-field-faq-category-question {
+  font-size: 1.5em; }
+
+/* line 184, summit_wide-global.scss */
+.block-summit-features-block .views-field-title, .block-block-3 .subhead {
+  color: #353535;
+  font-family: Georgia, serif;
+  font-size: 1.6em;
+  font-style: italic; }
+  /* line 189, summit_wide-global.scss */
+  .block-summit-features-block .views-field-title a, .block-block-3 .subhead a {
+    color: inherit; }
+
+/* line 194, summit_wide-global.scss */
+.block-1 img {
+  margin-right: 20px; }
+
+/* Repeated asset styles */
+/* line 200, summit_wide-global.scss */
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* line 205, summit_wide-global.scss */
+iframe {
+  max-width: 100%; }
+
+/* Page */
+/* line 215, summit_wide-global.scss */
+body {
+  line-height: 1.5; }
+
+/* line 219, summit_wide-global.scss */
+#page {
+  position: relative; }
+
+/* line 227, summit_wide-global.scss */
+.front #zone-header-wrapper,
+.front #zone-content-wrapper,
+#zone-header-wrapper,
+#zone-content-wrapper {
+  padding: 25px 0; }
+
+/* line 234, summit_wide-global.scss */
+.front #page-title {
+  display: none; }
+
+/* line 241, summit_wide-global.scss */
+.front #zone-content-wrapper #region-content .block,
+#zone-content-wrapper #region-content .block {
+  padding: 0;
+  margin-bottom: 2em; }
+
+/* line 250, summit_wide-global.scss */
+.region-content #page-title,
+.region-content h3 {
+  margin: 1.5em 0 1em; }
+/* line 254, summit_wide-global.scss */
+.region-content #page-title {
+  margin-top: 0; }
+
+/* Regions */
+/* Header (Branding and menu regions) */
+/* line 263, summit_wide-global.scss */
+.zone-user {
+  margin: 0;
+  position: relative; }
+
+@media (max-width: 440px) {
+  /* line 272, summit_wide-global.scss */
+  .branding-data {
+    padding-bottom: 60px; } }
+
+/* line 280, summit_wide-global.scss */
+#region-user-second {
+  position: absolute;
+  width: auto;
+  z-index: 205; 
+}
+  @media (max-width: 440px) {
+    /* line 280, summit_wide-global.scss */
+    #region-user-second {
+      top: 89px;
+      left: 0;
+      right: 0; } }
+  @media (max-width: 440px) {
+    /* line 292, summit_wide-global.scss */
+    #region-user-second .register-button {
+      margin-left: 18px; } }
+
+/* Menu */
+/* line 301, summit_wide-global.scss */
+.block-system-main-menu {
+  margin-left: 10%;
+  margin-top: 8%;
+  width: 100%; }
+  /* line 310, summit_wide-global.scss */
+  .block-system-main-menu ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'BentonSans-Book', 'BentonSans Book', 'BentonSans';}
+  /* line 315, summit_wide-global.scss */
+  .block-system-main-menu li {
+    list-style-type: none !important;
+    list-style-image: none !important;
+    margin: 0 0 0 30px;
+    float: left;
+    position: relative; }
+  /* line 323, summit_wide-global.scss */
+  .block-system-main-menu a {
+    padding: 7px 10px;
+    display: block;
+    white-space: nowrap;
+    float: none;
+    color: #666666;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none; }
+    /* line 336, summit_wide-global.scss */
+    .block-system-main-menu a:hover, .block-system-main-menu a:focus, .block-system-main-menu a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+/* Header regions */
+/* line 346, summit_wide-global.scss */
+#zone-header-wrapper {
+  background: #f2f2f2;
+  border-bottom: 1px solid #dddddd;
+  display:none; }
+  /* line 355, summit_wide-global.scss */
+  #zone-header-wrapper p {
+    margin-bottom: 20px; }
+
+/* line 360, summit_wide-global.scss */
+#zone-menu-wrapper {
+  padding: 0.5em 0; }
+  /* line 363, summit_wide-global.scss */
+  #zone-menu-wrapper .breadcrumb {
+    padding: 0; }
+
+/* Sidebar regions */
+/* line 379, summit_wide-global.scss */
+.region-sidebar-first p {
+  margin-bottom: 1em; }
+
+/* Block */
+/* Front page */
+/* line 400, summit_wide-global.scss */
+.block-frontpage-slideshow-block [class*=skin], .block-photos-of-past-summits-block-1 [class*=skin] {
+  position: relative; }
+
+/* line 405, summit_wide-global.scss */
+#vscc_controls_previous_frontpage_slideshow-block a, #vscc_controls_next_frontpage_slideshow-block a, #vscc_controls_previous_photos_of_past_summits-block_1 a, #vscc_controls_next_photos_of_past_summits-block_1 a {
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  position: absolute;
+  top: 50%;
+  margin-top: -24px;
+  width: 57px;
+  height: 47px;
+  z-index: 100;
+  opacity: 0; }
+
+/* line 421, summit_wide-global.scss */
+#vscc_controls_previous_frontpage_slideshow-block a, #vscc_controls_previous_photos_of_past_summits-block_1 a {
+  left: 0;
+  background-image: url(../img/btnPrevious.png); }
+
+/* line 425, summit_wide-global.scss */
+#vscc_controls_next_frontpage_slideshow-block a, #vscc_controls_next_photos_of_past_summits-block_1 a {
+  right: 0;
+  background-image: url(../img/btnNext.png); }
+
+/* line 434, summit_wide-global.scss */
+.block-frontpage-slideshow-block .views-slideshow-pager-fields, .block-learn-more-block .views-slideshow-pager-fields {
+  width: 100%;
+  z-index: 100;
+  text-align: center;
+  cursor: pointer; }
+/* line 441, summit_wide-global.scss */
+.block-frontpage-slideshow-block .views-slideshow-pager-field-item, .block-learn-more-block .views-slideshow-pager-field-item {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background-image: url(../img/slider.png); }
+  /* line 447, summit_wide-global.scss */
+  .block-frontpage-slideshow-block .views-slideshow-pager-field-item.active, .block-learn-more-block .views-slideshow-pager-field-item.active {
+    background-position: left bottom; }
+
+/* line 463, summit_wide-global.scss */
+[class*=skin]:hover #vscc_controls_previous_frontpage_slideshow-block a, [class*=skin]:focus #vscc_controls_previous_frontpage_slideshow-block a {
+  opacity: 1; }
+
+/* line 471, summit_wide-global.scss */
+[class*=skin]:hover #vscc_controls_next_frontpage_slideshow-block a, [class*=skin]:focus #vscc_controls_next_frontpage_slideshow-block a {
+  opacity: 1; }
+
+/* line 485, summit_wide-global.scss */
+[class*=skin]:hover #vscc_controls_previous_photos_of_past_summits-block_1 a, [class*=skin]:focus #vscc_controls_previous_photos_of_past_summits-block_1 a {
+  opacity: 1; }
+
+/* line 493, summit_wide-global.scss */
+[class*=skin]:hover #vscc_controls_next_photos_of_past_summits-block_1 a, [class*=skin]:focus #vscc_controls_next_photos_of_past_summits-block_1 a {
+  opacity: 1; }
+
+/* line 509, summit_wide-global.scss */
+.block-summit-features-block {
+  margin-bottom: 3em; }
+  /* line 512, summit_wide-global.scss */
+  .block-summit-features-block .block-title {
+    text-align: center; }
+  @media (max-width: 550px) {
+    /* line 517, summit_wide-global.scss */
+    .block-summit-features-block .views-row {
+      width: 100%;
+      margin: 1em 0;
+      float: none; } }
+  /* line 527, summit_wide-global.scss */
+  .block-summit-features-block .views-field-title {
+    border-bottom: 1px #f1eeee solid;
+    margin: 0 0.5em;
+    padding: 0.8em 0 0.5em; }
+  /* line 533, summit_wide-global.scss */
+  .block-summit-features-block .views-field-body {
+    padding: 0.5em 0;
+    margin: 0 0.5em; }
+  /* line 538, summit_wide-global.scss */
+  .block-summit-features-block .views-field-field-summit-feature-image-text {
+    display: none; }
+
+/* line 544, summit_wide-global.scss */
+.block-quotes-block-1 {
+  border: #dddddd solid;
+  border-width: 1px 0; }
+  /* line 549, summit_wide-global.scss */
+  .block-quotes-block-1 .views-row {
+    margin: 1.5em 0; }
+
+/* line 564, summit_wide-global.scss */
+.block-photos-of-past-summits-block-1 .views-row {
+  margin: 0 1%; }
+  @media (max-width: 530px) {
+    /* line 564, summit_wide-global.scss */
+    .block-photos-of-past-summits-block-1 .views-row {
+      width: 48%;
+      margin-bottom: 2%;
+      width: 100%; } }
+
+/* line 575, summit_wide-global.scss */
+#views_slideshow_cycle_teaser_section_photos_of_past_summits-block_1 {
+  width: 100% !important; }
+  /* line 577, summit_wide-global.scss */
+  #views_slideshow_cycle_teaser_section_photos_of_past_summits-block_1 .views-slideshow-cycle-main-frame-row {
+    width: 100% !important; }
+
+/* line 583, summit_wide-global.scss */
+.front .block-system-main {
+  display: none; }
+
+/* line 587, summit_wide-global.scss */
+.block-video-block .views-field-field-video-name,
+.block-video-block-1 .views-field-field-video-name,
+.block-video-block-2 .views-field-field-video-name, .block-video-block .views-field-field-video-speaker-title,
+.block-video-block-1 .views-field-field-video-speaker-title,
+.block-video-block-2 .views-field-field-video-speaker-title {
+  display: inline;
+  color: black;
+  font-size: 1.1em;
+  line-height: 1; }
+  /* line 592, summit_wide-global.scss */
+  .block-video-block .views-field-field-video-name .field-content,
+  .block-video-block-1 .views-field-field-video-name .field-content,
+  .block-video-block-2 .views-field-field-video-name .field-content, .block-video-block .views-field-field-video-speaker-title .field-content,
+  .block-video-block-1 .views-field-field-video-speaker-title .field-content,
+  .block-video-block-2 .views-field-field-video-speaker-title .field-content {
+    display: inline; }
+
+/* line 600, summit_wide-global.scss */
+.block-video-block,
+.block-video-block-1,
+.block-video-block-2 {
+  margin-bottom: 1em; }
+  /* line 604, summit_wide-global.scss */
+  .block-video-block .views-field-colorbox,
+  .block-video-block-1 .views-field-colorbox,
+  .block-video-block-2 .views-field-colorbox {
+    margin-bottom: 0.75em; }
+  /* line 608, summit_wide-global.scss */
+  .block-video-block .views-field-title,
+  .block-video-block-1 .views-field-title,
+  .block-video-block-2 .views-field-title {
+    color: #792438; }
+  /* line 616, summit_wide-global.scss */
+  .block-video-block .views-field-field-video-name .field-content:after,
+  .block-video-block-1 .views-field-field-video-name .field-content:after,
+  .block-video-block-2 .views-field-field-video-name .field-content:after {
+    content: ' – '; }
+  /* line 621, summit_wide-global.scss */
+  .block-video-block .views-field-field-video-speaker-title,
+  .block-video-block-1 .views-field-field-video-speaker-title,
+  .block-video-block-2 .views-field-field-video-speaker-title {
+    font-style: italic; }
+  /* line 626, summit_wide-global.scss */
+  .block-video-block .views-field-body,
+  .block-video-block-1 .views-field-body,
+  .block-video-block-2 .views-field-body {
+    clear: both;
+    padding-top: 0.65em; }
+
+/* Footer */
+/* line 634, summit_wide-global.scss */
+#zone-footer-wrapper {
+  margin: 0; }
+
+/* line 640, summit_wide-global.scss */
+.zone-footer.container-12 .grid-4 {
+  width: 20%;
+  margin: 0 2.5%; }
+  /* line 644, summit_wide-global.scss */
+  .zone-footer.container-12 .grid-4.region-postscript-second {
+    width: 40%;
+    margin: 0 2.5%; }
+
+/* line 659, summit_wide-global.scss */
+.view-learn-more .views-slideshow-cycle-main-frame .views-field-title {
+  margin-top: 1.5em;
+  font-weight: bold; }
+
+/* line 669, summit_wide-global.scss */
+#zone-footer-wrapper #block-block-3 {
+  font-size: 100%; }
+
+/* line 674, summit_wide-global.scss */
+.block-block-3 .subhead {
+  margin: 1em 0;
+  font-size: 1.2em;
+  color: #606060; }
+
+/* line 689, summit_wide-global.scss */
+.block-9 .content {
+  width: 218px; }
+
+/* line 699, summit_wide-global.scss */
+.block-agenda-block-2 table {
+  margin-bottom: 2em;
+  border-top: none; }
+/* line 704, summit_wide-global.scss */
+.block-agenda-block-2 tr.even, .block-agenda-block-2 tr.odd {
+  border-bottom: none; }
+/* line 708, summit_wide-global.scss */
+.block-agenda-block-2 tr.even td {
+  background: #ebebeb; }
+/* line 712, summit_wide-global.scss */
+.block-agenda-block-2 td, .block-agenda-block-2 caption {
+  padding: 1em 20px; }
+/* line 717, summit_wide-global.scss */
+.block-agenda-block-2 .views-table caption {
+  border: 1px solid #cccccc;
+  border-bottom: none;
+  margin: 0;
+  text-align: left; }
+/* line 729, summit_wide-global.scss */
+.block-agenda-block-2 .field-name-field-agenda-item-start-time,
+.block-agenda-block-2 .field-name-field-agenda-item-end-time {
+  float: left; }
+/* line 733, summit_wide-global.scss */
+.block-agenda-block-2 .field-name-field-agenda-item-start-time,
+.block-agenda-block-2 .field-name-field-agenda-item-end-time {
+  font-weight: bold; }
+/* line 738, summit_wide-global.scss */
+.block-agenda-block-2 .field-name-field-agenda-item-end-time .field-item:before {
+  content: "–"; }
+/* line 743, summit_wide-global.scss */
+.block-agenda-block-2 .field-name-field-agenda-item-session-title {
+  padding-left: 10em; }
+/* line 747, summit_wide-global.scss */
+.block-agenda-block-2 .field-name-field-agenda-session-description {
+  margin: 1.5em 0 1em;
+  padding-left: 2em; }
+  /* line 752, summit_wide-global.scss */
+  .block-agenda-block-2 .field-name-field-agenda-session-description p {
+    margin: 0 0 0.25em;
+    border-bottom: 1px solid #e1e1e1; }
+/* line 758, summit_wide-global.scss */
+.block-agenda-block-2 .field-collection-view-links {
+  list-style: none;
+  margin-top: 1em;
+  margin-left: 0; }
+  /* line 763, summit_wide-global.scss */
+  .block-agenda-block-2 .field-collection-view-links li {
+    margin-right: 0.5em;
+    list-style: none; }
+
+/* line 783, summit_wide-global.scss */
+.block-travel-tips-block .block-title {
+  box-sizing: border-box;
+  float: none;
+  width: 100%;
+  margin-bottom: 1.5em;
+  padding: 0.2em 1em;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: left; }
+/* line 795, summit_wide-global.scss */
+.block-travel-tips-block .views-row {
+  padding: 0 1em; }
+/* line 799, summit_wide-global.scss */
+.block-travel-tips-block .views-field-title {
+  font-weight: bold;
+  float: left;
+  color: #3399ff; }
+  /* line 803, summit_wide-global.scss */
+  .block-travel-tips-block .views-field-title span:after {
+    color: #606060;
+    content: ':';
+    padding-right: 0.3em; }
+
+/* line 827, summit_wide-global.scss */
+.view-quotes .views-row {
+  margin-bottom: 2em; }
+
+/* line 842, summit_wide-global.scss */
+.view-id-faq .views_slideshow_pager_field_item {
+  display: inline-block;
+  margin: 0.75em;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+  @media (min-width: 695px) {
+    /* line 842, summit_wide-global.scss */
+    .view-id-faq .views_slideshow_pager_field_item {
+      margin: 0.5em 0.5em 0 0;
+      padding: 2px 12px;
+      -webkit-border-radius: 8px 8px 0 0;
+      -moz-border-radius: 8px 8px 0 0;
+      border-radius: 8px 8px 0 0;
+      border-bottom: none; } }
+/* line 858, summit_wide-global.scss */
+.view-id-faq .views_slideshow_main {
+  padding: 2em 1em;
+  border-top: #9e9e9e solid 1px; }
+/* line 864, summit_wide-global.scss */
+.view-id-faq .views-slideshow-cycle-main-frame {
+  width: 95% !important; }
+/* line 867, summit_wide-global.scss */
+.view-id-faq .views_slideshow_slide {
+  width: 100% !important; }
+/* line 872, summit_wide-global.scss */
+.view-id-faq .item-list ul {
+  margin: 0;
+  padding: 0; }
+/* line 876, summit_wide-global.scss */
+.view-id-faq .item-list li {
+  list-style: none; }
+#zone-branding-wrapper {
+  position:fixed;
+  z-index: 990;
+  background: white;
+  height: 140px;
+  width: 100%;
+}
+div#region-branding {
+  text-align: center;
+  top: 50px;
+}
+.block-15 .block-inner {
+  margin-left: 0px;
+}
+.region-content {
+  margin: 0px;
+}
+div#zone-content {
+  width: 100%;
+}
+ul.site_select {
+  list-style-type: none;
+  display: none;
+}
+input[name=trigger] {
+  display: none;
+}
+input[name="trigger"]:checked + ul {
+  display: block;
+}
+.site_dropdown {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 26px;
+  color: #666666;
+  text-transform: uppercase;
+  font-family: BentonSansMedium, sans-serif;
+  margin-top: 10px;
+}
+.site_dropdown, .divider, .register_button {
+  float:left;
+}
+.divider {
+  padding: 0px 30px;
+}
+div#block-block-8 {
+  margin: 40px 8%;
+  float: right;
+}
+label.dropdown_arrow {
+  font-weight: normal;
+  display: inline;
+  font-family: 'BentonSans-Book', 'BentonSans Book', 'BentonSans';
+  background-image: url(/sites/default/files/dropdown_arrow.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 20px;
+}
+div#block-block-16 {
+  background: black;
+  color: white;
+  font-family: 'BentonSans-Light', 'BentonSans Light', 'BentonSans';
+  min-height: 230px;
+  margin-bottom: 10em !important;
+}
+.join_forum_hp {
+  font-size: 33px;
+  line-height: 60px;
+}
+.connect_hp {
+  font-size: 18px;
+  line-height: 30px;
+}
+.forum_container {
+  width: 75%;
+  margin-left: 10em !important;
+}
+.top-level {
+  position:relative;
+}
+.cta_hp {
+  font-size: 26px;
+  color: #000000;
+  background: white;
+  text-align: center;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  line-height: 54px;
+  margin-left:5em !important;
+  margin-top: 1em;
+}
+.cta_hp:hover {
+  background: #0076bc;
+  border: 1px solid #0076bc;
+  color: white;
+}
+.forum_cont {
+  position: absolute;
+  top: 25%;
+}
+.mm_hp {
+  max-width: 50%;
+  max-height: 50%;
+  margin: 0 auto;}

@@ -1,0 +1,885 @@
+/* ! DO NOT EDIT THE GLOBAL.CSS FILE! Only edit global.scss, or your styles will be overwritten. */
+
+@import "compass/css3/transition";
+
+/* Variables, extends, and mixins */
+$verydarkgrey: #353535;
+$darkgrey: #606060;
+$lightgrey: hsl(0, 0%, 62%);
+$verylightgrey: hsl(0, 0%, 95%);
+$lightblue:hsl(210, 100%, 60%);
+
+%visuallyhidden {
+  border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;
+}
+
+%clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+// Image replacement
+// add background-image and width/height.
+%ir {
+  display: block;
+  overflow: hidden;
+  background: top left no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+%grid-4 {
+  box-sizing: border-box;
+  width: 23%;
+  float: left;
+  margin:0 1%;
+}
+
+%button-med {
+
+  color:$darkgrey;
+  font-size:18px;
+  line-height:40px;
+  padding:0 15px;
+  -moz-border-radius:15px;
+  -webkit-border-radius:15px;
+  border-radius:15px;
+
+  background-color:#f9f9f9;
+  background:-moz-linear-gradient(#fcfcfc, #efefef);
+  background:-webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#efefef));
+  background:-o-linear-gradient(#fcfcfc, #efefef);
+  background:linear-gradient(#fcfcfc, #efefef);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#efefef');
+  border:1px solid #bebebe;
+  text-align:center;
+  margin-right:5px;
+  margin-left:1px;
+  display:block;
+  float:left;
+  -webkit-transition:background 0.5s ease, color 0.3s ease, border-color 0.3s ease;
+  -moz-transition:background 0.5s ease, color 0.3s ease, border-color 0.3s ease;
+  -o-transition:background 0.5s ease, color 0.3s ease, border-color 0.3s ease;
+  -ms-transition:background 0.5s ease, color 0.3s ease, border-color 0.3s ease;
+  transition:background 0.5s ease, color 0.3s ease, border-color 0.3s ease;
+  -webkit-box-shadow:1px 1px 1px rgba(0, 0, 0, .1);
+  -moz-box-shadow:1px 1px 1px rgba(0, 0, 0, .1);
+  box-shadow:1px 1px 1px rgba(0, 0, 0, .1);
+
+  &:hover,
+  &:focus,
+  &.active {
+    background: #2f96d0;
+    border-color: #2f96d0;
+    color:#ffffff;
+  }
+}
+
+%button-small {
+  @extend %button-med;
+  padding: 0 9px;
+  line-height: 2;
+  font-size: 1em;
+  -webkit-border-radius:9px;
+  -moz-border-radius:9px;
+  border-radius: 9px;
+}
+
+%wordbubble {
+  position:relative;
+  background-color:#ffffff;
+  padding:20px;
+  margin-top:15px;
+  border-radius:10px;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  -webkit-box-shadow:1px 2px 0 rgba(0, 0, 0, .05);
+  -moz-box-shadow:1px 2px 0 rgba(0, 0, 0, .05);
+  box-shadow:1px 2px 0 rgba(0, 0, 0, .05);
+}
+
+%whitecontainer {
+  background: #ffffff;
+  padding-bottom: 20px;
+  -webkit-box-shadow: 1px 2px 0 rgba(0, 0, 0, .05);
+  -moz-box-shadow: 1px 2px 0 rgba(0, 0, 0, .05);
+  box-shadow: 1px 2px 0 rgba(0, 0, 0, .05)
+}
+
+%fancy-blockquote {
+  padding:10px 0 0 68px;
+  margin:0;
+  position:relative;
+  vertical-align:baseline;
+  font-style: italic;
+  font-family: Georgia, serif;
+  font-size: 1.3em;
+
+  p {
+    margin:0 0 0.5em;
+  }
+
+  &:before {
+    content:'\201C';
+    font-size:6em;
+    line-height:1em;
+    display:block;
+    padding:0;
+    position:absolute;
+    top:-10px;
+    left:0;
+  }
+}
+
+%fancy-blockquote-source {
+  font-size: 0.8em;
+  color:$lightgrey;
+  text-align: right;
+
+  &:before {
+    content: "— ";
+  }
+}
+
+%fancy-list {
+  list-style: none;
+
+  li {
+    padding-left: 20px;
+    background: url(../img/bullet.png) left center no-repeat;
+    margin-bottom: 0.25em;
+  }
+}
+
+// Headers
+
+%header {
+  color: $verydarkgrey;
+  margin-bottom: 0.5em;
+  font-family: "din-condensed-web", sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+%header-large {
+  @extend %header;
+  font-size: 3.7em;
+}
+
+%header-med {
+  @extend %header;
+  font-size: 1.75em;
+}
+
+%header-small {
+  @extend %header;
+  font-size: 1.5em;
+}
+
+%italic-header {
+  color: $verydarkgrey;
+  font-family: Georgia, serif;
+  font-size: 1.6em;
+  font-style: italic;
+  a {
+    color:inherit;
+  }
+}
+
+%grid-gutter {
+  margin-right: 20px;
+}
+
+/* Repeated asset styles */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.wordbubble {
+  @extend %wordbubble;
+}
+
+/* Page */
+
+body {
+  line-height: 1.5;
+}
+
+#page {
+  position: relative;
+}
+
+// Zones
+.front #zone-header-wrapper,
+.front #zone-content-wrapper,
+#zone-header-wrapper,
+#zone-content-wrapper {
+  padding: 25px 0;
+}
+
+// Page title hide:
+
+.front {
+  #page-title {
+    display: none;
+  }
+}
+
+// Universal block styles. People be using too much specificity.
+.front #zone-content-wrapper #region-content .block,
+#zone-content-wrapper #region-content .block {
+  padding: 0;
+  margin-bottom: 2em;
+}
+
+// Content region
+
+.region-content {
+  #page-title,
+  h3 {
+    @extend %header-med;
+    margin: 1.5em 0 1em;
+  }
+  #page-title {
+    margin-top: 0;
+  }
+}
+
+/* Regions */
+
+/* Header (Branding and menu regions) */
+
+.zone-user {
+  margin: 0; // Just for summit site.
+  position: relative;
+}
+
+.register-button {
+  @extend %button-med;
+}
+
+.branding-data {
+  @media (max-width: 440px) {
+    padding-bottom: 60px;
+  }
+}
+
+// MQ 440px
+
+#region-user-second {
+  position: absolute;
+  top:1em;
+  right:1em;
+  width: auto;
+  padding-top: 4px;
+  z-index: 205;
+  @media (max-width: 440px) {
+    top: 89px;
+    left: 0;
+    right: 0;
+  }
+  .register-button {
+    @media (max-width: 440px) {
+      margin-left:18px;
+    }
+  }
+}
+
+/* Menu */
+
+.block-system-main-menu {
+
+  float: right;
+  padding: 1em 0;
+
+  .block-title {
+    @extend %visuallyhidden;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none !important;
+    list-style-image: none !important;
+    margin:0 0 0 30px;
+    float:left;
+    position:relative;
+  }
+
+ a {
+    padding:7px 10px;
+    display:block;
+    white-space:nowrap;
+    float:none;
+
+    color: #222;
+    font-size:12px;
+    text-transform:uppercase;
+    text-decoration:none;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: $lightblue;
+    }
+  }
+}
+
+
+
+/* Header regions */
+
+#zone-header-wrapper {
+  background: $verylightgrey;
+  border-bottom: 1px solid #dddddd;
+
+
+  .block-title {
+    @extend %header-med;
+  }
+
+  p {
+      margin-bottom: 20px;
+  }
+}
+
+#zone-menu-wrapper {
+  padding: 0.5em 0;
+
+  .breadcrumb {
+    padding: 0;
+  }
+}
+
+/* Sidebar regions */
+
+.region-sidebar-first {
+  .content ul {
+    @extend %fancy-list;
+  }
+
+  .block-title {
+    @extend %header-small;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+/* Block */
+
+//
+.block-1 {
+  img {
+    @extend %grid-gutter;
+  }
+}
+
+/* Front page */
+
+/////////////////////////////////////
+// Slideshows
+
+// All Prev/Next controls
+%vws-slideshow-container {
+  [class*=skin] {
+    position: relative;
+  }
+}
+
+%vws-slideshow-control-a {
+  @include transition-property(opacity);
+  @include transition-duration(0.2s);
+  @include transition-timing-function(ease-in);
+  @include transition-delay(0.5s);
+  @extend %ir;
+  position: absolute;
+  top: 50%;
+  margin-top: -24px;
+  width:57px;
+  height:47px;
+  z-index: 100;
+  opacity: 0;
+}
+
+// Apply these
+%vws-slideshow-control-left {
+  left:0;
+  background-image: url(../img/btnPrevious.png);
+}
+%vws-slideshow-control-right {
+  right:0;
+  background-image: url(../img/btnNext.png);
+}
+
+/////////////////////////////////////
+// All Pagers
+
+%vws-slideshow-icon-pager {
+  .views-slideshow-pager-fields {
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .views-slideshow-pager-field-item {
+    @extend %ir;
+    display: inline-block;
+    width:9px;
+    height:9px;
+    background-image: url(../img/slider.png);
+    &.active {
+      background-position: left bottom;
+    }
+  }
+}
+
+// Add to specfic blocks
+
+// Frontpage Slides
+.block-frontpage-slideshow-block {
+  @extend %vws-slideshow-container;
+  @extend %vws-slideshow-icon-pager;
+}
+
+#vscc_controls_previous_frontpage_slideshow-block a {
+  [class*=skin]:hover &,
+  [class*=skin]:focus & {
+    opacity: 1;
+  }
+  @extend %vws-slideshow-control-a;
+  @extend %vws-slideshow-control-left;
+}
+#vscc_controls_next_frontpage_slideshow-block a {
+  [class*=skin]:hover &,
+  [class*=skin]:focus & {
+    opacity: 1;
+  }
+  @extend %vws-slideshow-control-a;
+  @extend %vws-slideshow-control-right;
+}
+
+// Past summits block
+.block-photos-of-past-summits-block-1 {
+  @extend %vws-slideshow-container;
+}
+
+#vscc_controls_previous_photos_of_past_summits-block_1 a {
+  [class*=skin]:hover &,
+  [class*=skin]:focus & {
+    opacity: 1;
+  }
+  @extend %vws-slideshow-control-a;
+  @extend %vws-slideshow-control-left;
+}
+#vscc_controls_next_photos_of_past_summits-block_1 a {
+  [class*=skin]:hover &,
+  [class*=skin]:focus & {
+    opacity: 1;
+  }
+  @extend %vws-slideshow-control-a;
+  @extend %vws-slideshow-control-right;
+}
+
+// Learn more footer block
+.block-learn-more-block {
+  @extend %vws-slideshow-icon-pager;
+}
+
+/////////////////////////////////////
+
+
+// Front page Summit will feature block
+.block-summit-features-block {
+  margin-bottom: 3em;
+
+  .block-title {
+    @extend %header-large;
+    text-align: center;
+  }
+
+  .views-row {
+    @extend %whitecontainer;
+    @extend %grid-4;
+    @media (max-width: 550px) {
+      width:100%;
+      margin: 1em 0;
+      float: none;
+    }
+  }
+
+  .views-field-title {
+    @extend %italic-header;
+    border-bottom: 1px #F1EEEE solid;
+    margin: 0 0.5em;
+    padding: 0.8em 0 0.5em;
+  }
+  .views-field-body {
+    padding: 0.5em 0;
+    margin: 0 0.5em;
+  }
+  // Hidden for now. hover and focus pic text.
+  .views-field-field-summit-feature-image-text {
+    display: none;
+  }
+}
+
+// Quotes block, front page and internal.
+.block-quotes-block-1 {
+
+  border: #dddddd solid;
+  border-width: 1px 0;
+
+  .views-row {
+    @extend %fancy-blockquote;
+    margin: 1.5em 0;
+  }
+  .views-field-field-quote-speaker .field-content {
+    @extend %fancy-blockquote-source;
+  }
+}
+
+// Photos of past summits
+.block-photos-of-past-summits-block-1 {
+
+ .block-title {
+    @extend %header-med;
+  }
+  .views-row {
+    @extend %grid-4;
+    margin:0 1%;
+    @media (max-width: 530px) {
+      width: 48%;
+      margin-bottom:2%;
+      width:100%;
+    }
+  }
+}
+
+#views_slideshow_cycle_teaser_section_photos_of_past_summits-block_1 {
+  width:100% !important;
+  .views-slideshow-cycle-main-frame-row {
+    width:100% !important;
+  }
+}
+
+// Main content block. Hide where empty.
+.front .block-system-main {
+  display: none;
+}
+
+%vid-head {
+  display: inline;
+  color: black;
+  font-size: 1.1em;
+  line-height: 1;
+  .field-content {
+    display: inline;
+  }
+}
+
+// Video sidebar block
+.block-video-block,
+.block-video-block-1,
+.block-video-block-2 {
+
+  margin-bottom: 1em;
+
+  .views-field-colorbox {
+    margin-bottom: 0.75em;
+  }
+
+  .views-field-title {
+    @extend %header-small;
+    color:#792438;
+  }
+
+
+  .views-field-field-video-name {
+    @extend %vid-head;
+    .field-content:after {
+      content: ' – ';
+    }
+  }
+
+  .views-field-field-video-speaker-title {
+    @extend %vid-head;
+    font-style: italic;
+  }
+
+  .views-field-body {
+    clear: both;
+    padding-top: 0.65em;
+  }
+}
+
+/* Footer */
+
+#zone-footer-wrapper {
+  margin: 0;
+}
+
+.zone-footer {
+
+  &.container-12 .grid-4 {
+    width:20%;
+    margin: 0 2.5%;
+
+    &.region-postscript-second {
+      width:40%;
+      margin: 0 2.5%;
+    }
+  }
+
+  .block-title {
+    @extend %header-med;
+  }
+}
+
+
+// Learn more
+.view-learn-more {
+  .views-slideshow-cycle-main-frame {
+    .views-field-title {
+      margin-top:1.5em;
+      font-weight: bold;
+    }
+  }
+}
+
+// Best practices videos
+
+// Reset odd set in fieldglass site
+#zone-footer-wrapper #block-block-3 {
+  font-size: 100%;
+}
+
+.block-block-3 {
+  .subhead {
+    @extend %italic-header;
+    margin: 1em 0;
+    font-size: 1.2em;
+    color:$darkgrey;
+  }
+
+  ul {
+    @extend %fancy-list;
+  }
+}
+
+// Drop us a note
+.block-9 {
+
+  .content {
+    // Deal with iframe centering
+    width:  218px;
+  }
+}
+
+// Agenda Page
+
+.block-agenda-block-2 {
+
+  table {
+    margin-bottom: 2em;
+    border-top:none;
+  }
+
+  tr.even, tr.odd {
+    border-bottom:none;
+  }
+
+  tr.even td {
+    background: hsl(0, 0%, 92%);
+  }
+
+  td, caption {
+    padding: 1em 20px;
+  }
+
+  // Table date headers
+  .views-table caption {
+    @extend %header-small;
+    border: 1px solid hsl(0, 0%, 80%);
+    border-bottom:none;
+    margin: 0;
+    text-align: left;
+  }
+
+  .field-collection-item-field-agenda-item-session {
+  }
+
+  .field-name-field-agenda-item-start-time,
+  .field-name-field-agenda-item-end-time {
+    float: left;
+  }
+  .field-name-field-agenda-item-start-time,
+  .field-name-field-agenda-item-end-time {
+    font-weight: bold;
+  }
+
+  .field-name-field-agenda-item-end-time {
+    .field-item:before {
+      content: "–";
+    }
+  }
+
+  .field-name-field-agenda-item-session-title {
+    padding-left: 10em;
+  }
+
+  .field-name-field-agenda-session-description {
+    @extend %clearfix;
+    margin: 1.5em 0 1em;
+    padding-left: 2em;
+
+    p {
+      margin: 0 0 0.25em;
+      border-bottom: 1px solid #E1E1E1;
+    }
+  }
+
+  .field-collection-view-links {
+    @extend %clearfix;
+    list-style: none;
+    margin-top: 1em;
+    margin-left: 0;
+    li {
+      margin-right: 0.5em;
+      list-style: none;
+      a {
+        @extend %button-small;
+      }
+    }
+  }
+}
+
+.block-block-4 {
+}
+
+.block-block-5 {
+}
+
+// Travel tips page
+
+.block-travel-tips-block {
+
+  .block-title {
+    @extend %button-small;
+    box-sizing: border-box;
+    float: none;
+    width:100%;
+    margin-bottom: 1.5em;
+    padding: 0.2em 1em;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .views-row {
+    padding: 0 1em;
+  }
+
+  .views-field-title {
+    font-weight: bold;
+    float: left;
+    color: $lightblue;
+    span:after {
+      color:$darkgrey;
+      content: ':';
+      padding-right:0.3em;
+    }
+  }
+
+  .views-field-body {}
+
+}
+
+
+// Why Attend Page
+
+.page-node-6 {
+
+  // Download button
+  .block-system a[href*=".docx"] {
+    @extend %button-med;
+  }
+}
+
+// Fancy quotes
+.view-quotes {
+  .views-row {
+    @extend %fancy-blockquote;
+    margin-bottom: 2em;
+  }
+  .views-field-field-quote-speaker .field-content {
+    @extend %fancy-blockquote-source;
+  }
+}
+
+// FAQ
+
+.view-id-faq {
+  .views-slideshow-controls-top {
+    @extend %clearfix;
+  }
+  .views_slideshow_pager_field_item {
+    @extend %button-small;
+    display: inline-block;
+    margin:0.75em;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    @media (min-width: 695px) {
+      margin:0.5em 0.5em 0 0;
+      padding: 2px 12px;
+      -webkit-border-radius: 8px 8px 0 0;
+      -moz-border-radius: 8px 8px 0 0;
+      border-radius: 8px 8px 0 0;
+      border-bottom: none;
+    }
+  }
+  .views_slideshow_main {
+    padding:2em 1em;
+    border-top: $lightgrey solid 1px;
+  }
+
+  // Responsive fixes
+  .views-slideshow-cycle-main-frame {
+    width:95% !important;
+  }
+  .views_slideshow_slide {
+    width:100% !important;
+  }
+  // ----------------------
+  .item-list {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style: none;
+    }
+  }
+
+  .field-name-field-faq-category-question {
+    @extend %header-small;
+  }
+}
+

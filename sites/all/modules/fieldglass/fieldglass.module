@@ -1,0 +1,28 @@
+<?php
+
+/**
+* Implementation of hook_views_pre_render
+* This function is in place to filter out duplicate nodes
+* from listings. It will cycle each result, and store a new array of
+* unique NIDs, and when a duplicate is found, will unset that result
+*
+* Based on a pattern for reducing duplicate terms in a view
+* (http://himerus.com/comment/158)
+*
+* @param $view
+*/
+
+
+function fieldglass_init() {
+
+ /* drupal_add_js(' jQuery.browser = {};
+(function () {
+    jQuery.browser.msie = false;
+    jQuery.browser.version = 0;
+    if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+        jQuery.browser.msie = true;
+        jQuery.browser.version = RegExp.$1;
+    }
+})();', 'inline');
+ */
+}

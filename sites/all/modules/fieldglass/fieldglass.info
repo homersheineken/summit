@@ -1,0 +1,6 @@
+name = "Fieldglass"
+description = "Used for misc site-specific code, such as form alters and views hooks."
+package = Fieldglass
+dependencies[] = views
+core = 7.x
+php = 5.1

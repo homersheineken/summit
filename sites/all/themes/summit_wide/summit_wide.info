@@ -1,0 +1,93 @@
+name = Fieldglass Summit Theme Wide
+description = This is a child widetheme of the fieldglass theme. Make all changes that should occur on both sites to the parent theme.
+core = 7.x
+engine = phptemplate
+screenshot = screenshot.png
+base theme = fieldglass
+
+; Begin: "grid" Lines to add to yoursubtheme.info
+; CSS GRID SYSTEMS
+grids[alpha_default][name] = Default (960px)
+grids[alpha_default][layouts][fluid] = Fluid
+grids[alpha_default][layouts][narrow] = Narrow
+grids[alpha_default][layouts][normal] = Normal
+grids[alpha_default][layouts][wide] = Wide
+grids[alpha_default][layouts][wide1440] = Wide1440
+grids[alpha_default][layouts][wide1680] = Wide1680
+grids[alpha_default][layouts][wide1920] = Wide1920
+grids[alpha_default][columns][12] = 12 Columns
+grids[alpha_default][columns][16] = 16 Columns
+grids[alpha_default][columns][24] = 24 Columns
+; End: "grid" Lines to add to yoursubtheme.info
+
+; DEFAULT THEME SETTINGS
+; Begin: "settings" Lines to change in yoursubtheme.info
+; OLD SETTINGS: settings[alpha_layouts_alpha_default_wide_media] = 'all and (min-width: 1220px)'
+settings[alpha_layouts_alpha_default_wide_media] = 'all and (min-width: 1220px) and (min-device-width: 1220px), all and (max-device-width: 1280px) and (min-width: 1280px) and (orientation:landscape)'
+; End: "settings" Lines to change in yoursubtheme.info
+
+; Begin: "settings" Lines to add to yoursubtheme.info
+settings[alpha_layouts_alpha_default_wide1440_responsive] = '1'
+settings[alpha_layouts_alpha_default_wide1440_media] = 'all and (min-width: 1460px) and (min-device-width: 1460px), all and (max-device-width: 1520px) and (min-width: 1520px) and (orientation:landscape)'
+settings[alpha_layouts_alpha_default_wide1440_weight] = '4'
+settings[alpha_layouts_alpha_default_wide1680_responsive] = '1'
+settings[alpha_layouts_alpha_default_wide1680_media] = 'all and (min-width: 1700px) and (min-device-width: 1700px), all and (max-device-width: 1760px) and (min-width: 1760px) and (orientation:landscape)'
+settings[alpha_layouts_alpha_default_wide1680_weight] = '5'
+settings[alpha_layouts_alpha_default_wide1920_responsive] = '1'
+settings[alpha_layouts_alpha_default_wide1920_media] = 'all and (min-width: 1940px)'
+settings[alpha_layouts_alpha_default_wide1920_weight] = '6'
+
+settings[alpha_css][alpha-reset.css] = 'alpha-reset.css'
+settings[alpha_css][alpha-mobile.css] = 'alpha-mobile.css'
+settings[alpha_css][alpha-alpha.css] = 'alpha-alpha.css'
+settings[alpha_css][omega-branding.css] = 'omega-branding.css'
+settings[alpha_css][omega-menu.css] = 'omega-menu.css'
+settings[alpha_css][omega-forms.css] = 'omega-forms.css'
+settings[alpha_css][omega-visuals.css] = 'omega-visuals.css'
+; End: "settings" Lines to add to yoursubtheme.info
+
+
+; Regions
+
+regions[page_top] = 'Page Top'
+regions[page_bottom] = 'Page Bottom'
+regions[content] = 'Content'
+regions[user_first] = 'User Bar First'
+regions[user_second] = 'User Bar Second'
+regions[branding] = 'Branding'
+regions[menu_first] = 'Menu First'
+regions[menu_second] = 'Menu Second'
+regions[sidebar_first] = 'Sidebar First'
+;regions[sidebar_second] = 'Sidebar Second'
+regions[header_first] = 'Header First'
+regions[header_second] = 'Header Second'
+regions[preface_first] = 'Preface First'
+regions[preface_second] = 'Preface Second'
+regions[preface_third] = 'Preface Third'
+regions[postscript_first] = 'Postscript First'
+regions[postscript_second] = 'Postscript Second'
+regions[postscript_third] = 'Postscript Third'
+regions[postscript_fourth] = 'Postscript Fourth'
+regions[footer_first] = 'Footer First'
+regions[footer_second] = 'Footer Second'
+
+; Zones
+
+zones[header] = 'Header'
+zones[content] = 'Content'
+zones[footer] = 'Footer'
+zones[user] = 'User'
+zones[branding] = 'Branding'
+zones[menu] = 'Menu'
+zones[preface] = 'Preface'
+zones[postscript] = 'Postscript'
+
+; Theme Css
+
+css[summit_wide-global.css][name] = Wide Summit CSS
+css[summit_wide-global.css][description] = Styles for the Summit subtheme.
+css[summit_wide-global.css][options][weight] = 100
+
+; Scripts
+scripts[] = js/scripts.js
+
