@@ -84,6 +84,9 @@
   font-style: italic;
   font-weight: normal;
 }
+body {
+  border-top:none;
+}
 .block-system-main-menu .block-title {
   border: 0;
   clip: rect(0 0 0 0);
@@ -220,7 +223,7 @@ div#breadcrumb {
   font-weight: 500;
   color: #666666;
   font-size: 26px;
-  line-height: 72px;
+  line-height: 30px;
 }
 
 /* line 169, summit_wide-global.scss */
@@ -276,7 +279,7 @@ body {
 .front #zone-content-wrapper,
 #zone-header-wrapper,
 #zone-content-wrapper {
-  padding: 25px 0; }
+  padding: 25px 0 0; }
 
 /* line 234, summit_wide-global.scss */
 .front #page-title {
@@ -285,8 +288,7 @@ body {
 /* line 241, summit_wide-global.scss */
 .front #zone-content-wrapper #region-content .block,
 #zone-content-wrapper #region-content .block {
-  padding: 0;
-  margin-bottom: 2em; }
+  padding: 0; }
 .zone-content-wrapper {
   margin-top: 115px;
 }
@@ -711,7 +713,6 @@ body {
 }
 div#region-branding {
   text-align: center;
-  top: 50px;
 }
 .block-15 .block-inner {
   margin-left: 0px;
@@ -726,6 +727,9 @@ ul.site_select {
   list-style-type: none;
   display: none;
   position: absolute;
+}
+div#zone-footer, div#widget_pager_top_faq-page {
+  display: flex;
 }
 input[name=trigger] {
   display: none;
@@ -746,7 +750,6 @@ input[name="trigger2"]:checked + ul {
   color: #666666;
   text-transform: uppercase;
   font-family: BentonSansMedium, sans-serif;
-  margin-top: 10px;
 }
 .site_dropdown, .divider, .register_button {
   float:left;
@@ -754,12 +757,13 @@ input[name="trigger2"]:checked + ul {
 .divider {
   padding: 0px 30px;
 }
+
 .scroll_more {
   margin-top: 5%;
 }
 div#block-block-8 {
-  margin: 40px 8%;
-  float: right;
+  /*margin: 40px 8%;
+  float: right;*/
 }
 label.dropdown_arrow {
   font-weight: normal;
@@ -781,9 +785,7 @@ div#block-block-16 {
   background-image: url("/sites/default/files/parallex-background.jpg");
   padding-top: 10em !important;
 }
-.grid-6.iphone img {
-  margin-top: 125px;
-}
+
 .join_forum_hp {
   font-size: 33px;
   line-height: 60px;
@@ -847,13 +849,28 @@ div#block-block-18 {
   text-align: center;
   display: inline-block;
 }
-.grid-6.app-dl {
-  margin-top: 555px;
-  left: -10%;
-}
+
 .app_download {
   margin: 15px auto;
   text-align: center;
+}
+.app-hp, .downloads_cont, div#widget_pager_top_faq-page_1 {
+  display: flex;
+}
+.iphone, .app-dl {
+  /*position: relative;
+  top: 50%;
+  transform: translateY(50%);*/
+  flex:1;
+}
+.iphone {
+  top: 25%;
+  transform: translateY(25%);
+}
+.app-dl {
+  top: 50%;
+  transform: translateY(80%);
+  right: 10%;
 }
 .forum_hp, .summit_loc {
   font-weight: 700;
@@ -875,7 +892,7 @@ div#block-block-18 {
   text-decoration: underline;
 }
 div#block-block-19,div#block-block-20,div#block-block-21 {
-  margin-top: 12%;
+  /*margin-top: 12%;*/
 }
 .footer_left {
   margin-left: 10%;
@@ -896,7 +913,7 @@ div#block-block-19,div#block-block-20,div#block-block-21 {
   margin-right: 10%;
 }
 .main_menu {
-  float: left;
+  text-align: center;
 }
 
 .menu li {
@@ -904,14 +921,14 @@ div#block-block-19,div#block-block-20,div#block-block-21 {
   list-style-type: none !important;
   list-style-image: none !important;
 }
-.main_menu label, .menu li a{
+.main_menu label, .menu li a, .main_menu li a{
   color: #666666;
   font-size: 18px;
   text-transform: uppercase;
   background-image: none;
   font-family: 'BentonSans-Book', 'BentonSans Book', 'BentonSans';
 }
-.main_menu label:hover, .menu li a:hover {
+.main_menu label:hover, .menu li a:hover,.main_menu li a:hover  {
   text-decoration: underline;
   font-weight: bold;
 }
@@ -931,16 +948,44 @@ ul.menu li {
 .li.expanded, li.collapsed, li.leaf {
   padding: 0 !important;
 }
+.main_menu li {
+  display: inline-block;
+  margin-right: 3em;
+}
+.site_select li {
+  display: block;
+  text-align: left;
+}
+a.register-button {
+  font-size: 24px;
+  color: white;
+  background-color: rgb(0, 143, 211);
+  border-radius: 3px;
+  padding: 10px;
+}
 div#block-block-22 {
-  margin-left: 10%;
-  margin-top: 8%;
-  width: 100%;
+  /*margin-top:12%;
+  width: 100%;*/
+}
+div#block-block-23 {
+  float: right;
+}
+div#block-block-23 .region-content p {
+  margin-bottom: 0;
+}
+ul.site_select {
+  background: white;
+  padding: 0 20px;
 }
 ul.menu li {
-  margin-left: 6em;
+  margin-left: 11%;
 }
 .main_menu .site_select {
   background-color: white;
+}
+ul li.leaf {
+  list-style-image: none;
+  list-style-type: none;
 }
 .bars, .bars img {
   float: left;
@@ -959,10 +1004,17 @@ ul.menu li {
   font-style: normal;
   color: #666666;
   font-size: 18px;
+
 }
 .bars {
   margin: 0 auto 5em !important;
-
+}
+.dl_right_cont {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .innerbar {
   width: 55%;
@@ -993,12 +1045,14 @@ ul.menu li {
   width: 100%;
   text-align: center;
 }
-
+div#mobile-header {
+  display: none;
+}
 @media screen and (max-width:680px){
-  .herotext {font-size: 0.8rem}
+  .herotext {font-size: 2.5rem}
 }
 @media screen and (max-width:540px){
-  .herotext {font-size: 0.7rem}
+  .herotext {font-size: 2rem}
 }
 .downloads {
   text-align: center;
@@ -1049,6 +1103,7 @@ ul.menu li {
   margin: 10px auto 45px;
   position: relative;
 }
+
 .stats_num {
   text-align: center;
   font-family: 'BentonSans-Bold', 'BentonSans Bold', 'BentonSans';
@@ -1123,7 +1178,7 @@ ul.menu li {
   margin-bottom: -2em;
 }
 .views-slideshow-pager-field-item {
-  width: 29.5%;
+  width: 29.9%;
   margin: 0em 0em 0em 0em !important;
   /*margin-right: .15em*/
   padding: 0px !important;
@@ -1153,10 +1208,10 @@ ul.menu li {
   transform: translateY(66%);
 }
 span#vscc_controls_previous_faq-page, span#vscc_controls_previous_faq-page_1 {
-  background: url(/sites/default/files/taxi_icon.png) center no-repeat;
+  background: url(/sites/default/files/arrows1.png) top center no-repeat;
 }
 span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1 {
-  background: url(/sites/default/files/taxi_icon.png) center no-repeat;
+  background: url(/sites/default/files/arrows2.png) top center no-repeat;
 }
 .field-name-field-faq-category-answer {
   font-family: 'BentonSans-Book', 'BentonSans Book', 'BentonSans';
@@ -1190,8 +1245,10 @@ span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1 {
   border-top:none;
   border-left:none;
 }
+#views_slideshow_pager_field_item_top_faq-page_1_0,
 #views_slideshow_pager_field_item_top_faq-page_1, #views_slideshow_pager_field_item_top_faq-page_2,
-#views_slideshow_pager_field_item_top_faq-page_1_1, #views_slideshow_pager_field_item_top_faq-page_1_2{
+#views_slideshow_pager_field_item_top_faq-page_1_1, #views_slideshow_pager_field_item_top_faq-page_1_2,
+#vscc_controls_next_faq-page_1{
   border-left:1px solid white;
 }
 .page-faq .views-content-title, .page-agenda .views-content-title {
@@ -1222,8 +1279,371 @@ h3#ui-id-3, h3#ui-id-7, h3#ui-id-11,h3#ui-id-15,h3#ui-id-19,h3#ui-id-23,h3#ui-id
   font-style: normal;
   color: #666666;
   text-align: left;
+  line-height: 35px;
 }
 .ui-accordion .ui-accordion-icons {
   padding-left: 0em;
 }
+.implementation .views-field-field-management-model, .implementation .views-field-field-program, .implementation .views-field-field-region {
+  display: none;
+}
+.view-company-profile .views-row {
+  float: left;
+  min-height: 450px;
+  margin-left: 7%;
+}
+.button-group.filter-button-group {
+  margin-bottom: 5px;
+}
+div#zone-menu {
+  display: none;
+}
+.region-content ul, .region-content ul li {
+  list-style: none;
+}
+.item-list ul li {
+  margin: 0;
+  padding: 0;
+}
+.container-12 .grid-9 {
+  width: 100%;
+}
+aside#region-sidebar-first {
+  display: none;
+}
+.views-field-title .field-content {
+  font-size: 18px;
+  font-weight: bold
+}
 
+span.views-label.views-label-field-industry,span.views-label.views-label-field-management-model,span.views-label.views-label-field-maturity, span.views-label.views-label-field-program,span.views-label.views-label-field-region {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color:#666666;
+}
+
+button.is-checked {
+  background: rgba(153, 153, 153, 1);
+  color:white;
+}
+button:focus, button:active, input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active {
+  box-shadow:none;
+}
+button {
+  background: rgba(228, 228, 228, 1);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  color: #666666;
+  text-shadow: none;
+  border-radius: 0px;
+  border:none;
+  margin-right: 5px;
+  padding: 8px 7px;
+}
+.page-company-profile .views-field.views-field-title {
+  font-family: 'BentonSans-Book', 'BentonSans Book', 'BentonSans';
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 36px;
+  color: #666666;
+  margin-bottom: 25px;
+}
+.page-company-profile  .field-content {
+  max-width: 200px;
+  display: inline;
+  font-size: 18px;
+  word-wrap: break-word;
+  line-height: 30px;
+}
+.page-company-profile .views-field-title .field-content {
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 300;}
+
+.page-company-profile  .view-content{
+  top: 0px;
+  position: relative;
+  min-height: 2800px;
+}
+.page-company-profile #section-footer {
+  position: relative;
+  bottom: -900px;
+}
+.filters {
+  margin-left: 8%;
+  margin-top: 35px;
+}
+.page-company-profile  .button-group.filter-button-group {
+  font-family: 'BentonSans-Medium', 'BentonSans Medium', 'BentonSans';
+  font-weight: 500;
+  font-style: normal;
+  color: #666666;
+  font-size: 18px;
+}
+.bg1, .bg2, .bg4, .bg5 {
+  display: inline-block;
+}
+.button-group.filter-button-group.bg1, .button-group.filter-button-group.bg4 {
+  margin-right: 30px;
+}
+.page-company-profile .herotext {
+  margin-bottom: 25px;
+}
+.scroll_more {
+  font-size:14px;
+}
+.divider img {
+  max-height: 3em;
+}
+.app-mobile, .region-menu-inner {
+  display:none;
+}
+div#region-footer-first, div#region-footer-second, div#region-postscript-first {
+  transform: translateY(50%);
+}
+@media (max-width: 667px) and (min-width: 320px) {
+  #responsive-menu-button span {
+    display: block;
+    background: #0076bc;
+    height: 3px;
+    margin-top: 3px;
+    width: 20px;
+  }
+  .site_dropdown_cont {
+    display: none;
+  }
+  div#mobile-header {
+    display: block;
+  }
+}
+@media (max-device-width: 1024px) {
+  .page-faq .views-slideshow-pager-field-item, .page-agenda .views-slideshow-pager-field-item {
+    font-size: 29px;
+  }
+
+  .scroll_more {
+    display: none;
+  }
+
+  .forum_container {
+    margin-left: 0px !important;
+  }
+
+  .forum_cont {
+    top: 0%;
+  }
+
+  .cta_hp.grid-2 {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(50%);
+  }
+
+  .site_dropdown, a.register-button {
+    font-size: 1rem;
+  }
+
+  .site_select a {
+    font-size: 1rem;
+  }
+
+  .mm_hp {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  div#block-block-16 {
+    margin-bottom: 0em !important;
+  }
+  #block-block-17 {
+    background-image: none;
+    padding-top: 0em !important;
+  }
+  .summit_app, .fingertips {
+    font-size: 2rem;
+  }
+  .app-dl {
+    top: 50%;
+    transform: translateY(110%);
+    right: 10%;
+  }
+  .iphone {
+    top: 25%;
+    transform: translateY(75%);
+  }
+  div#block-block-18 {
+    background: url(/sites/default/files/gray-slant-background.png) center center no-repeat;
+    min-height: 700px;
+    margin-top: 0px;
+  }
+  .bars div {
+    width: 90%;
+    margin-left: 10%;
+  }
+}
+@media (max-device-width: 375px) {
+  .hero_register img {
+    max-width: 4rem;
+  }
+
+  .forum_cont {
+    position: relative;
+  }
+
+  .container-12.top_level {
+    margin: 10px;
+  }
+
+  .cta_hp.grid-2 {
+    transform: translateY(0%);
+  }
+
+  div#block-block-18 {
+    min-height: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    background: lightgray;
+  }
+
+  .summit_app, .fingertips {
+    /* font-size: 1rem; */
+    display: none;
+  }
+
+  .app-mobile {
+    display: block;
+    font-size: 22px;
+    line-height: 26px;
+    padding-top: 20px;
+  }
+
+  div#block-block-17 {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+
+  }
+
+  .iphone, .app-dl {
+    transform: translateY(5%);
+  }
+
+  div#region-menu-first {
+    visibility: hidden;
+  }
+
+  div#zone-content-wrapper {
+    padding-bottom: 0px;
+  }
+
+  .footer_right {
+    float: none;
+    margin: 0px;
+  }
+
+  .ui-accordion-header {
+    font-size: 18px !important;
+  }
+
+  .view-id-faq .views_slideshow_pager_field_item {
+    display: none;
+  }
+
+  .view-id-faq .views_slideshow_pager_field_item.active {
+    display: block;
+    width: 78%;
+    margin: 0 3px !important;
+  }
+
+  #vscc_controls_previous_faq-page, #vscc_controls_next_faq-page, #vscc_controls_previous_faq-page_1, #vscc_controls_next_faq-page_1 {
+    width: 10%;
+  }
+
+  div#zone-footer {
+    display: block;
+    min-height: 320px;
+  }
+
+  div#region-footer-second {
+    margin-bottom: 40px;
+  }
+
+  .footer_left {
+    margin-left: 0px;
+  }
+
+  div#region-branding {
+    text-align: center;
+    width: 80%;
+  }
+
+  #zone-branding-wrapper {
+    height: 90px;
+  }
+
+  .zone-content-wrapper {
+    margin-top: 0px;
+  }
+
+  div#region-menu-second {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(27%);
+  }
+
+  div#region-menu-second, div#region-branding {
+    float: left;
+  }
+
+  div#views_slideshow_cycle_main_faq-page {
+    margin-top: 30px;
+  }
+
+  div#block-block-15 {
+    margin-top: 30px;
+  }
+
+  div#block-block-23 {
+    margin-bottom: -1px;
+  }
+
+  .footer_center {
+    text-align: left;
+  }
+
+  .page-company-profile div#block-block-23 {
+    bottom: -900px;
+  }
+
+  .innerbar img {
+    margin-right: 10px;
+    max-height: 150px;
+  }
+
+  .container-12.downloads_cont {
+    display: inline-block;
+  }
+
+  .grid-6.dl_right {
+    margin-top: 20px !important;
+    margin-left: 0px !important;
+  }
+
+  .dl_right_cont {
+    position: relative;
+    top: 0%;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  .stats {
+    margin: 50px 0 150px;
+  }
+  .grid-6.hotel {
+    margin-bottom: 20px;
+  }
+}

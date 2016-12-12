@@ -44,12 +44,10 @@
 
 /* turn off blocks on home page */
 .responsive-layout-mobile.front .block-front-page-featured-award-block,
-.responsive-layout-mobile.front .region-postscript-first,
-.responsive-layout-mobile .block-block-19, /* Fuse block */
 .responsive-layout-mobile .block-fieldglass-tweets-block,
 .responsive-layout-mobile .block-views-fieldglass-blog-block-1,
 /* .responsive-layout-mobile .block-front-page-meet-our-team-block, */
-.responsive-layout-mobile .block-block-17, /* By the Numbers */
+
 .responsive-layout-mobile .block-front-page-carousel-block,
 .responsive-layout-mobile .block-views-front-page-by-the-numbers-block {
   display: none !important;
@@ -61,7 +59,7 @@
 }
 
 .responsive-layout-mobile.front #zone-content-wrapper #region-content .block {
-  padding-bottom: 0.5em;
+  /*padding-bottom: 0.5em;*/
 }
 
 .responsive-layout-mobile .block-15 .left,
