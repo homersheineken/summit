@@ -1,0 +1,15 @@
+core = 7.x
+package = Features
+dependencies[] = block
+dependencies[] = blockexport
+features[blockexport_settings][] = block_settings
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[menu_custom][] = main-menu
+features[node][] = agenda_page
+features[views_view][] = faq
+features_exclude[dependencies][company_profile] = company_profile
+features_exclude[dependencies][menu] = menu
+features_exclude[dependencies][views] = views
+features_exclude[dependencies][views_slideshow] = views_slideshow
+features_exclude[field_instance][node-agenda_page-body] = node-agenda_page-body

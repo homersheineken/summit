@@ -794,9 +794,14 @@ div#block-block-16 {
   font-size: 18px;
   line-height: 30px;
 }
+
 .forum_container {
   width: 75%;
   margin-left: 10em !important;
+  top: 25%;
+  -webkit-transform: translateY(25%);
+  -ms-transform: translateY(25%);
+  transform: translateY(25%);
 }
 .top-level {
   position:relative;
@@ -812,6 +817,12 @@ div#block-block-16 {
   margin-left:5em !important;
   margin-top: 1em;
 }
+.cta_hp.grid-2 {
+  top: 120%;
+  -webkit-transform: translateY(120%);
+  -ms-transform: translateY(120%);
+  transform: translateY(120%);
+}
 .cta_hp:hover {
   background: rgb(0, 143, 211);
   border: 1px solid rgb(0, 143, 211);
@@ -821,8 +832,11 @@ div#block-block-16 {
   color:white;
 }
 .forum_cont {
-  position: absolute;
+  position: relative;
   top: 25%;
+  -webkit-transform: translateY(25%);
+  -ms-transform: translateY(25%);
+  transform: translateY(25%);
 }
 .mm_hp {
   max-width: 50%;
@@ -1575,7 +1589,9 @@ div#block-block-24 {
   font-weight: 700;
   color: rgb(0, 143, 211);
 }
-
+.filters button {
+  margin-right: 4px;
+}
 @media screen and (max-width:680px){
   .herotext {font-size: 2.5rem}
 }
@@ -1950,7 +1966,5 @@ div#block-block-24 {
   div#views_slideshow_cycle_main_faq-page {
     margin-top: 25px;
   }
-  .filters button {
-    margin-right: 4px;
-  }
+
 }

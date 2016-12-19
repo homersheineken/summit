@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the  feature.
+ */
+
+include_once 'summit_redo_with_blocks.features.inc';

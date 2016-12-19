@@ -157,7 +157,88 @@ span.views-label.views-label-field-industry,span.views-label.views-label-field-m
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-3 mix [field_industry]  [field_management_model]  [field_maturity]   [field_program]   [field_region]';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<div class="hero">
+    <img src="sites/default/files/attendees.jpg" />
+    <div class="herotext attendees">Attendees</div>
+</div>
+
+<div class="filters"><div class="button-group filter-button-group bg1" data-filter-group="region">
+    Region: <button class="button is-checked" data-filter="">Show all</button><button class="button" data-filter=".north">North America</button><button class="button" data-filter=".latin">Latin America</button><button class="button" data-filter=".apac">APAC</button><button class="button" data-filter=".emea">EMEA</button>
+</div><div class="button-group filter-button-group bg2" data-filter-group="management">
+    Management model: <button class="button is-checked" data-filter="">Show all</button><button class="button" data-filter=".msp">MSP</button><button class="button" data-filter=".self-managed">Self-managed</button><button class="button" data-filter=".hybrid">Hybrid</button>
+</div>
+<div class="button-group filter-button-group bg3" data-filter-group="industry">
+    Industry:   <button class="button is-checked" class="button" data-filter="">Show all</button><button class="button" class="button" data-filter=".energy-resources-utility">Energy/Resources/Utility</button><button class="button" class="button" data-filter=".finance-insurance">Finanace/Insurance</button><button class="button" class="button" data-filter=".healthcare-pharma-med">Healthcare/Pharma/Med</button><button class="button" class="button" data-filter=".hospitality-leisure-transportation">Hospitality/Leisure/Transportation</button><button class="button" class="button" data-filter=".manufacturing-chemicals">Manufacturing/Chemicals</button><button class="button" class="button" data-filter=".not">Not for Profit/Gov\'t</button><button class="button" class="button" data-filter=".retail-packaging">Retail/Packaging</button><button class="button" class="button" data-filter=".technology-telecom">Technology/Telecom</button>
+</div>
+<div class="button-group filter-button-group bg4" data-filter-group="programs">
+    Program: <button class="button is-checked" data-filter="">Show all</button><button class="button" data-filter=".sow">SOW</button><button class="button" data-filter=".contingent">Contingent</button><button class="button" data-filter=".profile">Profile Worker</button>
+</div>
+<div class="button-group filter-button-group bg5" data-filter-group="maturity">
+    Program Age: <button class="button is-checked" data-filter="">Show all</button><button class="button" data-filter=".0-2">0-2 years</button><button class="button" data-filter=".3-5">3-5 years</button><button class="button" data-filter=".6-8">6-8 years</button><button class="button" data-filter=".9">9+ years</button><button class="button" data-filter=".implementation">Implementation</button>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.js"></script>
+<script>
+
+
+        /*jQuery(\'.filter-button-group button\').click(  \'button\', function() {
+            var filterValue = jQuery( this ).attr(\'data-filter\');
+            // use filterFn if matches value
+            container.isotope({ filter: filterValue });
+        });*/
+
+
+        jQuery( document ).ready( function() {
+            var filters = {};
+            var container = jQuery(\'.grid\').isotope({
+                // options
+                itemSelector: \'.views-row\',
+                layoutMode: \'fitRows\'
+            });
+
+
+            jQuery(\'.filter-button-group button\').click( \'button\', function() {
+                var $this = jQuery(this);
+                // get group key
+                var $buttonGroup = $this.parents(\'.button-group\');
+                var filterGroup = $buttonGroup.attr(\'data-filter-group\');
+                // set filter for group
+                filters[ filterGroup ] = $this.attr(\'data-filter\');
+                // combine filters
+                var filterValue = concatValues( filters );
+                container.isotope({ filter: filterValue });
+                $buttonGroup.find(\'.is-checked\').removeClass(\'is-checked\');
+                jQuery( this ).addClass(\'is-checked\');
+            });
+
+            function concatValues( obj ) {
+                var value = \'\';
+                for ( var prop in obj ) {
+                    value += obj[ prop ];
+                }
+                return value;
+            }
+        });
+
+
+
+
+</script>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Attendee Image */
   $handler->display->display_options['fields']['field_attendee_image']['id'] = 'field_attendee_image';
@@ -200,7 +281,6 @@ span.views-label.views-label-field-industry,span.views-label.views-label-field-m
   $handler->display->display_options['fields']['field_program']['field'] = 'field_program';
   $handler->display->display_options['fields']['field_program']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_program']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_program']['separator'] = ',';
   /* Field: Content: Region */
   $handler->display->display_options['fields']['field_region']['id'] = 'field_region';
   $handler->display->display_options['fields']['field_region']['table'] = 'field_data_field_region';
@@ -220,7 +300,6 @@ span.views-label.views-label-field-industry,span.views-label.views-label-field-m
 </div>';
   $handler->display->display_options['fields']['field_region']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_region']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_region']['separator'] = ',';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -238,93 +317,15 @@ span.views-label.views-label-field-industry,span.views-label.views-label-field-m
     'attendee' => 'attendee',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Industry (field_industry) */
-  $handler->display->display_options['filters']['field_industry_value']['id'] = 'field_industry_value';
-  $handler->display->display_options['filters']['field_industry_value']['table'] = 'field_data_field_industry';
-  $handler->display->display_options['filters']['field_industry_value']['field'] = 'field_industry_value';
-  $handler->display->display_options['filters']['field_industry_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_industry_value']['expose']['operator_id'] = 'field_industry_value_op';
-  $handler->display->display_options['filters']['field_industry_value']['expose']['label'] = 'Industry';
-  $handler->display->display_options['filters']['field_industry_value']['expose']['operator'] = 'field_industry_value_op';
-  $handler->display->display_options['filters']['field_industry_value']['expose']['identifier'] = 'field_industry_value';
-  $handler->display->display_options['filters']['field_industry_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-  );
-  /* Filter criterion: Content: Management Model (field_management_model) */
-  $handler->display->display_options['filters']['field_management_model_value']['id'] = 'field_management_model_value';
-  $handler->display->display_options['filters']['field_management_model_value']['table'] = 'field_data_field_management_model';
-  $handler->display->display_options['filters']['field_management_model_value']['field'] = 'field_management_model_value';
-  $handler->display->display_options['filters']['field_management_model_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_management_model_value']['expose']['operator_id'] = 'field_management_model_value_op';
-  $handler->display->display_options['filters']['field_management_model_value']['expose']['label'] = 'Management Model ';
-  $handler->display->display_options['filters']['field_management_model_value']['expose']['operator'] = 'field_management_model_value_op';
-  $handler->display->display_options['filters']['field_management_model_value']['expose']['identifier'] = 'field_management_model_value';
-  $handler->display->display_options['filters']['field_management_model_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-  );
-  /* Filter criterion: Content: Maturity (field_maturity) */
-  $handler->display->display_options['filters']['field_maturity_value']['id'] = 'field_maturity_value';
-  $handler->display->display_options['filters']['field_maturity_value']['table'] = 'field_data_field_maturity';
-  $handler->display->display_options['filters']['field_maturity_value']['field'] = 'field_maturity_value';
-  $handler->display->display_options['filters']['field_maturity_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_maturity_value']['expose']['operator_id'] = 'field_maturity_value_op';
-  $handler->display->display_options['filters']['field_maturity_value']['expose']['label'] = 'Maturity';
-  $handler->display->display_options['filters']['field_maturity_value']['expose']['operator'] = 'field_maturity_value_op';
-  $handler->display->display_options['filters']['field_maturity_value']['expose']['identifier'] = 'field_maturity_value';
-  $handler->display->display_options['filters']['field_maturity_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-  );
-  /* Filter criterion: Content: Program (field_program) */
-  $handler->display->display_options['filters']['field_program_value']['id'] = 'field_program_value';
-  $handler->display->display_options['filters']['field_program_value']['table'] = 'field_data_field_program';
-  $handler->display->display_options['filters']['field_program_value']['field'] = 'field_program_value';
-  $handler->display->display_options['filters']['field_program_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_program_value']['expose']['operator_id'] = 'field_program_value_op';
-  $handler->display->display_options['filters']['field_program_value']['expose']['label'] = 'Program';
-  $handler->display->display_options['filters']['field_program_value']['expose']['operator'] = 'field_program_value_op';
-  $handler->display->display_options['filters']['field_program_value']['expose']['identifier'] = 'field_program_value';
-  $handler->display->display_options['filters']['field_program_value']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_program_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-  );
-  /* Filter criterion: Content: Region (field_region) */
-  $handler->display->display_options['filters']['field_region_value']['id'] = 'field_region_value';
-  $handler->display->display_options['filters']['field_region_value']['table'] = 'field_data_field_region';
-  $handler->display->display_options['filters']['field_region_value']['field'] = 'field_region_value';
-  $handler->display->display_options['filters']['field_region_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_region_value']['expose']['operator_id'] = 'field_region_value_op';
-  $handler->display->display_options['filters']['field_region_value']['expose']['label'] = 'Region';
-  $handler->display->display_options['filters']['field_region_value']['expose']['operator'] = 'field_region_value_op';
-  $handler->display->display_options['filters']['field_region_value']['expose']['identifier'] = 'field_region_value';
-  $handler->display->display_options['filters']['field_region_value']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_region_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-  );
   $handler->display->display_options['path'] = 'company-profile99';
 
   /* Display: Page2 */
   $handler = $view->new_display('page', 'Page2', 'page_1');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'stuff grid';
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['style_options']['row_class'] = 'mix [field_industry] [field_management_model] [field_maturity] [field_program] [field_region]';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-3 mix [field_industry] [field_management_model] [field_maturity] [field_program] [field_region]';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -334,52 +335,27 @@ span.views-label.views-label-field-industry,span.views-label.views-label-field-m
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<style>
-.view-company-profile .views-row {
-    float: left;
-    width: 240px;
-    min-height: 450px;
-}
-.button-group.filter-button-group {
-    margin-bottom: 5px;
-}
-div#zone-menu {
-    display: none;
-}
-.region-content ul, .region-content ul li {
-    list-style: none;
-}
-.item-list ul li {
-    margin: 0;
-    padding: 0;
-}
-.container-12 .grid-9 {
-    width: 100%;
-}
-aside#region-sidebar-first {
-    display: none;
-}
-.views-field-title .field-content {
-    font-size: 18px;
-    font-weight: bold
-}
+  $handler->display->display_options['header']['area']['content'] = '<div class="hero">
+    <img src="sites/default/files/attendees.jpg" />
+    <div class="herotext attendees">Attendees</div>
+</div>
 
-span.views-label.views-label-field-industry,span.views-label.views-label-field-management-model,span.views-label.views-label-field-maturity, span.views-label.views-label-field-program,span.views-label.views-label-field-region {
-    font-weight: bold;
-}
-.field-content {
-    max-width: 200px;
-}
-button.is-checked {
-    background: #f0ab00;
-}
-button {
-    border-radius: 5px;
-    background: #008fd3;
-    color: white;
-    text-shadow: none;
-}
-</style>
+<div class="filters"><div class="button-group filter-button-group bg1" data-filter-group="region">
+    Region: <button class="button is-checked" data-filter="">Show all</button><button class="button" data-filter=".north">North America</button><button class="button" data-filter=".latin">Latin America</button><button class="button" data-filter=".apac">APAC</button><button class="button" data-filter=".emea">EMEA</button>
+</div><div class="button-group filter-button-group bg2" data-filter-group="management">
+    Management model: <button class="button is-checked" data-filter="">Show all</button><button class="button" data-filter=".msp">MSP</button><button class="button" data-filter=".self-managed">Self-managed</button><button class="button" data-filter=".hybrid">Hybrid</button>
+</div>
+
+<div class="button-group filter-button-group bg3" data-filter-group="industry">
+    Industry:   <button class="button is-checked" class="button" data-filter="">Show all</button><button class="button" class="button" data-filter=".energy-resources-utility">Energy/Resources/Utility</button><button class="button" class="button" data-filter=".finance-insurance">Finanace/Insurance</button><button class="button" class="button" data-filter=".healthcare-pharma-med">Healthcare/Pharma/Med</button><button class="button" class="button" data-filter=".hospitality-leisure-transportation">Hospitality/Leisure/Transportation</button><button class="button" class="button" data-filter=".manufacturing-chemicals">Manufacturing/Chemicals</button><button class="button" class="button" data-filter=".not">Not for Profit/Gov\'t</button><button class="button" class="button" data-filter=".retail-packaging">Retail/Packaging</button><button class="button" class="button" data-filter=".technology-telecom">Technology/Telecom</button>
+</div>
+<div class="button-group filter-button-group bg4" data-filter-group="programs">
+    Program: <button class="button is-checked" data-filter="">Show all</button><button class="button" data-filter=".sow">SOW</button><button class="button" data-filter=".contingent">Contingent</button><button class="button" data-filter=".profile">Profile Worker</button>
+</div>
+<div class="button-group filter-button-group bg5" data-filter-group="maturity">
+    Program Age: <button class="button is-checked" data-filter="">Show all</button><button class="button" data-filter=".0-2">0-2 years</button><button class="button" data-filter=".3-5">3-5 years</button><button class="button" data-filter=".6-8">6-8 years</button><button class="button" data-filter=".9">9+ years</button><button class="button" data-filter=".implementation">Implementation</button>
+</div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.js"></script>
 <script>
@@ -455,17 +431,14 @@ button {
   $handler->display->display_options['fields']['field_industry']['id'] = 'field_industry';
   $handler->display->display_options['fields']['field_industry']['table'] = 'field_data_field_industry';
   $handler->display->display_options['fields']['field_industry']['field'] = 'field_industry';
-  $handler->display->display_options['fields']['field_industry']['element_label_colon'] = FALSE;
   /* Field: Content: Management Model */
   $handler->display->display_options['fields']['field_management_model']['id'] = 'field_management_model';
   $handler->display->display_options['fields']['field_management_model']['table'] = 'field_data_field_management_model';
   $handler->display->display_options['fields']['field_management_model']['field'] = 'field_management_model';
-  $handler->display->display_options['fields']['field_management_model']['element_label_colon'] = FALSE;
   /* Field: Content: Program */
   $handler->display->display_options['fields']['field_program']['id'] = 'field_program';
   $handler->display->display_options['fields']['field_program']['table'] = 'field_data_field_program';
   $handler->display->display_options['fields']['field_program']['field'] = 'field_program';
-  $handler->display->display_options['fields']['field_program']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_program']['delta_offset'] = '0';
   /* Field: Content: Region */
   $handler->display->display_options['fields']['field_region']['id'] = 'field_region';
@@ -484,7 +457,6 @@ button {
     <div class="views-field views-field-field-program">    [field_program] </div>
     <div class="views-field views-field-field-region">    [field_region]  </div>
 </div>';
-  $handler->display->display_options['fields']['field_region']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_region']['delta_offset'] = '0';
   /* Field: Content: Maturity */
   $handler->display->display_options['fields']['field_maturity']['id'] = 'field_maturity';
@@ -504,7 +476,6 @@ button {
     <div class="views-field views-field-field-program">    [field_program] </div>
     <div class="views-field views-field-field-region">    [field_region]  </div>
 </div>';
-  $handler->display->display_options['fields']['field_maturity']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
