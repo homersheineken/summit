@@ -1472,7 +1472,7 @@ function summit_redo_with_blocks_default_blockexport_settings() {
   'theme' => 'seven',
   'status' => 0,
   'weight' => 0,
-  'region' => -1,
+  'region' => '',
   'custom' => 0,
   'visibility' => 0,
   'pages' => '',
@@ -3941,7 +3941,7 @@ company-profile',
   'theme' => 'bartik',
   'status' => 0,
   'weight' => 0,
-  'region' => -1,
+  'region' => '',
   'custom' => 0,
   'visibility' => 0,
   'pages' => '',
@@ -3955,7 +3955,7 @@ company-profile',
   'theme' => 'fieldglass',
   'status' => 0,
   'weight' => 0,
-  'region' => -1,
+  'region' => '',
   'custom' => 0,
   'visibility' => 0,
   'pages' => '',
@@ -3969,7 +3969,7 @@ company-profile',
   'theme' => 'seven',
   'status' => 0,
   'weight' => 0,
-  'region' => -1,
+  'region' => '',
   'custom' => 0,
   'visibility' => 0,
   'pages' => '',
@@ -4225,7 +4225,7 @@ company-profile',
         <input type="checkbox" id="trigger" name="trigger"/>
         <ul class="site_select">
             <li><a href="/">CHICAGO</a></li>
-            <li><a href="emea/">EMEA</a></li>
+            <li><a href="http://emeasummit.fieldglass.com">EMEA</a></li>
         </ul>
     </div>
     <div class="divider"><img src="sites/default/files/divider_line.png" /></div>
@@ -4678,7 +4678,7 @@ h2 {font-size:42px;   font-family: BentonSans,din-condensed-web, sans-serif;}
   'bid' => 16,
   'body' => '<div class="container-12 top_level ">
 <div class="forum_cont">
-<div class="forum_container grid-8">
+<div class="forum_container grid-9 prefix-1">
    <div class="join_forum_hp">Join the SAP Fieldglass Forum</div>
 
    <div class="connect_hp">Connect and engage with your peers and the greater SAP Fieldglass family before, during and after the event. Join the SAP Fieldglass Forum, where members help one another develop skills and find resources by sharing information and best practices relating to the application, program management and industry.</div>

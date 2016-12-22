@@ -1,3 +1,4 @@
+name = summit_redo_with_blocks
 core = 7.x
 package = Features
 dependencies[] = block

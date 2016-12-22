@@ -567,7 +567,10 @@ body {
 /* line 634, summit_wide-global.scss */
 #zone-footer-wrapper {
   margin: 0; }
-
+div#block-block-8 {
+  float: right;
+  width: 66%;
+}
   /* line 644, summit_wide-global.scss */
   .zone-footer.container-12 .grid-4.region-postscript-second {
     width: 40%;
@@ -757,7 +760,9 @@ input[name="trigger2"]:checked + ul {
 .divider {
   padding: 0px 30px;
 }
-
+div#block-block-23 {
+  margin-top: -77px;
+}
 .scroll_more {
   margin-top: 5%;
 }
@@ -797,7 +802,7 @@ div#block-block-16 {
 
 .forum_container {
   width: 75%;
-  margin-left: 10em !important;
+  /*margin-left: 10em !important;*/
   top: 25%;
   -webkit-transform: translateY(25%);
   -ms-transform: translateY(25%);
@@ -978,6 +983,10 @@ a.register-button {
   background-color: rgb(0, 143, 211);
   border-radius: 3px;
   padding: 10px;
+}
+a.register-button:hover {
+  color: white;
+  text-decoration: underline;
 }
 div#block-block-22 {
   /*margin-top:12%;
@@ -1189,7 +1198,7 @@ div#mobile-header {
   margin-bottom: -2em;
 }
 .views-slideshow-pager-field-item {
-  width: 29.9%;
+  width: 29.999%;
   margin: 0em 0em 0em 0em !important;
   /*margin-right: .15em*/
   padding: 0px !important;
@@ -1598,53 +1607,6 @@ div#block-block-24 {
 @media screen and (max-width:540px){
   .herotext {font-size: 2rem}
 }
-
-@media (max-width: 667px) and (min-width: 320px) {
-  div#block-block-8 {
-    float: right;
-    margin-top: 0px;
-  }
-  .fingertips, .summit_app {
-    display: none;
-  }
-  .app-mobile {
-    display: block;
-  }
-  .summit_exp {
-    font-size: 3rem;
-  }
-  .exp {
-    margin-top: 120px;
-  }
-  .grid-12.slideshow {
-    margin-top: 0px;
-  }
-  .main_content_slider_wrapper {
-    float:left;
-  }
-  .all_around_position_4, .all_around_position_5, .all_around_position_1,.all_around_position_2 {
-    display:none;
-  }
-  .all_around_position_3 {
-    left:26% !important;
-  }
-  .circle_slider {
-    float: none;
-    min-width: auto;
-  }
-  .content_slider_wrapper .circle_slider_text_wrapper {
-    margin-top: 0px;
-  }
-  div#block-block-24 {
-    margin-bottom: -150px;
-  }
-  .circle_slider_nav_left {
-    left: 200px!important;
-  }
-  .circle_slider_nav_right {
-    left: 622px !important;
-  }
-}
 @media (max-device-width: 1024px) {
   #responsive-menu-button span {
     display: block;
@@ -1655,9 +1617,6 @@ div#block-block-24 {
   }
   .branding-data {
     padding-bottom: 0px;
-  }
-  div#region-branding {
-    width: 80%;
   }
   .site_dropdown_cont {
     display: none;
@@ -1674,16 +1633,19 @@ div#block-block-24 {
   div#region-branding {
     text-align: center;
     width: 80%;
+    float: left;
   }
   div#region-menu-second {
     width: 10%;
+    float:right;
+    margin-top: -40px;
   }
   div#block-block-8 {
     float: right;
     margin-top: 10px;
   }
   .herotext {
-    font-size: 2.5em;
+    font-size: 2em;
   }
   .page-faq .views-slideshow-pager-field-item, .page-agenda .views-slideshow-pager-field-item {
     font-size: 29px;
@@ -1703,7 +1665,7 @@ div#block-block-24 {
     -webkit-transform: translateY(-25%);
     -ms-transform: translateY(-25%);
     transform: translateY(-25%);
-    min-width: 200px;
+    /*min-width: 200px;*/
     margin: 1em auto !important;
   }
   .site_dropdown, a.register-button {
@@ -1745,6 +1707,7 @@ div#block-block-24 {
     margin-left: 10%;
   }
 }
+
 @media (min-width: 667px) and (max-width: 1023px){
   .grid-4.exp {
     width: 95% !important;
@@ -1778,7 +1741,24 @@ div#block-block-24 {
   .forum_container {
     width: 100% !important;
     margin-left: 10px !important;
-    margin-bottom: 0px;
+    margin-bottom: 55px;
+    top: 0%;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  .forum_cont {
+    position: relative;
+    top: 0%;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  .cta_hp.grid-2 {
+    position: relative;
+    text-align: center;
+    min-width: 200px;
+    margin: 0px 10px 0px 10px !important;
   }
   div#block-block-16 {
     min-height: 255px;
@@ -1789,17 +1769,100 @@ div#block-block-24 {
     margin: 0 auto !important;
   }*/
   .grid-5.iphone {
-    top: 0%;
+    top: 10%;
+    -webkit-transform: translateY(10%);
+    -ms-transform: translateY(10%);
     transform: translateY(10%);
   }
   .grid-6.app-dl {
     top: 0%;
+    -webkit-transform: translateY(63%);
+    -ms-transform: translateY(63%);
     transform: translateY(63%);
+  }
+  div#block-block-18 {
+    min-height: 100px;
+    margin-top: 0px;
+  }
+  div#block-block-8 {
+    float: right;
+    margin-top: 51px;
+  }
+  .grid-6.app-dl {
+    top:44%;
+    transform: translateY(44%);
+  }
+}
+@media (max-width: 666px) and (min-width: 320px) {
+  div#block-block-8 {
+    float: right;
+    margin-top: 30px;
+  }
+  .fingertips, .summit_app {
+    display: none;
+  }
+  .app-mobile {
+    display: block;
+  }
+  .summit_exp {
+    font-size: 3rem;
+  }
+  .exp {
+    margin-top: 120px;
+  }
+  .grid-12.slideshow {
+    margin-top: 0px;
+  }
+  .main_content_slider_wrapper {
+    float:left;
+  }
+  .all_around_position_4, .all_around_position_5, .all_around_position_1,.all_around_position_2 {
+    display:none;
+  }
+  .all_around_position_3 {
+    left:26% !important;
+  }
+  .circle_slider {
+    float: none;
+    min-width: auto;
+  }
+  .content_slider_wrapper .circle_slider_text_wrapper {
+    margin-top: 0px;
+  }
+  div#block-block-24 {
+    margin-bottom: -150px;
+  }
+  .circle_slider_nav_left {
+    left: 200px!important;
+  }
+  .circle_slider_nav_right {
+    left: 622px !important;
+  }
+  .forum_container {
+    width: 100%;
+    top: 0%;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  .forum_cont {
+    position: relative;
+    top: 0%;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  .cta_hp.grid-2 {
+    margin-left: 0px !important;
+  }
+  div#block-block-18 {
+    min-height: 205px;
   }
 }
 @media (max-device-width: 375px) {
   .hero_register img {
-    max-width: 4rem;
+    max-width: 7rem;
+    margin-top: -20px;
   }
   .forum_cont {
     position: relative;
@@ -1811,7 +1874,7 @@ div#block-block-24 {
     transform: translateY(0%);
   }
   div#block-block-18 {
-    min-height: 0px;
+    min-height: 200px;
     margin-bottom: 0px;
     padding-bottom: 0px;
     background: lightgray;
@@ -1944,6 +2007,7 @@ div#block-block-24 {
   .grid-6.hotel {
     margin-bottom: 20px;
   }
+
 }
 @media (min-width: 1024px) and (max-width: 1200px){
   div#block-block-24 {
@@ -1965,6 +2029,40 @@ div#block-block-24 {
   }
   div#views_slideshow_cycle_main_faq-page {
     margin-top: 25px;
-  }
+  }.forum_container {
+     width: 75%;
+     /* margin-left: 10em !important; */
+     top: 0%;
+     -webkit-transform: translateY(0%);
+     -ms-transform: translateY(0%);
+     transform: translateY(0%);
+   }
+  .cta_hp.grid-2 {
+    position: relative;
+    top: 100%;
+    -webkit-transform: translateY(10%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
 
+  }
+}
+@media (min-device-width: 740px) and (min-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation: landscape){
+  .forum_container.grid-9.prefix-1, .cta_hp.grid-2 {
+    padding-left: 0px;
+  }
+  .cta_hp.grid-2 {
+    margin-left: 10px !important;
+  }
+}
+@media (min-device-width: 768px) and (max-device-width: 1023px){
+  .cta_hp.grid-2 {
+    padding-left: 0px;
+  }
+}
+@media (min-device-width: 1024px)and (max-device-width: 1023px){
+  div#region-menu-second {
+    width: 10%;
+    float: right;
+    margin-top: 0px;
+  }
 }
