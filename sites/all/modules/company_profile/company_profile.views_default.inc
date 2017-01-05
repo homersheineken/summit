@@ -22,6 +22,7 @@ function company_profile_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Attendees';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -339,7 +340,11 @@ span.views-label.views-label-field-industry,span.views-label.views-label-field-m
     <img src="sites/default/files/attendees.jpg" />
     <div class="herotext attendees">Attendees</div>
 </div>
-
+<style>
+  .title{
+     display:none;
+}
+</style>
 <div class="filters"><div class="button-group filter-button-group bg1" data-filter-group="region">
     Region: <button class="button is-checked" data-filter="">Show all</button><button class="button" data-filter=".north">North America</button><button class="button" data-filter=".latin">Latin America</button><button class="button" data-filter=".apac">APAC</button><button class="button" data-filter=".emea">EMEA</button>
 </div><div class="button-group filter-button-group bg2" data-filter-group="management">
