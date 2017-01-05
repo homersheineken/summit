@@ -1472,7 +1472,7 @@ function summit_redo_with_blocks_default_blockexport_settings() {
   'theme' => 'seven',
   'status' => 0,
   'weight' => 0,
-  'region' => '',
+  'region' => -1,
   'custom' => 0,
   'visibility' => 0,
   'pages' => '',
@@ -3944,7 +3944,7 @@ company-profile',
   'region' => '',
   'custom' => 0,
   'visibility' => 0,
-  'pages' => '',
+  'pages' => 'company-profile',
   'title' => '',
   'cache' => -1,
 );
@@ -3958,7 +3958,7 @@ company-profile',
   'region' => '',
   'custom' => 0,
   'visibility' => 0,
-  'pages' => '',
+  'pages' => 'company-profile',
   'title' => '',
   'cache' => -1,
 );
@@ -3972,7 +3972,7 @@ company-profile',
   'region' => '',
   'custom' => 0,
   'visibility' => 0,
-  'pages' => '',
+  'pages' => 'company-profile',
   'title' => '',
   'cache' => -1,
 );
@@ -3986,7 +3986,7 @@ company-profile',
   'region' => 'content',
   'custom' => 0,
   'visibility' => 0,
-  'pages' => '',
+  'pages' => 'company-profile',
   'title' => '',
   'cache' => -1,
 );
@@ -4654,10 +4654,11 @@ h2 {font-size:42px;   font-family: BentonSans,din-condensed-web, sans-serif;}
   $export['block_custom'][] = array(
   'bid' => 15,
   'body' => '<div class="hero">
+<!--<iframe width="100%" height="866px" src="https://www.youtube.com/embed/YWXj0igTvfQ" frameborder="0" allowfullscreen></iframe>-->
 <img src="http://summit.localhost/sites/default/files/summit_top_img.jpg" />
 <div class="herotext hp">
           <p ><span>Join Us June 14–16, 2017</span><span ></span></p><p ><span>Loews Chicago Hotel </span></p>
-          <p class="hero_register"><img src="sites/default/files/register_white.svg" /></p>
+          <p class="hero_register"><a href="https://www.surveymonkey.com/r/CJKTNT3" target=_blank><img src="sites/default/files/register_white.svg" /></a></p>
           <div class="scroll_more"><img src="sites/default/files/scroll_to_view.gif" /><br />SCROLL TO VIEW MORE</div>
 
         </div>
@@ -4691,9 +4692,11 @@ h2 {font-size:42px;   font-family: BentonSans,din-condensed-web, sans-serif;}
 );
   $export['block_custom'][] = array(
   'bid' => 17,
-  'body' => '<div class="mm_hp">
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class=\'embed-container\'><iframe src=\'https://player.vimeo.com/video/178515124\' frameborder=\'0\' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-</div>',
+  'body' => '<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+<div class="mm_hp">
+<div class=\'embed-container\'><iframe src=\'https://player.vimeo.com/video/178515124?autoplay=1\' frameborder=\'0\' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+</div>
+',
   'info' => 'mm-hp',
   'format' => 'full_html',
 );
