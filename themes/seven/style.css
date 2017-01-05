@@ -560,7 +560,7 @@ fieldset {
   margin: 1em 0;
 }
 fieldset .fieldset-legend {
-  margin-top: -0.5em;
+  margin-top: 0.5em;
   padding-left: 15px; /* LTR */
   position: absolute;
   text-transform: uppercase;

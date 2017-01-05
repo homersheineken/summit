@@ -706,7 +706,8 @@ div#block-block-8 {
   padding: 0; }
 /* line 876, summit_wide-global.scss */
 .view-id-faq .item-list li {
-  list-style: none; }
+  list-style: none;
+  margin-bottom: 20px;}
 #zone-branding-wrapper {
   position:fixed;
   z-index: 990;
@@ -1055,7 +1056,10 @@ ul li.leaf {
   margin:1rem auto;
   position: relative;
 }
-.hero img {max-width:100%}
+.hero img, .hero iframe, .hero video {
+  max-width:100%
+
+}
 .herotext {
   position: absolute;
   top:50%;
@@ -1087,6 +1091,9 @@ div#mobile-header {
 }
 .why_dl a {
   font-size: 26px;
+}
+.page-node-6 div#block-system-main {
+  min-height: 2200px;
 }
 .downloads a {
   background-color: white;
@@ -1244,6 +1251,10 @@ span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1 {
 .view-id-faq .views_slideshow_main{
   width: 80%;
   margin-left: 10%;
+  margin-top: 60px;
+}
+.view-faq {
+  min-height: 1100px;
 }
 .page-faq .views-slideshow-pager-field-item,
 .page-agenda .views-slideshow-pager-field-item{
@@ -1276,6 +1287,8 @@ span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1 {
 }
 .post_time {
   margin-right:4em;
+  width: 275px;
+  float: left;
 }
 .ui-accordion-header {
   font-family: 'BentonSans-Light', 'BentonSans Light', 'BentonSans';
@@ -1320,6 +1333,9 @@ div#zone-menu {
 }
 .region-content ul, .region-content ul li {
   list-style: none;
+}
+.ui-accordion-content li {
+  list-style: disc !important;
 }
 .item-list ul li {
   margin: 0;
