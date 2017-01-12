@@ -674,9 +674,9 @@ div#block-block-8 {
 .view-quotes .views-row {
   margin-bottom: 2em; }
 .white_bg {
-  z-index: -1;
+  z-index: 1;
   position: absolute;
-  top: -227px;
+  top: 800px;
 }
 /* line 842, summit_wide-global.scss */
 .view-id-faq .views_slideshow_pager_field_item {
@@ -1584,6 +1584,7 @@ div#block-block-24 {
 }
 .grid-12.slideshow {
   margin-top: -230px;
+  z-index: 10;
 }
 .ss_name {
   font-family: 'BentonSans-Medium', 'BentonSans Medium', 'BentonSans';
@@ -1622,6 +1623,7 @@ div#block-block-24 {
 }
 .exp {
   margin-left: 5% !important;
+  z-index: 10;
 }
 .summit_exp{
   font-family: 'BentonSans-Light', 'BentonSans Light', 'BentonSans';
