@@ -1565,6 +1565,7 @@ div#region-footer-first, div#region-footer-second, div#region-postscript-first {
 }
 div#slider1 {
   width:100% !important;
+  z-index: 10;
 }
 div#block-block-24 {
   margin-bottom: -250px;
