@@ -676,7 +676,12 @@ div#block-block-8 {
 .white_bg {
   z-index: 1;
   position: absolute;
-  top: 611px;
+  top: 625px;
+}
+.slideshow {
+  float: right;
+  width: 100%;
+  margin-top: -300px;
 }
 /* line 842, summit_wide-global.scss */
 .view-id-faq .views_slideshow_pager_field_item {
