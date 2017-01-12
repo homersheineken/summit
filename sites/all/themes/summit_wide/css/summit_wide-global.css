@@ -569,7 +569,7 @@ body {
   margin: 0; }
 div#block-block-8 {
   float: right;
-  width: 66%;
+  margin-right: 5em;
 }
   /* line 644, summit_wide-global.scss */
   .zone-footer.container-12 .grid-4.region-postscript-second {
