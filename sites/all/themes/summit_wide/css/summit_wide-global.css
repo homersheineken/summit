@@ -1552,7 +1552,7 @@ div#region-footer-first, div#region-footer-second, div#region-postscript-first {
   border: none !important;
 }
 .main_content_slider_wrapper {
-  max-width: 100% !important;
+  /*max-width: 100% !important;*/
   float: right;
   right: -34px;
   width: auto !important;
