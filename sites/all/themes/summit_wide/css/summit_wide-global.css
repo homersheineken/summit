@@ -2013,6 +2013,11 @@ div#block-block-15 {
   .forum_cont {
     position: relative;
   }
+  .circle_slider {
+    max-width: 500px !important;
+    left: 0px !important;
+    margin-left: 4em !important;
+  }
   .container-12.top_level {
     margin: 10px;
   }
@@ -2089,7 +2094,7 @@ div#block-block-15 {
     height: 90px;
   }
   .zone-content-wrapper {
-    margin-top: 0px;
+    margin-top: 53px;
   }
   .bars {
     margin: 0px auto 10px !important;
@@ -2120,6 +2125,7 @@ div#block-block-15 {
   }
   div#block-block-23 {
     margin-bottom: -1px;
+    margin-top: -66px;
   }
   .footer_center {
     text-align: left;
@@ -2230,7 +2236,7 @@ div#block-block-15 {
   div#slider1 {
     width: 100% !important;
     left: 0px !important;
-    margin-top: 20px;
+    margin-top: -20px;
   }
 }
 @media (min-device-width: 400px)and (max-device-width:767px) {
@@ -2242,6 +2248,11 @@ div#block-block-15 {
   }
   .stats {
     margin-bottom: 120px;
+  }
+  div#block-block-8 {
+    float: right;
+    margin-top: 53px;
+    margin-right: 0px;
   }
   .page-node-6 .field-name-body {
     min-height: 3500px;
@@ -2268,5 +2279,8 @@ div#block-block-15 {
   .content_slider_wrapper .circle_slider_text_wrapper {
     margin-top: 0px;
     margin-left: 0% !important;
+  }
+  .content_slider_text_block_wrap {
+    max-width: 400px;
   }
 }
