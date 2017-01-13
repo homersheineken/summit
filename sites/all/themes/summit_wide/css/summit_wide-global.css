@@ -2277,10 +2277,13 @@ div#block-block-15 {
     width: 100% !important;
   }
   .content_slider_wrapper .circle_slider_text_wrapper {
-    margin-top: 0px;
-    margin-left: 0% !important;
+    margin-top: 180px;
+    margin-left: 5% !important;
   }
   .content_slider_text_block_wrap {
     max-width: 400px;
+  }
+  #zone-branding-wrapper {
+    height: 70px;
   }
 }
