@@ -695,7 +695,7 @@ div#block-block-8 {
 .view-quotes .views-row {
   margin-bottom: 2em; }
 .white_bg {
-  z-index: 1;
+  z-index: 0;
   position: absolute;
   margin-top: -243px;
 }
@@ -1060,6 +1060,10 @@ div#block-block-22 {
 div#block-block-23 {
   float: right;
 }
+.page-company-profile div#block-block-23 {
+  top: 900px;
+  position: relative;
+}
 div#block-block-23 .region-content p {
   margin-bottom: 0;
 }
@@ -1168,7 +1172,7 @@ ul li.leaf {
   font-family: 'BentonSans-Regular', 'BentonSans';
   font-weight: 400;
   font-style: normal;
-  font-size: 3em;
+  font-size: 60px;
   line-height: 150%;
   color: #FFFFFF;
   width: 100%;
@@ -1662,10 +1666,10 @@ div#region-footer-first, div#region-footer-second, div#region-postscript-first {
 }
 div#slider1 {
   width:100% !important;
-  z-index: 10;
+  z-index: 0;
 }
 div#block-block-24 {
-  margin-bottom: -250px;
+  margin-bottom: -300px;
 }
 .circle_slider {
   float: right;
@@ -1740,6 +1744,7 @@ div#block-block-24 {
 .exp {
   margin-left: 5% !important;
   z-index: 25;
+  margin-top: -125px;
 }
 .summit_exp{
   font-family: 'BentonSans-Light', 'BentonSans Light', 'BentonSans';
@@ -1783,15 +1788,21 @@ div#block-block-25 {
   font-family: 'BentonSans-Light', 'BentonSans Light', 'BentonSans';
   font-weight: 200;
   font-style: normal;
-  font-size: 24px;
+  font-size: 20px;
   color: #FFFFFF;
   text-align: center;
   top:120px;
   position: fixed;
   width:100%;
-
   z-index: 950;
   display:none;
+}
+#block-block-25 a {
+  color:white;
+}
+#block-block-25 a:hover {
+  color:white;
+  font-weight: bold;
 }
 div#block-block-25 p {
   padding: 20px;
@@ -2072,6 +2083,9 @@ div#block-block-25 p {
   .view-id-faq .views_slideshow_main, .view-id-faq .views_slideshow_main {
     margin-top: 20px;
   }
+  .zone-content-wrapper {
+    margin-top: 0px;
+  }
 }
 @media (max-width: 666px) and (min-width: 320px) {
   /*div#block-block-8 {
@@ -2321,7 +2335,7 @@ div#block-block-25 p {
   }
   div#block-block-23 {
     margin-bottom: -1px;
-    margin-top: -66px;
+    margin-top: -67px;
   }
   .footer_center {
     text-align: left;
@@ -2357,6 +2371,9 @@ div#block-block-25 p {
 @media (min-width: 1024px) and (max-width: 1200px){
   div#block-block-24 {
     margin-top: 0px;
+  }
+  .exp {
+    margin-top: -80px;
   }
   .circle_slider {
     -webkit-transform: scale(.5, .5) !important;

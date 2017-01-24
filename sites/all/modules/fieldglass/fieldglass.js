@@ -17,14 +17,14 @@ jQuery( document ).ready(function() {
                 logo.removeClass('logoswap');
             }
             //Black Bar Stuff
-
+            var block25 =jQuery('#block-block-25');
             var shouldBeVisible = jQuery(window).scrollTop()>50;
             if (shouldBeVisible && !isVisible) {
                 isVisible = true;
-                jQuery('#block-block-25').slideToggle( "slow" );
+                block25.slideToggle( 200 );
             } else if (isVisible && !shouldBeVisible) {
                 isVisible = false;
-                jQuery('#block-block-25').slideToggle( 10 );
+                block25.slideToggle( 10 );
             }
         });
     }
