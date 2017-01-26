@@ -2203,6 +2203,9 @@ div#block-block-25 p {
   .foo img {
     width: 30%;
   }
+  div#block-block-23 {
+    margin-top: -73px;
+  }
 }
 @media (max-width: 666px) and (min-width: 320px) {
   /*div#block-block-8 {
