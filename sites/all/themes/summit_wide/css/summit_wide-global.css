@@ -2204,7 +2204,7 @@ div#block-block-25 p {
     width: 30%;
   }
   div#block-block-23 {
-    margin-top: -73px;
+    float:none;
   }
   .grid-6.downloads, .grid-6.hotel, .grid-6.map, .grid-6.oharecont, .grid-6.midwaycont {
     width: 100% !important;
