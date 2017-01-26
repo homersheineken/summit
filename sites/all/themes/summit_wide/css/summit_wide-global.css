@@ -284,12 +284,18 @@ div#region-menu-second {
   -webkit-transform: translateY(50%);
   -ms-transform: translateY(50%);
   transform: translateY(50%);
+  right: -4%;
 }
 div#region-branding, #region-menu-first, #region-menu-second {
   flex: 1;
 }
 
 div#zone-branding {
+  display:-webkit-flex;
+  display:-webkit-box;
+  display:-moz-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
   display: flex;
 }
 /* line 219, summit_wide-global.scss */
@@ -590,8 +596,8 @@ div#zone-branding {
 #zone-footer-wrapper {
   margin: 0; }
 div#block-block-8 {
-  float: right;
-  /*margin-right: 5em;*/
+  /*float: right;
+  margin-right: 5em;*/
 }
   /* line 644, summit_wide-global.scss */
   .zone-footer.container-12 .grid-4.region-postscript-second {
@@ -790,16 +796,24 @@ input[name="trigger2"]:checked + ul {
   font-family: BentonSansMedium, sans-serif;
 }
 .site_dropdown, .divider, .register_button {
-  float:left;
+  display:-webkit-inline-flex;
+  display:-webkit-box;
+  display:-moz-inline-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display: inline-flex;
 }
+.site_dropdown_cont {
+  text-align: center;
+}
+
 .divider {
   padding: 0px 30px;
-}
-.divider {
   margin-top: -4px;
+  display:none;
 }
 .register_button {
-  margin-top: -8px;
+  margin-top: -12px;
 }
 div#block-block-23 {
   margin-top: -75px;
@@ -829,7 +843,7 @@ div#block-block-16 {
   margin-bottom: 2em !important;
   z-index: 100;
   overflow: hidden;
-  padding: 15px 0px !important;
+  padding: 30px 0px !important;
 }
 #block-block-17 {
   background-image: url("/sites/default/files/parallex-background.jpg");
@@ -899,6 +913,11 @@ p.hp_hotel {
   color:white;
 }
 .forum_cont {
+  display:-webkit-flex;
+  display:-webkit-box;
+  display:-moz-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
   display: flex; /* add */
   justify-content: center; /* add to align horizontal */
   align-items: center; /* add to align vertical */
@@ -945,7 +964,13 @@ div#block-block-18 {
   text-align: center;
 }
 .app-hp, .downloads_cont, div#widget_pager_top_faq-page_1 {
+  display:-webkit-flex;
+  display:-webkit-box;
+  display:-moz-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
 }
 .iphone, .app-dl {
   /*position: relative;
@@ -1834,6 +1859,18 @@ div#block-block-25 {
 div#block-block-25 p {
   padding: 20px;
 }
+div#zone-content-wrapper {
+  overflow: hidden;
+}
+.innerbar_cont {
+  display:-webkit-flex;
+  display:-webkit-box;
+  display:-moz-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
 @media (min-width: 1025px) and (max-width: 1450px) {
   .iphone {
     top: 50%;
@@ -2179,6 +2216,13 @@ div#block-block-25 p {
   }
 }
 @media (max-width: 667px) and (min-width: 320px) {
+  .dl_right {
+    margin-left: 0px !important;
+    margin-top:10px !important;
+  }
+  .stats {
+    margin: 50px 0 100px;
+  }
   .container-12.innerbar_cont {
     margin-top: -100px;
   }
