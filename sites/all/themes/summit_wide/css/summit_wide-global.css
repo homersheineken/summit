@@ -277,6 +277,7 @@ div#region-menu-first {
   -webkit-transform: translateY(50%);
   -ms-transform: translateY(50%);
   transform: translateY(50%);
+  left: -2%;
 }
 div#region-menu-second {
   top: 50%;
@@ -783,7 +784,7 @@ input[name="trigger2"]:checked + ul {
 .site_dropdown {
   font-weight: 300;
   font-style: normal;
-  font-size: 26px;
+  font-size: 18px;
   color: #666666;
   text-transform: uppercase;
   font-family: BentonSansMedium, sans-serif;
@@ -824,16 +825,21 @@ div#block-block-16 {
   background: black;
   color: white;
   font-family: 'BentonSans-Light', 'BentonSans Light', 'BentonSans';
-  min-height: 185px;
+  /*min-height: 175px;*/
   margin-bottom: 2em !important;
   z-index: 100;
+  overflow: hidden;
+  padding: 15px 0px !important;
 }
 #block-block-17 {
   background-image: url("/sites/default/files/parallex-background.jpg");
   padding-top: 10em !important;
   padding-bottom: 45em !important;
 }
-
+.scroll_text {
+  font-size: 14px;
+  margin-top: -30px;
+}
 .join_forum_hp {
   font-size: 33px;
   line-height: 60px;
@@ -851,8 +857,11 @@ div#block-block-16 {
 p.hero_register {
   margin-top: 25px;
 }
+p.hp_hotel {
+  font-size: 42px;
+}
 .forum_container {
-  width: 75%;
+  width: 90%;
   /*margin-left: 10em !important;
   top: 25%;
   -webkit-transform: translateY(40%);
@@ -870,14 +879,14 @@ p.hero_register {
   border: 1px solid #e4e4e4;
   border-radius: 5px;
   line-height: 54px;
-  margin-left:5em !important;
-  width: 100%;
+  /*margin-left:5em !important;*/
+  width:100%;
 }
 .cta_hp{
-  top: 100%;
+  /*top: 100%;
   -webkit-transform: translateY(100%);
   -ms-transform: translateY(100%);
-  transform: translateY(100%);
+  transform: translateY(100%);*/
 }
 .cta_hp:hover {
   background: rgb(0, 143, 211);
@@ -890,12 +899,18 @@ p.hero_register {
   color:white;
 }
 .forum_cont {
-  position: absolute;
+  display: flex; /* add */
+  justify-content: center; /* add to align horizontal */
+  align-items: center; /* add to align vertical */
+  /*position: absolute;
   padding-top: 20px;
-  /*top: 25%;
+  top: 25%;
   -webkit-transform: translateY(25%);
   -ms-transform: translateY(25%);
   transform: translateY(25%);*/
+}
+.top_level {
+  margin: 0px !important;
 }
 .mm_hp {
   max-width: 50%;
@@ -996,7 +1011,6 @@ div#block-block-19,div#block-block-20,div#block-block-21 {
 .main_menu {
   text-align: center;
 }
-
 .menu li {
   float: left;
   list-style-type: none !important;
@@ -1030,12 +1044,15 @@ ul.menu li {
   text-align: left;
   line-height: 36px;
 }
+label#overview {
+  padding-right: 0px;
+}
 .li.expanded, li.collapsed, li.leaf {
   padding: 0 !important;
 }
 .main_menu li {
   display: inline-block;
-  margin-right: 3em;
+  margin-right: 2em;
 }
 .site_select li {
   display: block;
@@ -1103,7 +1120,10 @@ ul li.leaf {
   font-style: normal;
   color: #666666;
   font-size: 18px;
-
+}
+.grid-6.downloads, .grid-6.hotel, .grid-6.map, .grid-6.oharecont,.grid-6.midwaycont {
+  width: 50% !important;
+  margin: 0;
 }
 .bars {
   margin: 0 auto 5em !important;
@@ -1783,6 +1803,13 @@ div#block-block-15 {
 #logo {
   margin-top: 10px;
 }
+.past_attendees {
+  margin-left: 8%;
+  font-size: 20px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #666666;
+}
 div#block-block-25 {
   background-color: black;
   font-family: 'BentonSans-Light', 'BentonSans Light', 'BentonSans';
@@ -1807,6 +1834,78 @@ div#block-block-25 {
 div#block-block-25 p {
   padding: 20px;
 }
+@media (min-width: 1025px) and (max-width: 1450px) {
+  .iphone {
+    top: 50%;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+  }
+  .app-dl {
+    top: 103%;
+    -webkit-transform: translateY(103%);
+    -ms-transform: translateY(103%);
+    transform: translateY(103%);
+    right: 10%;
+  }
+
+}
+@media (min-width: 1200px) and (max-width: 1329px) {
+  .white_bg {
+    z-index: 0;
+    position: absolute;
+    margin-top: -200px;
+  }
+}
+@media (min-width: 1350px) {
+  .circle_slider {
+    float: right;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1350px) {
+  .grid-4.exp {
+    width:95% !important;
+  }
+  .slideshow {
+    margin-top: 0px;
+    float:none;
+  }
+  .circle_slider {
+    float: left;
+  }
+  div#block-block-16{
+    min-height: 185px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1225px) {
+  div#block-block-16{
+    min-height: 255px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1220px) {
+  .main_menu label, .menu li a, .main_menu li a, .site_dropdown {
+    font-size: 14px;
+  }
+  .register_button img {
+    width: 75%;
+  }
+  .iphone {
+    top: 100%;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  .app-dl {
+    top: 120%;
+    -webkit-transform: translateY(120%);
+    -ms-transform: translateY(120%);
+    transform: translateY(120%);
+  }
+  div#zone-branding {
+    width: 100%;
+  }
+
+}
 @media screen and (max-width:680px){
   .herotext, .reg_date {
     font-size: 1.3em;
@@ -1818,9 +1917,12 @@ div#block-block-25 p {
     font-size: 2.4rem;
     line-height: 39px;}
 }
-@media (max-device-width: 1024px) {
+@media (max-width: 1024px) {
   div#block-block-25 {
     display: none !important;
+  }
+  .forum_cont {
+    display: block;
   }
   #block-block-17 {
     padding-bottom: 0em !important;
@@ -1841,7 +1943,7 @@ div#block-block-25 p {
   .slideshow {
     float: left;
     width: 100%;
-    margin-top: 0px;
+    margin-top: 70px;
   }
   .content_slider_wrapper .circle_slider_text_wrapper {
     margin-top: 0px;
@@ -1995,7 +2097,7 @@ div#block-block-25 p {
     -ms-transform: scale(.5, .5) !important;
     transform: scale(.5, .5) !important;
     min-width: 0px;
-    left: 5% !important;
+    left: 17% !important;
   }
   .social_icon {
     padding-right: 1.3em;
@@ -2086,6 +2188,21 @@ div#block-block-25 p {
   .zone-content-wrapper {
     margin-top: 0px;
   }
+  .join_forum_hp, .connect_hp {
+    margin-left: 0px;
+  }
+  .join_forum_hp {
+    line-height: 45px;
+  }
+  .connect_hp {
+    margin-bottom: 10px;
+  }
+  #zone-branding-wrapper {
+    height: 60px;
+  }
+  .foo img {
+    width: 30%;
+  }
 }
 @media (max-width: 666px) and (min-width: 320px) {
   /*div#block-block-8 {
@@ -2093,6 +2210,26 @@ div#block-block-25 p {
     margin-top: 30px;
     margin-right: 0px;
   }*/
+  div#region-footer-first, div#region-footer-second, div#region-postscript-first {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  div#zone-footer {
+    display: block;
+  }
+  .footer_right {
+    float: none;
+  }
+  .footer_center {
+    text-align: left;
+  }
+  .footer_left {
+    margin-left: 0%;
+  }
+  .footer_right, .footer_center, .footer_left{
+    margin-top: 10px;
+  }
   .container-12.innerbar_cont {
     margin-top: -100px;
   }
@@ -2124,7 +2261,7 @@ div#block-block-25 p {
     float:none;
   }
   p.hp_hotel {
-    font-size: 18px;
+    font-size: 18px !important;
   }
   .all_around_position_4, .all_around_position_5, .all_around_position_1,.all_around_position_2 {
     display:none;
@@ -2137,11 +2274,13 @@ div#block-block-25 p {
     min-width: auto;
   }
   .content_slider_wrapper .circle_slider_text_wrapper {
-    margin-top: 55px;
+    margin-top: 90px;
     left: 0px !important;
   }
   div#block-block-24 {
     margin-bottom: -150px;
+    margin-top: -95px;
+
   }
   .circle_slider_nav_left {
     left: -30px!important;
@@ -2425,7 +2564,7 @@ div#block-block-25 p {
   div#block-block-18 {
     background: url(/sites/default/files/gray-slant-background.png) center bottom no-repeat;}
 }
-@media (min-device-width: 1024px)and (max-device-width: 1023px){
+@media (min-device-width: 1024px) and (max-device-width: 1023px){
   div#region-menu-second {
     width: 10%;
     float: right;
@@ -2457,7 +2596,7 @@ div#block-block-25 p {
     margin-bottom: -100px;
   }
 }
-@media (min-device-width: 400px)and (max-device-width:768px) {
+@media (min-device-width: 400px) and (max-device-width:768px) {
   div#slider1 {
     width: 100% !important;
     left: 0px !important;
@@ -2465,7 +2604,7 @@ div#block-block-25 p {
     margin-bottom: -100px;
   }
 }
-@media (min-device-width: 400px)and (max-device-width:767px) {
+@media (min-device-width: 400px) and (max-device-width:767px) {
   .dl_right_cont {
     top: 0%;
     -webkit-transform: translateY(0%);

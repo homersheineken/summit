@@ -1,5 +1,6 @@
 jQuery( document ).ready(function() {
-    if (jQuery(window).width() > 1024) {
+    var width = jQuery(window).width();
+    if (width > 1024) {
         var logo = jQuery("#logo");
         logo.attr("src","/sites/default/files/fgsummit_logo_rings.png");
         var isVisible = false;
@@ -21,11 +22,14 @@ jQuery( document ).ready(function() {
             var shouldBeVisible = jQuery(window).scrollTop()>50;
             if (shouldBeVisible && !isVisible) {
                 isVisible = true;
-                block25.slideToggle( 200 );
+                block25.slideToggle( 10 );
             } else if (isVisible && !shouldBeVisible) {
                 isVisible = false;
                 block25.slideToggle( 10 );
             }
         });
     }
+
 });
+
+/****************/
