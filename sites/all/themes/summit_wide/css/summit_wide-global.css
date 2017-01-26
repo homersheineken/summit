@@ -842,7 +842,7 @@ div#block-block-16 {
 }
 .join_forum_hp {
   font-size: 33px;
-  line-height: 60px;
+  line-height: 45px;
   margin-left: 60px;
 }
 .connect_hp {
@@ -880,7 +880,7 @@ p.hp_hotel {
   border-radius: 5px;
   line-height: 54px;
   /*margin-left:5em !important;*/
-  width:100%;
+  width:66%;
 }
 .cta_hp{
   /*top: 100%;
