@@ -805,7 +805,9 @@ input[name="trigger2"]:checked + ul {
 }
 .site_dropdown_cont {
   text-align: center;
+  margin-top: 4px;
 }
+
 
 .divider {
   padding: 0px 30px;
@@ -819,7 +821,7 @@ div#block-block-23 {
   margin-top: -75px;
 }
 .scroll_more {
-  margin-top: 5%;
+  margin-top: 3%;
 }
 div#block-block-8 {
   /*margin: 40px 8%;
@@ -844,6 +846,8 @@ div#block-block-16 {
   z-index: 100;
   overflow: hidden;
   padding: 30px 0px !important;
+  display: inline-block;
+  width:100%;
 }
 #block-block-17 {
   background-image: url("/sites/default/files/parallex-background.jpg");
@@ -970,6 +974,9 @@ div#block-block-18 {
   display:-moz-box;
   display:-ms-flexbox;
   display: flex;
+
+}
+.app-hp,  div#widget_pager_top_faq-page_1 {
   flex-wrap: wrap;
 }
 .iphone, .app-dl {
@@ -979,10 +986,10 @@ div#block-block-18 {
   flex:1;
 }
 .iphone {
-  top: 25%;
-  -webkit-transform: translateY(25%);
-  -ms-transform: translateY(25%);
-  transform: translateY(25%);
+  top: 26%;
+  -webkit-transform: translateY(26%);
+  -ms-transform: translateY(26%);
+  transform: translateY(26%);
 }
 .app-dl {
   top: 50%;
@@ -1186,7 +1193,9 @@ ul li.leaf {
 .foo:hover img:nth-child(0n), .register-button:hover img:first-child{
   display:none;
 }
-
+.register-button img {
+  margin-top: -13px;
+}
 .register-button img:last-child{display:none !important}
 .register-button:hover img:first-child{display:none !important}
 .register-button:hover img:last-child{display:inline-block !important}
@@ -1209,11 +1218,11 @@ ul li.leaf {
 }
 .herotext {
   position: absolute;
-  top:50%;
+  top:53%;
   padding:1rem;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform:translateY(-50%);
+  -webkit-transform: translateY(-53%);
+  -ms-transform: translateY(-53%);
+  transform:translateY(-53%);
   font-family: 'BentonSans-Regular', 'BentonSans';
   font-weight: 400;
   font-style: normal;
@@ -2216,6 +2225,9 @@ div#zone-content-wrapper {
   }
 }
 @media (max-width: 667px) and (min-width: 320px) {
+  .container-12.downloads_cont {
+    flex-wrap: wrap;
+  }
   .dl_right {
     margin-left: 0px !important;
     margin-top:10px !important;
