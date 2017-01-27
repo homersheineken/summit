@@ -1218,11 +1218,11 @@ ul li.leaf {
 }
 .herotext {
   position: absolute;
-  top:53%;
+  top:57%;
   padding:1rem;
-  -webkit-transform: translateY(-53%);
-  -ms-transform: translateY(-53%);
-  transform:translateY(-53%);
+  -webkit-transform: translateY(-57%);
+  -ms-transform: translateY(-57%);
+  transform:translateY(-57%);
   font-family: 'BentonSans-Regular', 'BentonSans';
   font-weight: 400;
   font-style: normal;

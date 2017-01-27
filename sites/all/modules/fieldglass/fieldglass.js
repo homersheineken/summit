@@ -7,6 +7,7 @@ jQuery( document ).ready(function() {
 
         jQuery(window).scroll(function() {
             var scroll = jQuery(window).scrollTop();
+            //Logo swapping
             /*if (scroll >= 25) {
                 logo.attr("src","/sites/default/files/summit_logo_noring.png");
                 logo.addClass('logoswap');
