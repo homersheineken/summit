@@ -27,7 +27,9 @@ a:hover {
 div#zone-branding {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  /*transform: translateY(-50%);*/
 }
 /* line 28, global.scss */
 .site-name-slogan {

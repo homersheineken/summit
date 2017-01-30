@@ -710,6 +710,7 @@ div#block-block-8 {
   float: right;
   width: 100%;
   margin-top: -300px;
+  /*max-height: 500px;*/
 }
 .exp {
   z-index: 25;
@@ -797,7 +798,6 @@ input[name="trigger2"]:checked + ul {
 }
 .site_dropdown, .divider, .register_button {
   display:-webkit-inline-flex;
-  display:-webkit-box;
   display:-moz-inline-flex;
   display:-moz-box;
   display:-ms-flexbox;
@@ -846,7 +846,7 @@ div#block-block-16 {
   z-index: 100;
   overflow: hidden;
   padding: 30px 0px !important;
-  display: inline-block;
+  /*display: inline-block;*/
   width:100%;
 }
 #block-block-17 {
@@ -918,7 +918,6 @@ p.hp_hotel {
 }
 .forum_cont {
   display:-webkit-flex;
-  display:-webkit-box;
   display:-moz-flex;
   display:-moz-box;
   display:-ms-flexbox;
@@ -1034,7 +1033,7 @@ div#block-block-19,div#block-block-20,div#block-block-21 {
   PADDING-BOTTOM: 1EM;}
 .social_icons {
   margin-left: 10%;
-  margin-top: 1.5em;
+  margin-top: 31px;
 }
 .footer_right {
   float: right;
@@ -1372,7 +1371,8 @@ div#mobile-header {
   margin-bottom: 0em;
 }
 .views-slideshow-pager-field-item {
-  width: 29.86%;
+  /*width: 29.86%;*/
+  width: 30%;
   margin: 0em 0em 0em 0em !important;
   /*margin-right: .15em*/
   padding: 0px !important;
@@ -1717,6 +1717,7 @@ div#region-footer-first, div#region-footer-second, div#region-postscript-first {
   right: -34px;
   width: auto !important;
   min-width: 100%;
+  /*max-height:500px;*/
 }
 div#slider1 {
   width:100% !important;
@@ -1873,7 +1874,6 @@ div#zone-content-wrapper {
 }
 .innerbar_cont {
   display:-webkit-flex;
-  display:-webkit-box;
   display:-moz-flex;
   display:-moz-box;
   display:-ms-flexbox;
@@ -1933,7 +1933,17 @@ div#zone-content-wrapper {
     font-size: 14px;
   }
   .register_button img {
-    width: 75%;
+    width: 40%;
+    margin-top: -60px;
+  }
+  .site_dropdown, .divider, .register_button {
+    display: block;
+    float: left;
+  }
+  .white_bg {
+    z-index: 0;
+    position: absolute;
+    margin-top: -180px;
   }
   .iphone {
     top: 100%;
@@ -1968,7 +1978,7 @@ div#zone-content-wrapper {
     display: none !important;
   }
   .forum_cont {
-    display: block;
+    display: flex;
   }
   #block-block-17 {
     padding-bottom: 0em !important;
@@ -2003,6 +2013,7 @@ div#zone-content-wrapper {
   }
   div#mobile-header {
     display: block;
+    float: right;
   }
   div#region-menu-first {
     display: none;
@@ -2019,10 +2030,7 @@ div#zone-content-wrapper {
     /*width: 10%;
     float:right;
     margin-top: -40px;*/
-    top: inherit;
-    -webkit-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    transform: translateY(0%);
+    top: 33%;
     position: fixed;
     right: 4%;
   }
@@ -2143,7 +2151,7 @@ div#zone-content-wrapper {
     -ms-transform: scale(.5, .5) !important;
     transform: scale(.5, .5) !important;
     min-width: 0px;
-    left: 17% !important;
+    /*left: 17% !important;*/
   }
   .social_icon {
     padding-right: 1.3em;
@@ -2180,6 +2188,7 @@ div#zone-content-wrapper {
     transform: translateY(0%);
     margin-left: 2em !important;
     margin-bottom: 1em;
+    font-size: 20px;
   }
   div#block-block-16 {
     min-height: 255px;
@@ -2228,6 +2237,9 @@ div#zone-content-wrapper {
   .container-12.downloads_cont {
     flex-wrap: wrap;
   }
+  #logo {
+    margin-top: 0px;
+  }
   .dl_right {
     margin-left: 0px !important;
     margin-top:10px !important;
@@ -2265,6 +2277,9 @@ div#zone-content-wrapper {
   }
   .grid-6.downloads, .grid-6.hotel, .grid-6.map, .grid-6.oharecont, .grid-6.midwaycont {
     width: 100% !important;
+  }
+  .forum_cont {
+    display: block;
   }
 }
 @media (max-width: 666px) and (min-width: 320px) {
@@ -2394,7 +2409,7 @@ div#zone-content-wrapper {
     margin-top: -80px;
   }
   .quote1, .quote2, .quote3, .travel_text {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 34px;
   }
 }
@@ -2402,6 +2417,9 @@ div#zone-content-wrapper {
   .hero_register img {
     max-width: 7rem;
     margin-top: -20px;
+  }
+  p.hero_register {
+    z-index: -1;
   }
   div#block-block-24 {
     margin-top: -100px;
@@ -2473,6 +2491,11 @@ div#zone-content-wrapper {
     float: none;
     margin: 0px;
   }
+  .social_icons {
+    margin-left: 4%;
+    margin-top: 31px;
+    margin-bottom: 20px;
+  }
   .ui-accordion-header {
     font-size: 18px !important;
   }
@@ -2492,7 +2515,7 @@ div#zone-content-wrapper {
     min-height: 320px;
   }
   div#region-footer-second {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
   }
   .footer_left {
     margin-left: 0px;
@@ -2531,6 +2554,7 @@ div#zone-content-wrapper {
   }
   div#views_slideshow_cycle_main_faq-page {
     margin-top: 30px;
+    margin-bottom: 60px;
   }
   div#block-block-15 {
     margin-top: 30px;
@@ -2638,7 +2662,7 @@ div#zone-content-wrapper {
 @media (min-device-width: 1000px) and (max-device-width: 1024px) {
   div#mobile-header {
     display: block;
-    margin-top: 13px;
+    /*margin-top: 13px;*/
   }
   .iphone,. app-dl {
     top: 0%;
