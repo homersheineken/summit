@@ -2031,7 +2031,7 @@ div#zone-content-wrapper {
     float:right;
     margin-top: -40px;*/
     top: 33%;
-    position: fixed;
+    position: absolute;
     right: 4%;
   }
   /*div#block-block-8 {

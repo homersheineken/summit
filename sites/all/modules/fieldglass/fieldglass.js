@@ -1,5 +1,5 @@
 jQuery( document ).ready(function() {
-    //FF bug - big gap between carousel and Forum section
+
 
     //Script for dropdown black bar
     var width = jQuery(window).width();
