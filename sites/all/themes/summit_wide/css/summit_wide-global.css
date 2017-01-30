@@ -1151,6 +1151,7 @@ ul li.leaf {
   font-style: normal;
   color: #666666;
   font-size: 18px;
+  overflow: hidden;
 }
 .grid-6.downloads, .grid-6.hotel, .grid-6.map, .grid-6.oharecont,.grid-6.midwaycont {
   width: 50% !important;
@@ -1173,6 +1174,7 @@ ul li.leaf {
 .innerbar img {
   margin-right: 25px;
   max-height: 125px;
+  margin-top: 14px;
 }
 .herotext {font-size: 1rem}
 
@@ -1325,6 +1327,16 @@ div#mobile-header {
   width: 80%;
   margin: 70px auto;
 }
+.past_attendees {
+  font-style: normal;
+  font-size: 22px;
+  line-height: 36px;
+  font-family: 'BentonSans-Book', 'BentonSans Book', 'BentonSans';
+  font-weight: 300;
+  color: #666666;
+  width: 80%;
+  margin-left: 8%;
+}
 .travel_text div {
   margin-bottom: 30px;
 }
@@ -1430,7 +1442,7 @@ span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1 {
   width: 80%;
   margin-left: 10%;
   margin-top: 100px;
-  min-height: 900px;
+  min-height: 1200px;
 }
 .view-faq {
   min-height: 1100px;
@@ -1837,13 +1849,6 @@ div#block-block-15 {
 }
 #logo {
   margin-top: 10px;
-}
-.past_attendees {
-  margin-left: 8%;
-  font-size: 20px;
-  font-size: 18px;
-  line-height: 30px;
-  color: #666666;
 }
 div#block-block-25 {
   background-color: black;
