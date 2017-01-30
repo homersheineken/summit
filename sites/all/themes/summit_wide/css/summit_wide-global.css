@@ -1109,7 +1109,8 @@ div#block-block-23 {
   float: right;
 }
 .page-company-profile div#block-block-23 {
-  top: 900px;
+  top: 0px;
+  margin-top: 900px;
   position: relative;
 }
 div#block-block-23 .region-content p {
@@ -1604,7 +1605,7 @@ button {
 }
 .page-company-profile #section-footer {
   position: relative;
-  bottom: -900px;
+  /*bottom: -900px;*/
 }
 .filters {
   margin-left: 8%;
