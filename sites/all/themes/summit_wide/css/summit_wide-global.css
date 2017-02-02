@@ -877,6 +877,7 @@ p.hero_register {
 }
 p.hp_hotel {
   font-size: 42px;
+  line-height: 56px;
 }
 .forum_container {
   width: 90%;
@@ -1812,7 +1813,7 @@ div#block-block-24 {
 .exp {
   margin-left: 5% !important;
   z-index: 25;
-  margin-top: -125px;
+  margin-top: -120px;
 }
 .summit_exp{
   font-family: 'BentonSans-Light', 'BentonSans Light', 'BentonSans';
