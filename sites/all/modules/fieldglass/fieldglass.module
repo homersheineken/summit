@@ -12,7 +12,6 @@
 * @param $view
 */
 
-
 function fieldglass_init() {
 
  /* drupal_add_js(' jQuery.browser = {};
@@ -28,4 +27,34 @@ function fieldglass_init() {
     drupal_add_js( '/sites/all/modules/fieldglass/fieldglass.js');
     drupal_add_js( '/sites/all/libraries/sidr-package-1.2.1/jquery.sidr.min.js');
     drupal_add_css( 'http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', 'theme');
+}
+
+function fieldglass_views_pre_render(&$view){
+    //make company json view data compatible for data viz
+    if ($view->name == "company_profile"){
+        if ($view->current_display == "page_2" ) {
+            foreach($view->result AS $k => $result){
+                //make string into number
+                if (isset($result->field_field_maturity[0]['rendered']['#markup'])) {
+                    $result->field_field_maturity[0]['rendered']['#markup'] = (int)substr($result->field_field_maturity[0]['rendered']['#markup'], 0,1);
+                }
+                //swap mgmt model for #
+                if (isset ($result->field_field_management_model[0]['rendered']['#markup'])) {
+                    switch ($result->field_field_management_model[0]['rendered']['#markup']){
+                        case "MSP":
+                            $result->field_field_management_model[0]['rendered']['#markup'] = 1;
+                            break;
+                        case "Hybrid":
+                            $result->field_field_management_model[0]['rendered']['#markup'] = 0;
+                            break;
+                        case "Self-managed":
+                            $result->field_field_management_model[0]['rendered']['#markup'] = -1;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+    }
 }
