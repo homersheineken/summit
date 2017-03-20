@@ -128,9 +128,14 @@
 
 /* Non-home page, general */
 .responsive-layout-mobile #region-content h2 {
-  margin-top: 1.2em;
+  margin-top: .5em;
 }
-
+.bars h2 {
+  line-height: 32px;
+}
+.bar_text {
+  width: auto !important;
+}
 .responsive-layout-mobile .block-43,
 .responsive-layout-mobile .solutions-block,
 .responsive-layout-mobile #block-views-fieldglass-blog-block,
