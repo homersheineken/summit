@@ -1887,11 +1887,10 @@ div#zone-content-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
-@media (min-width: 1025px)  {
-  .herotext.hp {
-    display: none;
-  }
+.herotext.hp {
+  display: none;
 }
+
 @media (min-width: 1025px) and (max-width: 1450px) {
   .iphone {
     top: 50%;
