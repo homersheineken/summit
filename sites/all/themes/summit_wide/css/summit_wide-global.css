@@ -2108,7 +2108,7 @@ div#zone-content-wrapper {
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     transform: translateY(0%);
-    margin-top:50px;
+    margin-top:-8px;
   }
   div#block-block-18 {
     background: url(/sites/default/files/gray-slant-background.png) center bottom no-repeat;
@@ -2580,7 +2580,7 @@ div#zone-content-wrapper {
     margin-top: 30px;
   }
   div#block-block-23 {
-    margin-bottom: -1px;
+    margin-bottom: -10px;
     margin-top: -67px;
   }
   .footer_center {
