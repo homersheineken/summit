@@ -2108,7 +2108,7 @@ div#zone-content-wrapper {
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     transform: translateY(0%);
-    margin-top:-8px;
+    margin-top:15px;
   }
   div#block-block-18 {
     background: url(/sites/default/files/gray-slant-background.png) center bottom no-repeat;
@@ -2415,7 +2415,7 @@ div#zone-content-wrapper {
     -ms-transform: translateY(0%);
     transform: translateY(0%);
     right: 10%;
-    margin: 60px 0 90px;}
+    margin: 100px 0 55px;}
   .herotext {
     font-size: 1.5em !important;
   }
@@ -2485,6 +2485,11 @@ div#zone-content-wrapper {
   .summit_app, .fingertips {
     /* font-size: 1rem; */
     display: none;
+  }
+  .summit_app {
+    display: block;
+    font-size: 14px;
+    line-height: 27px;
   }
   .app-mobile {
     display: block;
