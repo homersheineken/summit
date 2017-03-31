@@ -1030,15 +1030,16 @@ div#block-block-19,div#block-block-20,div#block-block-21 {
 }
 .social_icon {
   display: inline-block;
-  padding-right: 3.3em;
-  PADDING-BOTTOM: 1EM;}
-.social_icons {
-  margin-left: 10%;
-  margin-top: 31px;
+  padding: 0 25px;
 }
+
 .footer_right {
   float: right;
   margin-right: 10%;
+}
+.sign_in.toc {
+  font-size: 13px;
+  margin-top: 5px;
 }
 .main_menu {
   text-align: center;
@@ -1642,9 +1643,9 @@ button {
   display:none;
 }
 div#region-footer-first, div#region-footer-second, div#region-postscript-first {
-  -webkit-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
 }
 .circle_item_border {
   border: 9px solid #008FD3 !important;
@@ -2517,9 +2518,14 @@ div#zone-content-wrapper {
     margin: 0px;
   }
   .social_icons {
-    margin-left: 4%;
     margin-top: 31px;
     margin-bottom: 20px;
+  }
+  .social_icon:first-child {
+    padding-left: 0px;
+  }
+  .sign_in.toc {
+    margin-bottom: 15px;
   }
   .ui-accordion-header {
     font-size: 18px !important;
