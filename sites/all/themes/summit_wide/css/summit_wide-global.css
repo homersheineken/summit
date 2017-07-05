@@ -304,17 +304,22 @@ div#zone-branding {
 
 /* line 227, summit_wide-global.scss */
 .front #zone-header-wrapper,
+.context-emea #zone-header-wrapper,
 .front #zone-content-wrapper,
+.context-emea #zone-context-wrapper,
 #zone-header-wrapper,
 #zone-content-wrapper {
   padding: 25px 0 0; }
 
 /* line 234, summit_wide-global.scss */
-.front #page-title {
+.front #page-title,
+.context-emea #page-title
+{
   display: none; }
 
 /* line 241, summit_wide-global.scss */
 .front #zone-content-wrapper #region-content .block,
+.context-emea #zone-content-wrapper #region-content .block,
 #zone-content-wrapper #region-content .block {
   padding: 0; }
 .zone-content-wrapper {
@@ -538,7 +543,8 @@ div#zone-branding {
     width: 100% !important; }
 
 /* line 583, summit_wide-global.scss */
-.front .block-system-main {
+.front .block-system-main,
+.page-node-174 .block-system-main{
   display: none; }
 
 /* line 587, summit_wide-global.scss */
@@ -1213,9 +1219,12 @@ h2.double {
   margin:1rem auto 100px;
   position: relative;
 }
-.front .hero {
+.front .hero, .page-node-174 .hero {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
+}
+.view-id-agenda .hero{
+  margin-bottom: 0px;
 }
 .hero iframe, .hero video {
   position: absolute;
@@ -1262,7 +1271,8 @@ div#mobile-header {
 .why_dl a {
   font-size: 22px;
 }
-.page-node-6 div#block-system-main {
+.page-node-6 div#block-system-main,
+.page-node-175 div#block-system-main{
   min-height: 2200px;
 }
 .downloads a {
@@ -1399,6 +1409,9 @@ div#mobile-header {
   border-radius: 0px !important;
 
 }
+.view-agenda .views-slideshow-pager-field-item .views-field-title{
+  margin:26px 4% 0;
+}
 .views_slideshow_pager_field_item:hover {
   background-color: #008fd3 !important;
 }
@@ -1461,7 +1474,8 @@ span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1 {
   margin-top: -100px;
 }
 .page-faq .views-slideshow-pager-field-item,
-.page-agenda .views-slideshow-pager-field-item{
+.page-agenda .views-slideshow-pager-field-item,
+.view-agenda .views-slideshow-pager-field-item{
   background-color: rgba(0, 50, 131, 1);
   font-family: 'BentonSans-Light', 'BentonSans Light', 'BentonSans';
   font-weight: 200;
@@ -1469,6 +1483,9 @@ span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1 {
   font-size: 35px;
   color: #FFFFFF;
   text-align: left;
+}
+.view-agenda .views-slideshow-pager-field-item {
+  margin-top:26px;
 }
 .views_slideshow_active_pager_field_item{
   background-color: rgba(0, 143, 211, 1);
@@ -2736,7 +2753,8 @@ div#zone-content-wrapper {
     float: right;
     margin-right: 0px;
   }
-  .page-node-6 .field-name-body {
+  .page-node-6 .field-name-body,
+  .page-node-175 .field-name-body{
     min-height: 3500px;
   }
   .page-node-5 .field-name-body {

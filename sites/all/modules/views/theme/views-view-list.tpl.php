@@ -9,7 +9,10 @@
  * @ingroup views_templates
  */
 ?>
-<?php print $wrapper_prefix; ?>
+
+<?php
+      $wrapper_prefix = str_replace( 'wrapper-class',  'wrapper-class' . $id, $wrapper_prefix);
+      print $wrapper_prefix; ?>
   <?php if (!empty($title)) : ?>
     <h3><?php print $title; ?></h3>
   <?php endif; ?>
