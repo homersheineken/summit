@@ -1826,11 +1826,19 @@ a {
   padding: 0;
   text-shadow: none; }
 .view-id-agenda .view-content {
+  margin: 0 auto;
+}
+.view-id-agenda .views_slideshow_cycle_main{
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.views-field.views-field-field-agenda-item-date {
+  margin: 1.5em 0 1em;
+}
+.views-field-field-agenda-item-session li .field-collection-view{
+  margin-top: 20px;
+}
 .page-agenda-test .region-content #page-title {
   display: none;
 }
@@ -1855,7 +1863,6 @@ span.date-display-single {
 }
 .view-id-agenda .views-row-even {
   /*background-color: #e4e4e4;*/
-  display: inline-block;
 }
 #views_slideshow_pager_field_item_top_faq-page_1_0,#views_slideshow_pager_field_item_top_faq-page_1_1,#views_slideshow_pager_field_item_top_faq-page_1_2 {
   background-color: rgba(0, 50, 131, 1);
@@ -1899,33 +1906,61 @@ span.date-display-single {
 .agenda_header {
   margin-top: 0;
 }
-
-.container {
+.views-field.views-field-field-agenda-item-session li {
+  padding: 10px 20px;
+}
+.container,
+.views-field-field-agenda-item-session{
   width: 100%;
   box-sizing: border-box;
   display: table;
-  margin: 20px 0 100px;
+  margin: 20px 0 0px;
   color: #666666;
   font-family: 'BentonSans-Light', 'BentonSans Light', 'BentonSans';
 }
 .container .row, .container .views-row  {
   display: table-row;
 }
-.container .row:nth-child(even), .container .views-row:nth-child(even) {
+.container .row:nth-child(even), .container .views-row:nth-child(even),
+.views-field.views-field-field-agenda-item-session li:nth-child(even){
   background-color: #e4e4e4;
 }
-.container .column {
+.views-field.views-field-field-agenda-item-session li:nth-child(even) .delete {
+  background-color: #e4e4e4;
+}
+.views-field.views-field-field-agenda-item-session li:nth-child(odd) .delete {
+  background-color: white;
+}
+/*.field.field-name-field-agenda-item-start-time.field-type-cck-time.field-label-hidden {
+  width: 120px;
+}
+.field.field-name-field-agenda-item-end-time.field-type-cck-time.field-label-hidden {
+  width: 150px;
+}*/
+.field.field-name-field-agenda-item-end-time.field-type-cck-time.field-label-hidden, .field.field-name-field-agenda-item-start-time.field-type-cck-time.field-label-hidden {
+  display: table-cell;
+}
+.field-name-field-agenda-item-session-title {
+  font-size: 26px;
+}
+.container .column,
+.views-field-field-agenda-item-session .column{
   display: table-cell;
   padding: 20px;
 }
-.container .column .date {
+.container .column .date,
+.field-name-field-agenda-item-start-time,
+.field-name-field-agenda-item-end-time{
   font-size: 26px;
 }
-.container .column .title {
+.container .column .title{
   font-size: 26px;
   line-height: 1.2em;
 }
-.container .column .description {
+
+
+.container .column .description,
+.field-name-field-agenda-session-description{
   font-size: 16px;
   margin-top: 20px;
 }
@@ -1952,9 +1987,17 @@ span.date-display-single {
 }
 
 
-@media (max-width: 1024px) {
-  .container .column:last-child {
-    padding-right: 20px;
+@media (max-width: 1200px) {
+  .container .column, .views-field-field-agenda-item-session .column {
+    display:block;
+  }
+  .views_slideshow_pager_field_item{
+    display:none;
+  }
+  .views_slideshow_pager_field_item.active {
+    display: block;
+    width: 90%;
+    border-left: none !important;
   }
 }
 @media (max-width: 1024px) {
@@ -1967,4 +2010,8 @@ span.date-display-single {
     width: auto;
     padding: 0;
   }
+  .container .column:last-child {
+    padding-right: 20px;
+  }
+
 }

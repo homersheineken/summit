@@ -26,7 +26,7 @@ function fieldglass_init() {
  */
     drupal_add_js( 'sites/all/modules/fieldglass/fieldglass.js');
     drupal_add_js( 'sites/all/libraries/sidr-package-1.2.1/jquery.sidr.min.js');
-    if (current_path() == 'agenda' || current_path() == 'agenda-test' || current_path() == 'emea/agenda') {
+    if (current_path() == 'agenda' || current_path() == 'agenda-test' || current_path() == 'emea/agenda' || current_path() == 'na/agenda') {
         drupal_add_js( 'sites/all/modules/fieldglass/agenda.js');
     }
     drupal_add_css( 'http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', 'theme');

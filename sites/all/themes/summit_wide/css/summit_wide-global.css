@@ -1434,12 +1434,17 @@ div#mobile-header {
 }
 #views_slideshow_pager_field_item_top_faq-page_0, #views_slideshow_pager_field_item_top_faq-page_1, #views_slideshow_pager_field_item_top_faq-page_2,
 #views_slideshow_pager_field_item_top_faq-page_1_0, #views_slideshow_pager_field_item_top_faq-page_1_1, #views_slideshow_pager_field_item_top_faq-page_1_2,
-#views_slideshow_pager_field_item_top_faq-page_2_0,  #views_slideshow_pager_field_item_top_faq-page_2_1, #views_slideshow_pager_field_item_top_faq-page_2_2{
+#views_slideshow_pager_field_item_top_faq-page_2_0,  #views_slideshow_pager_field_item_top_faq-page_2_1, #views_slideshow_pager_field_item_top_faq-page_2_2,
+#views_slideshow_pager_field_item_top_agenda-page_1_0, #views_slideshow_pager_field_item_top_agenda-page_1_1, #views_slideshow_pager_field_item_top_agenda-page_1_2,
+#views_slideshow_pager_field_item_top_agenda-page_3_0, #views_slideshow_pager_field_item_top_agenda-page_3_1, #views_slideshow_pager_field_item_top_agenda-page_3_2{
   height: 90px;
+  float:left;
 }
 #vscc_controls_previous_faq-page, #vscc_controls_next_faq-page,
 #vscc_controls_previous_faq-page_1, #vscc_controls_next_faq-page_1,
-#vscc_controls_previous_faq-page_2, #vscc_controls_next_faq-page_2{
+#vscc_controls_previous_faq-page_2, #vscc_controls_next_faq-page_2,
+#vscc_controls_previous_agenda-page_1, #vscc_controls_next_agenda-page_1,
+#vscc_controls_previous_agenda-page_3, #vscc_controls_next_agenda-page_3{
   width: 5%;
   height: 90px;
   float:left;
@@ -1451,10 +1456,10 @@ div#mobile-header {
   -ms-transform: translateY(66%);
   transform: translateY(66%);
 }
-span#vscc_controls_previous_faq-page, span#vscc_controls_previous_faq-page_1, span#vscc_controls_previous_faq-page_2 {
+span#vscc_controls_previous_faq-page, span#vscc_controls_previous_faq-page_1, span#vscc_controls_previous_faq-page_2, #vscc_controls_previous_agenda-page_1,#vscc_controls_previous_agenda-page_3 {
   background: url(/sites/default/files/arrows1.png) top center no-repeat;
 }
-span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1, span#vscc_controls_next_faq-page_2 {
+span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1, span#vscc_controls_next_faq-page_2, #vscc_controls_next_agenda-page_1,#vscc_controls_next_agenda-page_3 {
   background: url(/sites/default/files/arrows2.png) top center no-repeat;
   float: right;
 }
@@ -1483,6 +1488,7 @@ span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1, span#vscc_
 }
 .page-faq .views-slideshow-pager-field-item,
 .page-emea-faq .views-slideshow-pager-field-item,
+.page-na-faq .views-slideshow-pager-field-item,
 .page-agenda .views-slideshow-pager-field-item,
 .view-agenda .views-slideshow-pager-field-item{
   background-color: rgba(0, 50, 131, 1);
@@ -1502,7 +1508,9 @@ span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1, span#vscc_
 
 #views_slideshow_pager_field_item_top_faq-page_0, #views_slideshow_pager_field_item_top_faq-page_1, #views_slideshow_pager_field_item_top_faq-page_2,
 #views_slideshow_pager_field_item_top_faq-page_1_0, #views_slideshow_pager_field_item_top_faq-page_1_1, #views_slideshow_pager_field_item_top_faq-page_1_2,
-#views_slideshow_pager_field_item_top_faq-page_2_0, #views_slideshow_pager_field_item_top_faq-page_2_1, #views_slideshow_pager_field_item_top_faq-page_2_2{
+#views_slideshow_pager_field_item_top_faq-page_2_0, #views_slideshow_pager_field_item_top_faq-page_2_1, #views_slideshow_pager_field_item_top_faq-page_2_2,
+#views_slideshow_pager_field_item_top_agenda-page_1_0, #views_slideshow_pager_field_item_top_agenda-page_1_1, #views_slideshow_pager_field_item_top_agenda-page_1_2,
+#views_slideshow_pager_field_item_top_agenda-page_3_0, #views_slideshow_pager_field_item_top_agenda-page_3_1, #views_slideshow_pager_field_item_top_agenda-page_3_2{
   border-right:none;
   border-top:none;
   border-left:none;
@@ -1510,13 +1518,19 @@ span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1, span#vscc_
 #views_slideshow_pager_field_item_top_faq-page_2_0,#views_slideshow_pager_field_item_top_faq-page_2_1, #views_slideshow_pager_field_item_top_faq-page_2_2,
 #views_slideshow_pager_field_item_top_faq-page_1_0,#views_slideshow_pager_field_item_top_faq-page_1_1, #views_slideshow_pager_field_item_top_faq-page_1_2,
 #views_slideshow_pager_field_item_top_faq-page_0,#views_slideshow_pager_field_item_top_faq-page_1, #views_slideshow_pager_field_item_top_faq-page_2,
+#views_slideshow_pager_field_item_top_agenda-page_1_0, #views_slideshow_pager_field_item_top_agenda-page_1_1, #views_slideshow_pager_field_item_top_agenda-page_1_2,
+#views_slideshow_pager_field_item_top_agenda-page_3_0, #views_slideshow_pager_field_item_top_agenda-page_3_1, #views_slideshow_pager_field_item_top_agenda-page_3_2,
 #vscc_controls_next_faq-page_2,
 #vscc_controls_next_faq-page_1,
 #vscc_controls_next_faq-page{
   border-left:1px solid white;
 }
-.page-faq .views-content-title, .page-agenda .views-content-title,
-.page-emea-faq .views-content-title{
+.page-faq .views-content-title,
+.page-agenda .views-content-title,
+.page-emea-faq .views-content-title,
+.page-na-faq .views-content-title,
+.page-na-agenda .views-content-title,
+.page-emea-agenda .views-content-title{
   margin-left: 4%;
   -webkit-transform: translateY(10%);
   -ms-transform: translateY(10%);
@@ -1635,7 +1649,8 @@ button {
   font-weight: 300;}
 
 .page-company-profile  .view-content,
-.page-emea-company-profile .view-content{
+.page-emea-company-profile .view-content,
+.page-na-company-profile .view-content{
   top: 0px;
   position: relative;
   min-height: 2800px;
