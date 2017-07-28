@@ -1,39 +1,33 @@
-jQuery( document ).ready(function() {
+(function($) {
 
+    $(document).ready(function() {
 
-    //Script for dropdown black bar
-    var width = jQuery(window).width();
-    if (width > 1024) {
-        var logo = jQuery("#logo");
-        logo.attr("src","/sites/default/files/fgsummit_logo_rings.png");
-        var isVisible = false;
+        var $day1 = $("#views_slideshow_pager_field_item_top_agenda-block_1_0");
+        var $day2 = $("#views_slideshow_pager_field_item_top_agenda-block_1_9");
 
-        jQuery(window).scroll(function() {
-            var scroll = jQuery(window).scrollTop();
-            //Logo swapping
-            /*if (scroll >= 25) {
-                logo.attr("src","/sites/default/files/summit_logo_noring.png");
-                logo.addClass('logoswap');
-                /*logo.css('margin-top', '75px');
-                jQuery("div#region-menu-first").css("margin-top", "46");
-                jQuery("div#region-menu-second").css("margin-top", "47");
-            } else {
-                logo.attr("src","/sites/default/files/fgsummit_logo_rings.png");
-                logo.removeClass('logoswap');
-            }*/
-            //Black Bar Stuff
-            var block25 =jQuery('#block-block-25');
-            var shouldBeVisible = jQuery(window).scrollTop()>50;
-            if (shouldBeVisible && !isVisible) {
-                isVisible = true;
-                block25.slideToggle( 10 );
-            } else if (isVisible && !shouldBeVisible) {
-                isVisible = false;
-                block25.slideToggle( 10 );
+        $day1.click(function (){
+            $day1.addClass("active");
+            $day2.removeClass("active");
+        });
+
+        $day2.click(function (){
+            $day2.addClass("active");
+            $day1.removeClass("active");
+        });
+
+        var titles = jQuery(".page-node-174 .field-name-field-agenda-item-session-title");
+        jQuery.each(titles, function(i, val) {
+            if (this.nextElementSibling){
+                var child = this.firstChild.innerHTML;
+                var image ='<span class="accord"><img src="/sites/default/files/hp_assets/Read More@2x.png"  height="10px" width="15px"/></span>';
+                this.innerHTML = child + image;
             }
         });
-    }
+        jQuery(" .page-node-174 .field-name-field-agenda-session-description").hide();
+        jQuery(".accord img").click(function () {
+            var move = this.parentNode.parentNode.nextSibling;
+            $(move).slideToggle(400);
+        });
+    });
 
-});
-
-/****************/
+})(jQuery);

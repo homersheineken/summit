@@ -26,10 +26,22 @@ a:hover {
 
 div#zone-branding {
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
+  max-width:1200px;
   /*transform: translateY(-50%);*/
+}
+/*
+#hero {
+  background-image: url(http://www.fieldglass.com/sites/default/files/SAPFG-transforming-agile-enterprise-workforce.png);
+  background-position: 50% 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100.5%;
+  overflow: hidden;
+  display: block;
+  background-color: #222222;
+}*/
+#admin-menu {
+  position: fixed;
 }
 /* line 28, global.scss */
 .site-name-slogan {
@@ -210,13 +222,13 @@ a {
 /* line 222, global.scss */
 #zone-footer-wrapper {
   /*background: url("/sites/default/files/footer_chicago_cityscape.png") ;*/
-  background: black;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 2em;
-  min-height: 205px;}
+  background: black
 
+  background-color: black;
+}
+footer#section-footer {
+  background-color: black;
+}
 /* line 227, global.scss */
 #zone-footer-wrapper .block a.center {
   text-align: center;
@@ -1832,6 +1844,7 @@ a {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
+  min-height: 800px;
 }
 .views-field.views-field-field-agenda-item-date {
   margin: 1.5em 0 1em;
@@ -1853,10 +1866,12 @@ span.date-display-single {
   line-height: 35px;
 }
 .view-id-agenda {
-  box-sizing: border-box;
-  display: table;
+  display: block;
   color: #666666;
   font-family: 'BentonSans-Light', 'BentonSans Light', 'BentonSans';
+}
+.column.uno {
+  width: 200px;
 }
 .view-id-agenda li .views-field {
   margin-top:20px;
@@ -1921,7 +1936,7 @@ span.date-display-single {
 .container .row, .container .views-row  {
   display: table-row;
 }
-.container .row:nth-child(even), .container .views-row:nth-child(even),
+/*.container .row:nth-child(even), .container .views-row:nth-child(even),
 .views-field.views-field-field-agenda-item-session li:nth-child(even){
   background-color: #e4e4e4;
 }
@@ -1931,7 +1946,7 @@ span.date-display-single {
 .views-field.views-field-field-agenda-item-session li:nth-child(odd) .delete {
   background-color: white;
 }
-/*.field.field-name-field-agenda-item-start-time.field-type-cck-time.field-label-hidden {
+.field.field-name-field-agenda-item-start-time.field-type-cck-time.field-label-hidden {
   width: 120px;
 }
 .field.field-name-field-agenda-item-end-time.field-type-cck-time.field-label-hidden {
@@ -1947,21 +1962,29 @@ span.date-display-single {
 .views-field-field-agenda-item-session .column{
   display: table-cell;
   padding: 20px;
+  text-align: left;
 }
 .container .column .date,
 .field-name-field-agenda-item-start-time,
-.field-name-field-agenda-item-end-time{
-  font-size: 26px;
+.field-name-field-agenda-item-end-time,
+.field-name-field-agenda-item-session-title{
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 27px;
+  color: #000;
 }
 .container .column .title{
   font-size: 26px;
   line-height: 1.2em;
 }
 
-
 .container .column .description,
 .field-name-field-agenda-session-description{
-  font-size: 16px;
+  font-family: 'BentonSans-Light', 'BentonSans Light', 'BentonSans';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
   margin-top: 20px;
 }
 .container .column .description p {
@@ -1988,15 +2011,15 @@ span.date-display-single {
 
 
 @media (max-width: 1200px) {
-  .container .column, .views-field-field-agenda-item-session .column {
+  /*.container .column, .views-field-field-agenda-item-session .column {
     display:block;
-  }
+  }*/
   .views_slideshow_pager_field_item{
     display:none;
   }
   .views_slideshow_pager_field_item.active {
     display: block;
-    width: 90%;
+    width: 46%;
     border-left: none !important;
   }
 }

@@ -4250,7 +4250,6 @@ company-profile',
     </ul>
 </div>
 <link rel="stylesheet" type="text/css" href="sites/all/libraries/sidr-package-1.2.1/stylesheets/jquery.sidr.dark.css">
-<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
 <script>
     jQuery(document).ready(function() {

@@ -29,7 +29,7 @@ function fieldglass_init() {
     if (current_path() == 'agenda' || current_path() == 'agenda-test' || current_path() == 'emea/agenda' || current_path() == 'na/agenda') {
         drupal_add_js( 'sites/all/modules/fieldglass/agenda.js');
     }
-    drupal_add_css( 'http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', 'theme');
+    //drupal_add_css( 'http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', 'theme');
 }
 
 function fieldglass_views_pre_render(&$view){
@@ -60,4 +60,28 @@ function fieldglass_views_pre_render(&$view){
             }
         }
     }
+}
+
+function fieldglass_preprocess_block(&$variables) {
+    //Setup block id's
+    if ($variables['block']->module == 'views' && $variables['block']->delta == 'agenda-block_1') {
+        $variables['block_html_id'] = drupal_html_id('agenda');
+        $variables['classes_array'][] = drupal_html_class('anchor');
+    }
+    if ($variables['block']->module == 'block' && $variables['block']->delta == '28') {
+        $variables['block_html_id'] = drupal_html_id('travel');
+        $variables['classes_array'][] = drupal_html_class('anchor');
+    }
+    if ($variables['block']->module == 'block' && $variables['block']->delta == '29') {
+        $variables['block_html_id'] = drupal_html_id('why_attend');
+        $variables['classes_array'][] = drupal_html_class('anchor');
+    }
+    if ($variables['block']->module == 'views' && $variables['block']->delta == 'company_profile-block_1') {
+        $variables['block_html_id'] = drupal_html_id('attendees');
+        $variables['classes_array'][] = drupal_html_class('anchor');
+    }
+    if ($variables['block']->module == 'block' && $variables['block']->delta == '30') {
+        $variables['block_html_id'] = drupal_html_id('hero');
+    }
+
 }
