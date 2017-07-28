@@ -2579,12 +2579,7 @@ span.accord {
   div#block-block-8 {
     float: right;
   }
-  .grid-6.app-dl {
-    top:44%;
-    -webkit-transform: translateY(44%);
-    -ms-transform: translateY(44%);
-    transform: translateY(44%);
-  }
+
 }
 @media (max-width: 767px) and (min-width: 320px) {
   div#zone-branding {
