@@ -2593,6 +2593,7 @@ span.accord {
   div#zone-branding {
     display: block;
     margin-left:10px;
+    margin-top: -10px;
   }
   .view-id-agenda .views_slideshow_cycle_main {
     min-height: 0px;
@@ -2939,7 +2940,6 @@ span.accord {
     margin-left: 0px;
   }
   div#region-branding {
-    text-align: center;
     width: 80%;
     margin: 0px;
   }
