@@ -2626,7 +2626,12 @@ span.accord {
     font-size: 12px;
     line-height: 22px;
   }
-  .hero_sub, .hero_register {
+  .hero_sub{
+    font-size: 7px;
+    line-height: 10px;
+  }
+
+   .hero_register {
     font-size:10px;
     line-height: 11px;
   }
@@ -3149,9 +3154,7 @@ span.accord {
   .circle_slider {
     /*margin-left: 4em !important;*/
   }
-  #zone-branding-wrapper {
-    height: 70px;
-  }
+
   .cta_hp {
     margin-left: 0em !important;
     top: 0%;
