@@ -2301,13 +2301,13 @@ span.accord {
     display:none;
   }
   .hero {
-    margin: 15px 0 15px;
+    margin: 14px 0 15px;
   }
   .hero_sub, .hero_register {
     font-size:14px;
   }
   .reg_date {
-    margin-bottom: 0px;
+    margin-bottom: -14px;
     line-height: 50px;
     font-size: 3.8vw;
   }
@@ -2863,6 +2863,9 @@ span.accord {
     background: lightgray;
     margin-bottom: -10px;
   }
+  #travel {
+    margin-bottom: 0px;
+  }
   .summit_app, .fingertips {
     /* font-size: 1rem; */
     display: none;
@@ -2923,7 +2926,6 @@ span.accord {
   }
   div#zone-footer {
     display: block;
-    min-height: 320px;
   }
   div#region-footer-second {
     margin-bottom: 0px;
