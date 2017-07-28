@@ -2585,9 +2585,6 @@ span.accord {
     -ms-transform: translateY(44%);
     transform: translateY(44%);
   }
-  .midway, .ohare {
-    width: 85% !important;
-  }
 }
 @media (max-width: 767px) and (min-width: 320px) {
   div#zone-branding {
