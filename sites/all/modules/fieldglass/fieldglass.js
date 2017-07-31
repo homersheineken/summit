@@ -28,6 +28,33 @@
             var move = this.parentNode.parentNode.nextSibling;
             $(move).slideToggle(400);
         });
+        /*var offset = $('#agenda').offset();
+        var scrollto = offset.top - 76; // minus fixed header height
+        $('html, body').animate({scrollTop:scrollto}, 0);
+        var offset1 = $('#why-attend').offset();
+        var scrollto1 = offset1.top + 76; // minus fixed header height
+        $('html, body').animate({scrollTop:scrollto1}, 0);
+        var offset2 = $('#attendees').offset();
+        var scrollto2 = offset2.top + 76; // minus fixed header height
+        $('html, body').animate({scrollTop:scrollto2}, 0);
+        var offset3 = $('#travel').offset();
+        var scrollto3 = offset3.top + 76; // minus fixed header height
+        $('html, body').animate({scrollTop:scrollto3}, 0);
+
+        $(function() {
+            setTimeout(delayedFragmentTargetOffset, 500);
+        });
+
+// add scroll offset to fragment target (if there is one)
+        function delayedFragmentTargetOffset(){
+            var offset = $(':target').offset();
+            if(offset){
+                var scrollto = offset.top - 76; // minus fixed header height
+                $('html, body').animate({scrollTop:scrollto}, 0);
+            }
+        }*/
+
+
     });
 
 })(jQuery);

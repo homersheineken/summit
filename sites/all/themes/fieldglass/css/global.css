@@ -1961,8 +1961,9 @@ span.date-display-single {
 .container .column,
 .views-field-field-agenda-item-session .column{
   display: table-cell;
-  padding: 20px;
+  padding: 5px 20px;
   text-align: left;
+
 }
 .container .column .date,
 .field-name-field-agenda-item-start-time,

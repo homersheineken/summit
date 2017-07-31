@@ -1079,6 +1079,7 @@ div#block-block-19,div#block-block-20,div#block-block-21 {
   text-transform: uppercase;
   background-image: none;
   font-family: 'BentonSans-Book', 'BentonSans Book', 'BentonSans';
+  letter-spacing: .5px;
 }
 .site_select li a  {
   text-transform: capitalize;
@@ -1241,7 +1242,7 @@ h2.double {
 .hero {
   position: relative;
   max-width:1920px;
-  margin:1rem auto 45px;
+  margin:1rem auto 20px;
   position: relative;
 }
 .page-node-4 .hero {
@@ -1275,7 +1276,7 @@ div#block-views-agenda-block-2 {
   font-weight: 800;
   font-style: normal;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 26px;
   color: #FFFFFF;
   width: 100%;
   text-align: center;
@@ -1285,11 +1286,15 @@ a.foo {
   color: white;
   background-color: #00a0de;
   border-radius: 3px;
-  padding: 7px 15px;
+  padding: 7px 18px;
+  letter-spacing: .5px;
 }
 .hero_register {
   font-size: 17.5px;
   margin-top: 40px;
+}
+.hero_sub, .hero_register {
+  letter-spacing: .5px;
 }
 .scroll_more img  {
   height:55px;
@@ -1319,7 +1324,14 @@ div#mobile-header {
 section#agenda .block-inner{
   background-color: #e4e5e4;
 }
-#agenda h2,#why-attend h2, #travel h2, #attendees h2 {
+#agenda h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 27px;
+  color: #000;
+  margin: 30px 30px 10px 30px;
+}
+#why-attend h2, #travel h2, #attendees h2 {
   font-weight: 600;
   font-size: 24px;
   line-height: 27px;
@@ -1329,9 +1341,13 @@ section#agenda .block-inner{
 #attendees h2, #agenda h2 {
   padding-top: 30px;
 }
-#agenda .content {
+#agenda .view-content {
   max-width: 960px;
   margin: 0 auto;
+}
+.view-id-agenda .view-header {
+  margin-bottom: 30px;
+  margin-left: 30px;
 }
 .downloads {
   text-align: center;
@@ -1422,7 +1438,7 @@ section#agenda .block-inner{
 .travel_text a{
   font-weight:700;
 }
-.travel_text a:hover {
+.travel_text a:hover, .text_part a:hover {
   text-decoration: underline;
   color: #00a0de !important;
 }
@@ -1575,6 +1591,7 @@ span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1, span#vscc_
   text-align: left;
   border-radius: 3px;
   text-transform: uppercase;
+  letter-spacing: .5px;
 }
 .view-agenda .views-slideshow-pager-field-item {
   margin-top:26px;
@@ -2011,13 +2028,14 @@ div#zone-content-wrapper {
 .page-node-174 .view-company-profile .views-row{
   min-height: 0;
 }
-.anchor:before {
+/*.anchor:before {
   display: block;
   content: " ";
   margin-top: -76px;
   height: 45px;
   visibility: hidden;
-}
+}*/
+
 div#region-branding {
   width: 25%;
 }
@@ -2025,11 +2043,22 @@ div#region-menu-second {
   width: 75%;
 }
 
-#block-block-27, #agenda, #block-system-main, #block-block16, #attendees, #travel, #why-attend, #zone-footer-wrapper{
+#block-block-27,  #block-system-main, #block-block16,  #travel, #why-attend, #zone-footer-wrapper{
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+
   /* padding: 0 60px; */
+}
+#attendees, #agenda {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #e4e5e4;
+}
+#attendees .block-inner, #agenda .block-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 div#block-block-27, #travel,#why-attend,#attendees, div#block-block-31 {
 
@@ -2037,6 +2066,7 @@ div#block-block-27, #travel,#why-attend,#attendees, div#block-block-31 {
 }
 #attendees .travel_text {
   margin-left: 30px;
+  margin-right: 20px;
 }
 #attendees .block-inner{
   background-color: #e4e5e4;
@@ -2069,6 +2099,13 @@ div#block-block-27, #travel,#why-attend,#attendees, div#block-block-31 {
   line-height: 27px;
   margin-bottom: 20px;
 }
+.ready a {
+  color: #f0ab00;
+}
+.ready a:hover {
+  color: #f0ab00;
+  text-decoration: underline !important;
+}
 .register {
   font-size: 17.5px;
 }
@@ -2090,7 +2127,7 @@ div#block-block-27, #travel,#why-attend,#attendees, div#block-block-31 {
 }
 .register a {
   background-color: #00a0de;
-  padding: 7px 15px;
+  padding: 7px 18px;
   border-radius: 3px;
   color: white;
 }
@@ -2114,7 +2151,7 @@ div#block-block-27, #travel,#why-attend,#attendees, div#block-block-31 {
   width: 80%;
 }
 .addt_resources {
-  margin-top: 30px;
+  margin-top: 80px;
 }
 .addt_resources .reason_title {
   width: 100%;
@@ -2151,11 +2188,15 @@ div#block-block-27, #travel,#why-attend,#attendees, div#block-block-31 {
   display: inline-block;
   padding: 6px;
   margin: 0px 10px;
+  letter-spacing: .5px;
 }
 .hotel,.map {
-  display: table-cell;
+  display: inline-block;
   vertical-align: top;
   width: 48%;
+}
+.map {
+  margin-top: -50px;
 }
 .hotel .travel_text {
   margin-left: 30px;
@@ -2597,11 +2638,14 @@ span.accord {
 
 }
 @media (max-width: 667px) and (min-width: 320px) {
+  .map {
+    margin-top: 0px;
+  }
   .container .column, .views-field-field-agenda-item-session .column {
     padding:0;
     display: block;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
   .field.field-name-field-agenda-item-end-time.field-type-cck-time.field-label-hidden, .field.field-name-field-agenda-item-start-time.field-type-cck-time.field-label-hidden {
     display: inline-block;
@@ -2623,8 +2667,8 @@ span.accord {
     line-height: 22px;
   }
   .hero_sub{
-    font-size: 7px;
-    line-height: 10px;
+    font-size: 10px;
+    line-height: 11px;
   }
 
    .hero_register {
@@ -2688,11 +2732,16 @@ span.accord {
   }
 }
 @media (max-width: 666px) and (min-width: 320px) {
-  /*div#block-block-8 {
-    float: right;
+  .addt_resources {
     margin-top: 30px;
-    margin-right: 0px;
-  }*/
+  }
+  .herotext {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-60%);
+  }
   div#region-footer-first, div#region-footer-second, div#region-postscript-first {
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
