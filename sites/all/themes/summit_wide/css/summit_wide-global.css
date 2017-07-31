@@ -1103,7 +1103,7 @@ ul.menu li {
   font-weight: bold;
 }
 li.last.leaf.button a {
-  padding: 10px 13px;
+  padding: 12px 13px;
   background-color: #00a0de;
   border-radius: 3px;
 }
@@ -1268,7 +1268,7 @@ div#block-views-agenda-block-2 {
 }
 .herotext {
   position: absolute;
-  top:50%;
+  top:52%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform:translateY(-50%);
@@ -1286,7 +1286,7 @@ a.foo {
   color: white;
   background-color: #00a0de;
   border-radius: 3px;
-  padding: 7px 18px;
+  padding:12px 18px;
   letter-spacing: .5px;
 }
 .hero_register {
@@ -2094,6 +2094,9 @@ div#block-block-27, #travel,#why-attend,#attendees, div#block-block-31 {
   text-align: center;
   z-index: 20;
 }
+.ready_cont {
+  padding: 20px;
+}
 .ready{
   font-size: 24px;
   line-height: 27px;
@@ -2127,7 +2130,7 @@ div#block-block-27, #travel,#why-attend,#attendees, div#block-block-31 {
 }
 .register a {
   background-color: #00a0de;
-  padding: 7px 18px;
+  padding: 12px 18px;
   border-radius: 3px;
   color: white;
 }
