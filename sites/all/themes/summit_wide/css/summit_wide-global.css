@@ -1338,7 +1338,7 @@ section#agenda .block-inner{
   color: #000;
   margin: 30px;
 }
-#attendees h2, #agenda h2 {
+#attendees h2, #agenda h2, #travel h2, #why-attend h2 {
   padding-top: 30px;
 }
 #agenda .view-content {
@@ -2060,8 +2060,7 @@ div#region-menu-second {
   margin: 0 auto;
   width: 100%;
 }
-div#block-block-27, #travel,#why-attend,#attendees, div#block-block-31 {
-
+div#block-block-27, #travel,#why-attend {
   margin-bottom: 45px;
 }
 #attendees .travel_text {
@@ -2070,6 +2069,12 @@ div#block-block-27, #travel,#why-attend,#attendees, div#block-block-31 {
 }
 #attendees .block-inner{
   background-color: #e4e5e4;
+}
+div#views_slideshow_cycle_teaser_section_agenda-block_1 {
+  max-height: 500px;
+}
+.logged-in div#views_slideshow_cycle_teaser_section_agenda-block_1 {
+  max-height: none;
 }
 .videoWrapper {
   position: relative;
@@ -2641,6 +2646,12 @@ span.accord {
 
 }
 @media (max-width: 667px) and (min-width: 320px) {
+  div#views_slideshow_cycle_teaser_section_agenda-block_1 {
+    max-height: 800px;
+  }
+  .logged-in div#views_slideshow_cycle_teaser_section_agenda-block_1 {
+    max-height: none;
+  }
   .map {
     margin-top: 0px;
   }
