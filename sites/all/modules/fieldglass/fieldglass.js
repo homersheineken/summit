@@ -74,7 +74,7 @@
             var time = this.innerText;
             this.innerText = convert_to_24h(time);
         });
-        jQuery(".front .field-name-field-agenda-item-end-time ").prepend('-');
+        jQuery(".front .field-name-field-agenda-item-end-time ").prepend('&nbsp;-&nbsp;');
 
         /**********************/
         (function(document, history, location) {
