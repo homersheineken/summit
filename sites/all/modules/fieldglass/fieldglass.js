@@ -51,7 +51,7 @@
             if (screen_size > 850) {
                 height = 400;
             } else if (screen_size >500) {
-                height=600;
+                height=575;
             } else {
                 height = 700;
             }
@@ -63,7 +63,7 @@
             //screen_size < 667 && toggle == 'big' ? height = height + 300 : height = 0;
             //screen_size > 667 && toggle == 'big' ? height = height - 300 : null;
             var seen = $(".field-name-field-agenda-session-description:visible").length;
-            var total = height  + 200 * seen;
+            var total = height  + 240 * seen;
             ss_block.css('height',total);
             ss_block.css('max-height',total);
             screen_width = $(document).width();
