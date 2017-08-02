@@ -47,7 +47,15 @@
         function resize_div (toggle){
             var screen_size = $(document).width();
             var height = 0;
-            screen_size > 667 ? height = 400 : height = 700;
+            //screen_size > 667 ? height = 400 : height = 700;
+            if (screen_size > 850) {
+                height = 400;
+            } else if (screen_size >500) {
+                height=600;
+            } else {
+                height = 700;
+            }
+
             //screen_size < 667 && toggle == 'toggle' ? height = height + 300 : null;
 
             //screen_size > 667 && toggle == 'toggle' ? height = height + 300 : null;
