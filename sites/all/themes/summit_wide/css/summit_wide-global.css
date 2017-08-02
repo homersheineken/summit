@@ -1963,6 +1963,9 @@ div#block-block-24 {
   line-height: normal;
   margin-top: 0px;
 }
+.column.dos {
+  min-width: 600px;
+}
 div#block-block-15 {
   z-index: 1;}
 .exp_text {
@@ -2072,9 +2075,11 @@ div#block-block-27, #travel,#why-attend {
 }
 div#views_slideshow_cycle_teaser_section_agenda-block_1 {
   max-height: 480px;
+  min-height: 400px;
 }
 .logged-in div#views_slideshow_cycle_teaser_section_agenda-block_1 {
   max-height: none;
+  min-height: 1100px;
 }
 .videoWrapper {
   position: relative;
@@ -2633,6 +2638,11 @@ span.accord {
   }
 
 }
+@media (max-width:850px) and (min-width:667px){
+  .container .column .description, .field-name-field-agenda-session-description{
+    max-width: 500px;
+  }
+}
 @media (max-width: 767px) and (min-width: 320px) {
   div#zone-branding {
     display: block;
@@ -2646,8 +2656,12 @@ span.accord {
 
 }
 @media (max-width: 667px) and (min-width: 320px) {
+  .column.dos {
+    min-width: 0px;
+  }
   div#views_slideshow_cycle_teaser_section_agenda-block_1 {
     max-height: 800px;
+    min-height: 700px;
   }
   .logged-in div#views_slideshow_cycle_teaser_section_agenda-block_1 {
     max-height: none;
@@ -2681,12 +2695,14 @@ span.accord {
     line-height: 22px;
   }
   .hero_sub{
-    font-size: 10px;
-    line-height: 11px;
+    font-size: 11px;
+    line-height: 13px;
   }
-
+  a.foo {
+    padding: 7px 18px
+  }
    .hero_register {
-    font-size:10px;
+    font-size:11px;
     line-height: 11px;
   }
   #block-block-31 {
@@ -2754,7 +2770,7 @@ span.accord {
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-60%);
+    transform: translateY(-50%);
   }
   div#region-footer-first, div#region-footer-second, div#region-postscript-first {
     -webkit-transform: translateY(0%);

@@ -26,21 +26,49 @@
             }
         });
         jQuery(" .page-node-174 .field-name-field-agenda-session-description").hide();
-
+        /*********/
         var ss_block =$('#views_slideshow_cycle_teaser_section_agenda-block_1');
         var div_height = ss_block.height();
+        var screen_width = $(document).width();
         jQuery(".accord img").click(function () {
             var move = this.parentNode.parentNode.nextSibling;
             $(move).slideToggle(400, function () {
-                var seen = $(".field-name-field-agenda-session-description:visible").length;
-                ss_block.css('max-height',div_height + 130 * seen);
+                var toggle = 'toggle';
+                resize_div(toggle);
             });
 
         });
+        $(window).resize(function() {
+            var toggle;
+            screen_width > 667 ? toggle = 'big' : null;
+            resize_div(toggle);
+        });
+
+        function resize_div (toggle){
+            var screen_size = $(document).width();
+            var height = 0;
+            screen_size > 667 ? height = 400 : height = 700;
+            //screen_size < 667 && toggle == 'toggle' ? height = height + 300 : null;
+
+            //screen_size > 667 && toggle == 'toggle' ? height = height + 300 : null;
+
+            //screen_size < 667 && toggle == 'big' ? height = height + 300 : height = 0;
+            //screen_size > 667 && toggle == 'big' ? height = height - 300 : null;
+            var seen = $(".field-name-field-agenda-session-description:visible").length;
+            var total = height  + 200 * seen;
+            ss_block.css('height',total);
+            ss_block.css('max-height',total);
+            screen_width = $(document).width();
+        }
 
 
+        jQuery(".front .field-type-cck-time").each(function (index, value){
+            var time = this.innerText;
+            this.innerText = convert_to_24h(time);
+        });
+        jQuery(".front .field-name-field-agenda-item-end-time ").prepend('<span>&nbsp;-&nbsp;</span>');
 
-
+        /**********************/
         (function(document, history, location) {
             var HISTORY_SUPPORT = !!(history && history.pushState);
 
@@ -120,6 +148,24 @@
                 'DOMContentLoaded', anchorScrolls.init.bind(anchorScrolls)
             );
         })(window.document, window.history, window.location);
+        function convert_to_24h(timeStr) {
+            timeStr = timeStr.slice(0,-1);
+            var colon = timeStr.indexOf(':');
+            var hours = timeStr.substr(0, colon),
+                minutes = timeStr.substr(colon+1, 2),
+                meridian = timeStr.substr(colon+3, 2).toUpperCase();
+
+            meridian == "P" ? meridian="PM" : null;
+            var hoursInt = parseInt(hours, 10),
+                offset = meridian == 'PM' ? 12 : 0;
+
+            if (hoursInt === 12) {
+                hoursInt = offset;
+            } else {
+                hoursInt += offset;
+            }
+            return hoursInt + ":" + minutes;
+        }
 
     });
 
