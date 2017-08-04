@@ -2769,9 +2769,9 @@ span.accord {
   .herotext {
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+    transform: translateY(-60%);
   }
   div#region-footer-first, div#region-footer-second, div#region-postscript-first {
     -webkit-transform: translateY(0%);
