@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/* ! DO NOT EDIT THE GLOBAL.CSS FILE! Only edit global.scss, or your styles will be overwritten. */
+/* This file was originally compiled by summit_wide-global.scss, but that no longer appears to be the case.
+   This is now the place to add, edit, or remove styling. */
 /* Variables, extends, and mixins */
 /* line 12, summit_wide-global.scss */
 
@@ -2073,6 +2074,10 @@ div#block-block-27, #travel,#why-attend {
 #attendees .block-inner{
   background-color: #e4e5e4;
 }
+/*
+The following code commented out because it did not work with the updated fieldglass.js code that automatically
+ calculates the correct heights of these containers */
+/*
 div#views_slideshow_cycle_teaser_section_agenda-block_1 {
   max-height: 480px;
   min-height: 400px;
@@ -2080,7 +2085,7 @@ div#views_slideshow_cycle_teaser_section_agenda-block_1 {
 .logged-in div#views_slideshow_cycle_teaser_section_agenda-block_1 {
   max-height: none;
   min-height: 1100px;
-}
+}*/
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */

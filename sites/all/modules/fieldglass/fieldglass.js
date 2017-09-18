@@ -27,7 +27,18 @@
         });
         jQuery(" .page-node-174 .field-name-field-agenda-session-description").hide();
         /*********/
-        var ss_block =$('#views_slideshow_cycle_teaser_section_agenda-block_1');
+        var ss_block = $('#views_slideshow_cycle_teaser_section_agenda-block_1');
+        var first_row_item = $('#views_slideshow_cycle_div_agenda-block_1_0 .views-slideshow-cycle-main-frame-row-item');
+        var second_row_item = $('#views_slideshow_cycle_div_agenda-block_1_1 .views-slideshow-cycle-main-frame-row-item');
+
+        //initialize block height
+        $(window).load(function(){
+            ss_block.css('height', $(first_row_item).height() + 50);
+        });
+
+
+        var ss_block_child_1 =$('#views_slideshow_cycle_div_agenda-block_1_0');
+        var ss_block_child_2 =$('#views_slideshow_cycle_div_agenda-block_1_1');
         var div_height = ss_block.height();
         var screen_width = $(document).width();
         jQuery(".accord img").click(function () {
@@ -45,6 +56,13 @@
         });
 
         function resize_div (toggle){
+
+            ss_block.css('height', $('.views-slideshow-cycle-main-frame-row[style*="display: block"] .views-slideshow-cycle-main-frame-row-item').height() + 50);
+            ss_block_child_1.css('height', first_row_item.height() + 50);
+            ss_block_child_2.css('height', second_row_item.height() + 50);
+
+            // ! NOTE - I believe everything else in this resize_div function (from this comment down) is obsolete
+
             var screen_size = $(document).width();
             var height = 0;
             //screen_size > 667 ? height = 400 : height = 700;
@@ -64,8 +82,6 @@
             //screen_size > 667 && toggle == 'big' ? height = height - 300 : null;
             var seen = $(".field-name-field-agenda-session-description:visible").length;
             var total = height  + 240 * seen;
-            ss_block.css('height',total);
-            ss_block.css('max-height',total);
             screen_width = $(document).width();
         }
 
