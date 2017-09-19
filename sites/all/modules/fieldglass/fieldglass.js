@@ -26,63 +26,54 @@
             }
         });
         jQuery(" .page-node-174 .field-name-field-agenda-session-description").hide();
+
         /*********/
+
+        //set variables for agenda tabs
         var ss_block = $('#views_slideshow_cycle_teaser_section_agenda-block_1');
+
         var first_row_item = $('#views_slideshow_cycle_div_agenda-block_1_0 .views-slideshow-cycle-main-frame-row-item');
         var second_row_item = $('#views_slideshow_cycle_div_agenda-block_1_1 .views-slideshow-cycle-main-frame-row-item');
+        var third_row_item = $('#views_slideshow_cycle_div_agenda-block_1_2 .views-slideshow-cycle-main-frame-row-item');
+
+        var ss_block_child_1 =$('#views_slideshow_cycle_div_agenda-block_1_0');
+        var ss_block_child_2 =$('#views_slideshow_cycle_div_agenda-block_1_1');
+        var ss_block_child_3 =$('#views_slideshow_cycle_div_agenda-block_1_2');
+
+        var tab = $('.views-slideshow-pager-field-item');
 
         //initialize block height
         $(window).load(function(){
             ss_block.css('height', $(first_row_item).height() + 50);
         });
 
-
-        var ss_block_child_1 =$('#views_slideshow_cycle_div_agenda-block_1_0');
-        var ss_block_child_2 =$('#views_slideshow_cycle_div_agenda-block_1_1');
-        var div_height = ss_block.height();
-        var screen_width = $(document).width();
         jQuery(".accord img").click(function () {
             var move = this.parentNode.parentNode.nextSibling;
             $(move).slideToggle(400, function () {
-                var toggle = 'toggle';
-                resize_div(toggle);
+                resize_div();
             });
 
         });
+
         $(window).resize(function() {
-            var toggle;
-            screen_width > 667 ? toggle = 'big' : null;
-            resize_div(toggle);
+            resize_div();
         });
 
-        function resize_div (toggle){
+        tab.click(function (){
+            $(this).addClass('active');
+            setTimeout(function() {
+                resize_div();
+            }, 100);
+        });
+
+        function resize_div (){
 
             ss_block.css('height', $('.views-slideshow-cycle-main-frame-row[style*="display: block"] .views-slideshow-cycle-main-frame-row-item').height() + 50);
             ss_block_child_1.css('height', first_row_item.height() + 50);
             ss_block_child_2.css('height', second_row_item.height() + 50);
+            ss_block_child_3.css('height', third_row_item.height() + 50);
 
-            // ! NOTE - I believe everything else in this resize_div function (from this comment down) is obsolete
-
-            var screen_size = $(document).width();
-            var height = 0;
-            //screen_size > 667 ? height = 400 : height = 700;
-            if (screen_size > 850) {
-                height = 400;
-            } else if (screen_size >500) {
-                height=575;
-            } else {
-                height = 700;
-            }
-
-            //screen_size < 667 && toggle == 'toggle' ? height = height + 300 : null;
-
-            //screen_size > 667 && toggle == 'toggle' ? height = height + 300 : null;
-
-            //screen_size < 667 && toggle == 'big' ? height = height + 300 : height = 0;
-            //screen_size > 667 && toggle == 'big' ? height = height - 300 : null;
-            var seen = $(".field-name-field-agenda-session-description:visible").length;
-            var total = height  + 240 * seen;
-            screen_width = $(document).width();
+            // note - removed obsolete code
         }
 
 
