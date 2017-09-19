@@ -1499,8 +1499,9 @@ section#agenda .block-inner{
   margin-bottom: 0em;
 }
 .views-slideshow-pager-field-item {
-  width: 48%;
-  margin: 0em 5px 0em 5px !important;
+  /* if event is two days (tabs) - width: 48%;*/
+  width: 32%; /* if event is three days */
+  margin: 0em 5px 0em 5px; /* commented out by dbs:  !important;*/
   padding: 0px !important;
   display: inline-block;
   float: left;
@@ -1512,6 +1513,7 @@ section#agenda .block-inner{
 }
 .views_slideshow_pager_field_item:hover {
   background-color: #fcb616 !important;
+  cursor: pointer;
 }
 .left_arrow {
   margin-right: 0em;
@@ -1594,9 +1596,12 @@ span#vscc_controls_next_faq-page, span#vscc_controls_next_faq-page_1, span#vscc_
   text-transform: uppercase;
   letter-spacing: .5px;
 }
+
+/* commented out by dbs
 .view-agenda .views-slideshow-pager-field-item {
   margin-top:26px;
-}
+}*/
+
 .views_slideshow_active_pager_field_item{
   background-color: rgba(0, 143, 211, 1);
 }
@@ -2268,6 +2273,7 @@ span.accord {
   margin-left: 10px;
   position: relative;
   top: -7px;
+  cursor: pointer;
 }
 .thanks {
   width: 100%;
@@ -2659,7 +2665,6 @@ span.accord {
     min-height: 0px;
     /*margin-bottom: -200px;*/
   }
-
 }
 @media (max-width: 667px) and (min-width: 320px) {
   .column.dos {
@@ -3115,7 +3120,8 @@ span.accord {
   }
   div#views_slideshow_cycle_main_faq-page {
     margin-top: 25px;
-  }.forum_container {
+  }
+  .forum_container {
      width: 75%;
      /* margin-left: 10em !important; */
      top: 0%;
@@ -3129,9 +3135,30 @@ span.accord {
     -webkit-transform: translateY(100%);
     -ms-transform: translateY(100%);
     transform: translateY(100%);
-
   }
 }
+
+@media (max-width: 1200px) {
+  /*overrides fieldglass/css/global.css line 2020 to allow for 3 agenda tabs*/
+  .view-agenda .views_slideshow_pager_field_item,
+  .view-agenda .views_slideshow_page_field_item.active {
+    width: 32%;
+  }
+}
+
+@media (max-width: 768px) {
+  /*overrides fieldglass/css/global.css line 2020 to allow for 3 agenda tabs*/
+  .view-agenda .views-slideshow-pager-field-item,
+  .view-agenda .views-slideshow-pager-field-item.active {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .views-slideshow-controls-top {
+    padding: 0 5px;
+  }
+}
+
 @media (min-device-width: 740px) and (min-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation: landscape){
   .forum_container.grid-9.prefix-1, .cta_hp.grid-2 {
     padding-left: 0px;
