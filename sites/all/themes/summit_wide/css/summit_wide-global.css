@@ -2670,13 +2670,14 @@ span.accord {
   .column.dos {
     min-width: 0px;
   }
-  div#views_slideshow_cycle_teaser_section_agenda-block_1 {
+  /* The following code commented out because it does not work with the updated fieldglass.js code. */
+  /*div#views_slideshow_cycle_teaser_section_agenda-block_1 {
     max-height: 800px;
     min-height: 700px;
   }
   .logged-in div#views_slideshow_cycle_teaser_section_agenda-block_1 {
     max-height: none;
-  }
+  }*/
   .map {
     margin-top: 0px;
   }
