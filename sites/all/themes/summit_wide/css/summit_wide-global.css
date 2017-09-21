@@ -1342,6 +1342,41 @@ section#agenda .block-inner{
 #attendees h2, #agenda h2, #travel h2, #why-attend h2 {
   padding-top: 30px;
 }
+
+#agenda .view-agenda h2 {
+  margin-top: 10px;
+  color: #fcb616;
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  #agenda .view-agenda h2 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 667px) {
+  #agenda .view-agenda h2 {
+    margin-left: 0;
+  }
+}
+
+.views-field-field-subtitle {
+  font-size: 11px;
+  font-weight: normal;
+  margin-top: 7px;
+  text-align: center;
+}
+
+.views-field-field-subtitle:after {
+  display: block;
+  content: '';
+  width: 40px;
+  height: 1px;
+  background-color: white;
+  margin: 0 auto;
+}
+
 #agenda .view-content {
   max-width: 960px;
   margin: 0 auto;
